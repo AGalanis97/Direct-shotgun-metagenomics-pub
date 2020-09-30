@@ -1,0 +1,13 @@
+Software,Species,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+minimap2,Brassica cretica,0,16.372,Viridiplantae
+minimap2,Chlamydomonas reinhardtii,5.156,9.654,Viridiplantae
+minimap2,Citrus sinensis,0,3.237,Viridiplantae
+minimap2,Malus domestica,18.103,28.35,Viridiplantae
+minimap2,Medicago truncatula,9.381,6.85,Viridiplantae
+minimap2,Oxalis drummondii,0,0.087,Viridiplantae
+minimap2,Papaver somniferum,3.029,5.668,Viridiplantae
+minimap2,Petunia x hybrida,0,0.014,Viridiplantae
+minimap2,Prunus persica,2.728,9.125,Viridiplantae
+minimap2,Pyrus x bretschneideri,4.733,4.207,Viridiplantae
+minimap2,Theobroma cacao,0,7.851,Viridiplantae
+minimap2,Zea mays,26.372,8.585,Viridiplantae

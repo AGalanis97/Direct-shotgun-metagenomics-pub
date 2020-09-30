@@ -1,0 +1,12 @@
+Software,Species,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+kraken2,Apis mellifera filamentous virus,2.488,1.545,Viruses
+kraken2,Apis mellifera,2.686,11.682,Eukaryota (others)
+kraken2,Frischella perrara,9.169,5.575,Bacteria
+kraken2,Gilliamella apicola,1.604,0.975,Bacteria
+kraken2,Homo sapiens,4.154,3.401,Eukaryota (others)
+kraken2,Lactobacillus kunkeei,27.564,16.729,Bacteria
+kraken2,Nosema ceranae,2.449,2.984,Eukaryota (fungi)
+kraken2,Paenibacillus apiarius,0.003,11.312,Bacteria
+kraken2,Snodgrassella alvi,3.389,2.089,Bacteria
+kraken2,Staphylococcus epidermidis,8.23,5.311,Bacteria
+kraken2,Varroa destructor,3.95,38.397,Eukaryota (others)

@@ -1,0 +1,13 @@
+Software,Genus,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+DIAMOND,Brassica,13.503,16.372,Viridiplantae
+DIAMOND,Chlamydomonas,6.119,9.654,Viridiplantae
+DIAMOND,Citrus,2.281,3.237,Viridiplantae
+DIAMOND,Malus,16.894,28.35,Viridiplantae
+DIAMOND,Medicago,5.031,6.85,Viridiplantae
+DIAMOND,Oxalis,0.069,0.087,Viridiplantae
+DIAMOND,Papaver,1.972,5.668,Viridiplantae
+DIAMOND,Petunia,0.000,0.014,Viridiplantae
+DIAMOND,Prunus,10.648,9.125,Viridiplantae
+DIAMOND,Pyrus,1.554,4.207,Viridiplantae
+DIAMOND,Theobroma,3.520,7.851,Viridiplantae
+DIAMOND,Zea,8.088,8.585,Viridiplantae

@@ -1,0 +1,13 @@
+Software,Genus,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+MG-RAST,Brassica,0.16,16.372,Viridiplantae
+MG-RAST,Chlamydomonas,14.35,9.654,Viridiplantae
+MG-RAST,Citrus,2.43,3.237,Viridiplantae
+MG-RAST,Malus,1.18,28.35,Viridiplantae
+MG-RAST,Medicago,6.59,6.85,Viridiplantae
+MG-RAST,Oxalis,0,0.087,Viridiplantae
+MG-RAST,Papaver,0.31,5.668,Viridiplantae
+MG-RAST,Petunia,0,0.014,Viridiplantae
+MG-RAST,Prunus,0,9.125,Viridiplantae
+MG-RAST,Pyrus,0.16,4.207,Viridiplantae
+MG-RAST,Theobroma,0,7.851,Viridiplantae
+MG-RAST,Zea,4.08,8.585,Viridiplantae
