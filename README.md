@@ -16,46 +16,157 @@ For archive purposes and distribution.
 
 ### This repository makes use of the here R package. When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.
 
-> sessionInfo()
-R version 3.6.3 (2020-02-29)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 10 x64 (build 18363)
+<details closed>
+<summary> <span title='Click to Expand'> current session info </span> </summary>
 
-Matrix products: default
+```r
 
-locale:
-[1] LC_COLLATE=English_United Kingdom.1252  LC_CTYPE=English_United Kingdom.1252    LC_MONETARY=English_United Kingdom.1252
-[4] LC_NUMERIC=C                            LC_TIME=English_United Kingdom.1252    
+- Session info -------------------------------------------------------------------------------------------------------------------------------------------
+ setting  value                       
+ version  R version 3.6.3 (2020-02-29)
+ os       Windows 10 x64              
+ system   x86_64, mingw32             
+ ui       RStudio                     
+ language (EN)                        
+ collate  English_United Kingdom.1252 
+ ctype    English_United Kingdom.1252 
+ tz       Europe/Istanbul             
+ date     2020-09-30                  
 
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
+- Packages -----------------------------------------------------------------------------------------------------------------------------------------------
+ package              * version  date       lib source        
+ acepack                1.4.1    2016-10-29 [1] CRAN (R 3.6.3)
+ ALDEx2               * 1.18.0   2019-10-29 [1] Bioconductor  
+ annotate               1.64.0   2019-10-30 [1] Bioconductor  
+ AnnotationDbi          1.48.0   2019-10-29 [1] Bioconductor  
+ ape                    5.3      2019-03-17 [1] CRAN (R 3.6.3)
+ assertthat             0.2.1    2019-03-21 [1] CRAN (R 3.6.3)
+ backports              1.1.5    2019-10-02 [1] CRAN (R 3.6.1)
+ base64enc              0.1-3    2015-07-28 [1] CRAN (R 3.6.0)
+ BIEN                   1.2.4    2020-02-27 [1] CRAN (R 3.6.3)
+ Biobase                2.46.0   2019-10-29 [1] Bioconductor  
+ BiocGenerics           0.32.0   2019-10-29 [1] Bioconductor  
+ BiocManager            1.30.10  2019-11-16 [1] CRAN (R 3.6.3)
+ BiocParallel           1.20.1   2019-12-21 [1] Bioconductor  
+ bit                    1.1-15.2 2020-02-10 [1] CRAN (R 3.6.2)
+ bit64                  0.9-7    2017-05-08 [1] CRAN (R 3.6.2)
+ bitops                 1.0-6    2013-08-17 [1] CRAN (R 3.6.0)
+ blob                   1.2.1    2020-01-20 [1] CRAN (R 3.6.3)
+ checkmate              2.0.0    2020-02-06 [1] CRAN (R 3.6.3)
+ class                  7.3-15   2019-01-01 [2] CRAN (R 3.6.3)
+ classInt               0.4-3    2020-04-07 [1] CRAN (R 3.6.3)
+ cli                    2.0.2    2020-02-28 [1] CRAN (R 3.6.3)
+ clipr                  0.7.0    2019-07-23 [1] CRAN (R 3.6.3)
+ cluster                2.1.0    2019-06-19 [2] CRAN (R 3.6.3)
+ codetools              0.2-16   2018-12-24 [2] CRAN (R 3.6.3)
+ colorspace             1.4-1    2019-03-18 [1] CRAN (R 3.6.1)
+ cowplot                1.0.0    2019-07-11 [1] CRAN (R 3.6.3)
+ crayon                 1.3.4    2017-09-16 [1] CRAN (R 3.6.3)
+ data.table             1.12.8   2019-12-09 [1] CRAN (R 3.6.3)
+ DBI                    1.1.0    2019-12-15 [1] CRAN (R 3.6.3)
+ DelayedArray           0.12.2   2020-01-06 [1] Bioconductor  
+ desc                   1.2.0    2018-05-01 [1] CRAN (R 3.6.3)
+ DESeq2                 1.26.0   2019-10-29 [1] Bioconductor  
+ details              * 0.2.1    2020-01-12 [1] CRAN (R 3.6.3)
+ digest                 0.6.25   2020-02-23 [1] CRAN (R 3.6.3)
+ doParallel             1.0.15   2019-08-02 [1] CRAN (R 3.6.3)
+ dplyr                  0.8.5    2020-03-07 [1] CRAN (R 3.6.3)
+ e1071                  1.7-3    2019-11-26 [1] CRAN (R 3.6.3)
+ fansi                  0.4.1    2020-01-08 [1] CRAN (R 3.6.3)
+ fasterize              1.0.2    2020-03-25 [1] CRAN (R 3.6.3)
+ foreach                1.4.8    2020-02-09 [1] CRAN (R 3.6.3)
+ foreign                0.8-75   2020-01-20 [2] CRAN (R 3.6.3)
+ Formula                1.2-3    2018-05-03 [1] CRAN (R 3.6.0)
+ genefilter             1.68.0   2019-10-29 [1] Bioconductor  
+ geneplotter            1.64.0   2019-10-29 [1] Bioconductor  
+ GenomeInfoDb           1.22.1   2020-03-27 [1] Bioconductor  
+ GenomeInfoDbData       1.2.2    2020-03-21 [1] Bioconductor  
+ GenomicRanges          1.38.0   2019-10-29 [1] Bioconductor  
+ GGally                 1.5.0    2020-03-25 [1] CRAN (R 3.6.3)
+ ggcorrplot             0.1.3    2019-05-19 [1] CRAN (R 3.6.3)
+ ggplot2                3.3.0    2020-03-05 [1] CRAN (R 3.6.3)
+ ggpubr                 0.2.5    2020-02-13 [1] CRAN (R 3.6.3)
+ ggridges               0.5.2    2020-01-12 [1] CRAN (R 3.6.3)
+ ggsignif               0.6.0    2019-08-08 [1] CRAN (R 3.6.3)
+ ggtree                 2.0.4    2020-04-13 [1] Bioconductor  
+ glue                   1.3.2    2020-03-12 [1] CRAN (R 3.6.3)
+ gridExtra              2.3      2017-09-09 [1] CRAN (R 3.6.3)
+ gtable                 0.3.0    2019-03-25 [1] CRAN (R 3.6.3)
+ Hmisc                  4.4-0    2020-03-23 [1] CRAN (R 3.6.3)
+ htmlTable              1.13.3   2019-12-04 [1] CRAN (R 3.6.3)
+ htmltools              0.4.0    2019-10-04 [1] CRAN (R 3.6.3)
+ htmlwidgets            1.5.1    2019-10-08 [1] CRAN (R 3.6.3)
+ httr                   1.4.1    2019-08-05 [1] CRAN (R 3.6.3)
+ IRanges                2.20.2   2020-01-13 [1] Bioconductor  
+ iterators              1.0.12   2019-07-26 [1] CRAN (R 3.6.3)
+ janitor                2.0.1    2020-04-12 [1] CRAN (R 3.6.3)
+ jpeg                   0.1-8.1  2019-10-24 [1] CRAN (R 3.6.1)
+ jsonlite               1.6.1    2020-02-02 [1] CRAN (R 3.6.3)
+ KernSmooth             2.23-16  2019-10-15 [2] CRAN (R 3.6.3)
+ knitr                  1.28     2020-02-06 [1] CRAN (R 3.6.3)
+ lattice                0.20-38  2018-11-04 [2] CRAN (R 3.6.3)
+ latticeExtra           0.6-29   2019-12-19 [1] CRAN (R 3.6.3)
+ lazyeval               0.2.2    2019-03-15 [1] CRAN (R 3.6.3)
+ lifecycle              0.2.0    2020-03-06 [1] CRAN (R 3.6.3)
+ locfit                 1.5-9.1  2013-04-20 [1] CRAN (R 3.6.3)
+ lubridate              1.7.4    2018-04-11 [1] CRAN (R 3.6.3)
+ magrittr               1.5      2014-11-22 [1] CRAN (R 3.6.3)
+ Matrix                 1.2-18   2019-11-27 [2] CRAN (R 3.6.3)
+ matrixStats            0.56.0   2020-03-13 [1] CRAN (R 3.6.3)
+ memoise                1.1.0    2017-04-21 [1] CRAN (R 3.6.3)
+ munsell                0.5.0    2018-06-12 [1] CRAN (R 3.6.3)
+ nlme                   3.1-144  2020-02-06 [2] CRAN (R 3.6.3)
+ nnet                   7.3-12   2016-02-02 [2] CRAN (R 3.6.3)
+ pillar                 1.4.3    2019-12-20 [1] CRAN (R 3.6.3)
+ pkgconfig              2.0.3    2019-09-22 [1] CRAN (R 3.6.3)
+ plotly                 4.9.2.1  2020-04-04 [1] CRAN (R 3.6.3)
+ plyr                   1.8.6    2020-03-03 [1] CRAN (R 3.6.3)
+ png                    0.1-7    2013-12-03 [1] CRAN (R 3.6.0)
+ purrr                  0.3.3    2019-10-18 [1] CRAN (R 3.6.3)
+ R6                     2.4.1    2019-11-12 [1] CRAN (R 3.6.3)
+ raster                 3.0-12   2020-01-30 [1] CRAN (R 3.6.3)
+ RColorBrewer           1.1-2    2014-12-07 [1] CRAN (R 3.6.0)
+ Rcpp                   1.0.4    2020-03-17 [1] CRAN (R 3.6.3)
+ RCurl                  1.98-1.1 2020-01-19 [1] CRAN (R 3.6.2)
+ reshape                0.8.8    2018-10-23 [1] CRAN (R 3.6.3)
+ rgeos                  0.5-2    2019-10-03 [1] CRAN (R 3.6.3)
+ rlang                  0.4.5    2020-03-01 [1] CRAN (R 3.6.3)
+ rpart                  4.1-15   2019-04-12 [2] CRAN (R 3.6.3)
+ RPostgreSQL            0.6-2    2017-06-24 [1] CRAN (R 3.6.3)
+ rprojroot              1.3-2    2018-01-03 [1] CRAN (R 3.6.3)
+ RSQLite                2.2.0    2020-01-07 [1] CRAN (R 3.6.3)
+ rstudioapi             0.11     2020-02-07 [1] CRAN (R 3.6.3)
+ rvcheck                0.1.8    2020-03-01 [1] CRAN (R 3.6.3)
+ S4Vectors              0.24.3   2020-01-18 [1] Bioconductor  
+ scales                 1.1.0    2019-11-18 [1] CRAN (R 3.6.3)
+ sessioninfo            1.1.1    2018-11-05 [1] CRAN (R 3.6.3)
+ sf                     0.8-1    2020-01-28 [1] CRAN (R 3.6.3)
+ snakecase              0.11.0   2019-05-25 [1] CRAN (R 3.6.3)
+ sp                     1.4-1    2020-02-28 [1] CRAN (R 3.6.3)
+ stringi                1.4.6    2020-02-17 [1] CRAN (R 3.6.2)
+ stringr                1.4.0    2019-02-10 [1] CRAN (R 3.6.3)
+ SummarizedExperiment   1.16.1   2019-12-20 [1] Bioconductor  
+ survival               3.1-8    2019-12-03 [2] CRAN (R 3.6.3)
+ tibble                 2.1.3    2019-06-06 [1] CRAN (R 3.6.2)
+ tidyr                  1.0.2    2020-01-24 [1] CRAN (R 3.6.3)
+ tidyselect             1.0.0    2020-01-27 [1] CRAN (R 3.6.3)
+ tidytree               0.3.2    2020-03-12 [1] CRAN (R 3.6.3)
+ treeio                 1.10.0   2019-10-29 [1] Bioconductor  
+ units                  0.6-6    2020-03-16 [1] CRAN (R 3.6.3)
+ vctrs                  0.2.4    2020-03-10 [1] CRAN (R 3.6.3)
+ viridisLite            0.3.0    2018-02-01 [1] CRAN (R 3.6.3)
+ withr                  2.1.2    2018-03-15 [1] CRAN (R 3.6.3)
+ xfun                   0.12     2020-01-13 [1] CRAN (R 3.6.3)
+ XML                    3.99-0.3 2020-01-20 [1] CRAN (R 3.6.2)
+ xml2                   1.2.5    2020-03-11 [1] CRAN (R 3.6.3)
+ xtable                 1.8-4    2019-04-21 [1] CRAN (R 3.6.3)
+ XVector                0.26.0   2019-10-29 [1] Bioconductor  
+ zlibbioc               1.32.0   2019-10-29 [1] Bioconductor  
 
-other attached packages:
-[1] ALDEx2_1.18.0
+[1] C:/Users/user/Documents/R/win-library/3.6
+[2] C:/Program Files/R/R-3.6.3/library
 
-loaded via a namespace (and not attached):
-  [1] colorspace_1.4-1            ggtree_2.0.4                ggsignif_0.6.0              class_7.3-15                ggridges_0.5.2             
-  [6] snakecase_0.11.0            htmlTable_1.13.3            XVector_0.26.0              GenomicRanges_1.38.0        base64enc_0.1-3            
- [11] rstudioapi_0.11             ggpubr_0.2.5                bit64_0.9-7                 lubridate_1.7.4             AnnotationDbi_1.48.0       
- [16] codetools_0.2-16            splines_3.6.3               doParallel_1.0.15           geneplotter_1.64.0          knitr_1.28                 
- [21] Formula_1.2-3               jsonlite_1.6.1              annotate_1.64.0             cluster_2.1.0               png_0.1-7                  
- [26] rgeos_0.5-2                 RPostgreSQL_0.6-2           BiocManager_1.30.10         compiler_3.6.3              httr_1.4.1                 
- [31] rvcheck_0.1.8               backports_1.1.5             ggcorrplot_0.1.3            assertthat_0.2.1            Matrix_1.2-18              
- [36] lazyeval_0.2.2              fasterize_1.0.2             acepack_1.4.1               htmltools_0.4.0             tools_3.6.3                
- [41] gtable_0.3.0                glue_1.3.2                  GenomeInfoDbData_1.2.2      dplyr_0.8.5                 Rcpp_1.0.4                 
- [46] Biobase_2.46.0              raster_3.0-12               vctrs_0.2.4                 ape_5.3                     nlme_3.1-144               
- [51] iterators_1.0.12            xfun_0.12                   stringr_1.4.0               lifecycle_0.2.0             XML_3.99-0.3               
- [56] zlibbioc_1.32.0             scales_1.1.0                parallel_3.6.3              SummarizedExperiment_1.16.1 RColorBrewer_1.1-2         
- [61] memoise_1.1.0               gridExtra_2.3               ggplot2_3.3.0               rpart_4.1-15                reshape_0.8.8              
- [66] latticeExtra_0.6-29         stringi_1.4.6               RSQLite_2.2.0               genefilter_1.68.0           S4Vectors_0.24.3           
- [71] foreach_1.4.8               tidytree_0.3.2              e1071_1.7-3                 checkmate_2.0.0             BiocGenerics_0.32.0        
- [76] BiocParallel_1.20.1         GenomeInfoDb_1.22.1         rlang_0.4.5                 pkgconfig_2.0.3             matrixStats_0.56.0         
- [81] bitops_1.0-6                lattice_0.20-38             purrr_0.3.3                 sf_0.8-1                    treeio_1.10.0              
- [86] htmlwidgets_1.5.1           cowplot_1.0.0               bit_1.1-15.2                tidyselect_1.0.0            GGally_1.5.0               
- [91] BIEN_1.2.4                  plyr_1.8.6                  magrittr_1.5                DESeq2_1.26.0               R6_2.4.1                   
- [96] IRanges_2.20.2              Hmisc_4.4-0                 DelayedArray_0.12.2         DBI_1.1.0                   pillar_1.4.3               
-[101] foreign_0.8-75              units_0.6-6                 survival_3.1-8              RCurl_1.98-1.1              sp_1.4-1                   
-[106] nnet_7.3-12                 tibble_2.1.3                janitor_2.0.1               crayon_1.3.4                KernSmooth_2.23-16         
-[111] plotly_4.9.2.1              jpeg_0.1-8.1                locfit_1.5-9.1              grid_3.6.3                  data.table_1.12.8          
-[116] blob_1.2.1                  digest_0.6.25               classInt_0.4-3              xtable_1.8-4                tidyr_1.0.2                
-[121] stats4_3.6.3                munsell_0.5.0               viridisLite_0.3.0          
+```
+
+</details>
+<br>
