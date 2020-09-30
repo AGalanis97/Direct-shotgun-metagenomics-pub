@@ -16,7 +16,6 @@ For archive purposes and distribution.
 
 ### This repository makes use of the here R package. When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.
 
-<details closed>
 <summary> <span title='Click to Expand'> current session info </span> </summary>
 
 ```r
@@ -168,5 +167,5 @@ For archive purposes and distribution.
 
 ```
 
-</details>
+
 <br>
