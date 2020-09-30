@@ -11,10 +11,10 @@ It contains a separate folder for each figure. Within the folders, subfolders co
 #### 3. Output data 
 Contains the raw figures that were used in the publication. They are deposited here for direct comparison to any changes that may occur when adjusting the scripts. 
 
-#### 3. Scripts with functions useful in this study
-For archive purposes and distribution.
+#### 3. Useful scripts
+It contains bash scripts used to generate mocks and evaluate kraken2. Mostly for archive purposes and distribution.
 
-### This repository makes use of the here R package. When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.
+This repository makes use of the here R package. When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.
 
 <summary> <span title='Click to Expand'> current session info </span> </summary>
 
