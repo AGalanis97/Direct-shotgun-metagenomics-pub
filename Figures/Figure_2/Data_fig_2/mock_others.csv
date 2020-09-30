@@ -1,0 +1,12 @@
+Software,Species,Observed_Abundance,Taxonomic_Domain
+Mock,Apis mellifera filamentous virus,1.545,Viruses
+Mock,Apis mellifera,11.682,Eukaryota (others)
+Mock,Frischella perrara,5.575,Bacteria
+Mock,Gilliamella apicola,0.975,Bacteria
+Mock,Homo sapiens,3.401,Eukaryota (others)
+Mock,Lactobacillus kunkeei,16.729,Bacteria
+Mock,Nosema ceranae,2.984,Eukaryota (fungi)
+Mock,Paenibacillus apiarius,11.312,Bacteria
+Mock,Snodgrassella alvi,2.089,Bacteria
+Mock,Staphylococcus epidermidis,5.311,Bacteria
+Mock,Varroa destructor,38.397,Eukaryota (others)

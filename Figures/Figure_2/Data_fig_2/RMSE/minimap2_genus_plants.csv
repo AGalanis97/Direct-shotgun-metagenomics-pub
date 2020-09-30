@@ -1,0 +1,13 @@
+Software,Genus,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+minimap2,Brassica,0,16.372,Viridiplantae
+minimap2,Chlamydomonas,5.18,9.654,Viridiplantae
+minimap2,Citrus,1.649,3.237,Viridiplantae
+minimap2,Malus,20.327,28.35,Viridiplantae
+minimap2,Medicago,9.483,6.85,Viridiplantae
+minimap2,Oxalis,0,0.087,Viridiplantae
+minimap2,Papaver,3.104,5.668,Viridiplantae
+minimap2,Petunia,0,0.014,Viridiplantae
+minimap2,Prunus,10.721,9.125,Viridiplantae
+minimap2,Pyrus,7.442,4.207,Viridiplantae
+minimap2,Theobroma,0,7.851,Viridiplantae
+minimap2,Zea,27.144,8.585,Viridiplantae

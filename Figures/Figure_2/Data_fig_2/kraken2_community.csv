@@ -1,0 +1,24 @@
+Software,Species,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+kraken2,Apis mellifera filamentous virus,0.97,0.675,Viruses
+kraken2,Apis mellifera,1.049,5.105,Eukaryota (others)
+kraken2,Brassica cretica,0,9.218,Viridiplantae
+kraken2,Chlamydomonas reinhardtii,3.109,5.435,Viridiplantae
+kraken2,Citrus sinensis,0.381,1.822,Viridiplantae
+kraken2,Frischella perrara,3.575,2.436,Bacteria
+kraken2,Gilliamella apicola,0.626,0.426,Bacteria
+kraken2,Homo sapiens,1.73,1.486,Eukaryota (others)
+kraken2,Lactobacillus kunkeei,10.746,7.31,Bacteria
+kraken2,Malus domestica,7.751,15.961,Viridiplantae
+kraken2,Medicago truncatula,4.001,3.856,Viridiplantae
+kraken2,Nosema ceranae,0.955,1.304,Eukaryota (fungi)
+kraken2,Oxalis drummondii,0.018,0.049,Viridiplantae
+kraken2,Paenibacillus apiarius,0.001,4.943,Bacteria
+kraken2,Papaver somniferum,2.709,3.191,Viridiplantae
+kraken2,Petunia x hybrida,0.004,0.008,Viridiplantae
+kraken2,Prunus persica,1.031,5.138,Viridiplantae
+kraken2,Pyrus x bretschneideri ,1.113,2.369,Viridiplantae
+kraken2,Snodgrassella alvi,1.321,0.913,Bacteria
+kraken2,Staphylococcus epidermidis ,3.21,2.321,Bacteria
+kraken2,Theobroma cacao,6.035,4.42,Viridiplantae
+kraken2,Varroa destructor,1.541,16.779,Eukaryota (others)
+kraken2,Zea mays,5.374,4.834,Viridiplantae

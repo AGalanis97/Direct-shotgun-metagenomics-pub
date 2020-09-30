@@ -1,0 +1,12 @@
+Software,Species,Observed_Abundance,Expected_Abundance,Taxonomic_Domain
+CCMetagen,Apis mellifera filamentous virus,5,1.545,Viruses
+CCMetagen,Apis mellifera,0.3,11.682,Eukaryota (others)
+CCMetagen,Frischella perrara,17,5.575,Bacteria
+CCMetagen,Gilliamella apicola,0.2,0.975,Bacteria
+CCMetagen,Homo sapiens,0.05,3.401,Eukaryota (others)
+CCMetagen,Lactobacillus kunkeei,52,16.729,Bacteria
+CCMetagen,Nosema ceranae,2,2.984,Eukaryota (fungi)
+CCMetagen,Paenibacillus apiarius,0.02,11.312,Bacteria
+CCMetagen,Snodgrassella alvi,7,2.089,Bacteria
+CCMetagen,Staphylococcus epidermidis,16,5.311,Bacteria
+CCMetagen,Varroa destructor,0.4,38.397,Eukaryota (others)
