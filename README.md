@@ -13,7 +13,7 @@ It contains a separate folder for each figure. Within the folders, subfolders co
 Contains the raw figures that were used in the publication. They are deposited here for direct comparison to any changes that may occur when adjusting the scripts. 
 
 #### 3. Useful scripts
-It contains bash scripts used to generate mocks and evaluate kraken2. In addition, it contains a directory, honeyDSM which is a collection of scripts and functions useful to this study (so that it can be installed and used/improved in the future). Mostly for archive purposes and distribution.
+It contains bash scripts used to generate mocks and evaluate kraken2, mostly for archive purposes and distribution. All custom functions have been combined into the honeyDSM-seq-analysis R package that can be found here:
 
 
 <summary> <span title='Click to Expand'> current session info </span> </summary>
