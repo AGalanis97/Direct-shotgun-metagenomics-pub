@@ -1,0 +1,29 @@
+# Direct shotgun metagenomics captures species abundance of honey samples
+# R script author: Anastasios Galanis, 2020
+# This script will INSTALL packages that have not been previously installed. 
+# If you do not wish to install new packages, please avoid running this script.
+
+# This script will reproduce Figures 3A
+# This script is written in R version 3.6.3
+
+# Load or install (if not present) the required packages
+if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
+if (!require('purrr')) install.packages('purrr'); library('purrr')
+if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
+if (!require('here')) install.packages('here'): library('here')
+# Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
+# prepareDatabase('accessionTaxa.sql')
+# This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
+# from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
+if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
+if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
+if (!require('taxize')) install.packages('taxize'): library('taxize')
+
+setwd(here())
+
+# Import the normalised reads table
+Hives_normalised_counts <- read.csv("./Figures/Figure_3/normalised_counts_species.csv")
+Normalised_counts_with_Hive7 <- as.data.frame(Hives_normalised_counts_species) %>% round(.,digits = 0)
+Relative_abundance_with_Hive7 <- Normalised_counts_with_Hive7 %>% mutate_all(.,funs((./sum(.))*100))
+
+rownames(Relative_abundance_with_Hive7) <- rownames(Normalised_counts_with_Hive7)

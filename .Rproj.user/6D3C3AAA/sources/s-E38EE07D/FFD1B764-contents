@@ -164,7 +164,9 @@ Hives_normalised_counts_species <- counts(Hives_dds_RLE_species, normalized = TR
 Hives_counts_vst_species <- varianceStabilizingTransformation(Hives_dds_RLE_species, blind = FALSE)
 
 # Export the counts because it will be needed for the next figure
-write.csv(Hives_normalised_counts_species, file = "./Figures/Figure_3/normalised_counts_species.csv")
+Hives_normalised_counts_species_export <- as.data.frame(Hives_normalised_counts_species)
+Hives_normalised_counts_species_export <- Hives_normalised_counts_species_export %>% rownames_to_column(., var = "Taxonomic_ID")
+write.csv(Hives_normalised_counts_species_export, file = "./Figures/Figure_3/normalised_counts_species.csv")
 
 Hives_annotation <- as.data.frame(colData(Hives_dds_species))
 
