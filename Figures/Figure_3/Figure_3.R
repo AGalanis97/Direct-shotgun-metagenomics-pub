@@ -310,9 +310,9 @@ differentially_abundant_families <- plotDiffAbund(
   level = "family")
 
 
-ggsave(plot= differentially_abundant_species,filename = "significantly_abundant_species.pdf",device="pdf", height = 9, width = 14)
-ggsave(plot= differentially_abundant_genera,filename = "significantly_abundant_genera.pdf",device="pdf", height = 9, width = 14)
-ggsave(plot= differentially_abundant_families,filename = "significantly_abundant_families.pdf",device="pdf", height = 9, width = 14)
+ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species.pdf",device="pdf", height = 9, width = 14)
+ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera.pdf",device="pdf", height = 9, width = 14)
+ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families.pdf",device="pdf", height = 9, width = 14)
 
 
 
