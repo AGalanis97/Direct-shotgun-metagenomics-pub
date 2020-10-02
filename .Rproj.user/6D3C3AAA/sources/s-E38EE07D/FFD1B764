@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1601574767188.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "661229638",
+    "hash" : "0",
     "id" : "FFD1B764",
-    "lastKnownWriteTime" : 1601620559,
-    "last_content_update" : 1601620559948,
+    "lastKnownWriteTime" : 1601643584,
+    "last_content_update" : 1601643617459,
     "path" : "~/GitHub/honeyDSM-seq/Figures/Figure_3/Figure_3.R",
     "project_path" : "Figures/Figure_3/Figure_3.R",
     "properties" : {
-        "cursorPosition" : "260,99",
-        "scrollLine" : "236"
+        "cursorPosition" : "315,0",
+        "scrollLine" : "281"
     },
     "read_only" : false,
     "read_only_alternatives" : [

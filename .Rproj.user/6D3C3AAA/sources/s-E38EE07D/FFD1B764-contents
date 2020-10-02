@@ -11,11 +11,10 @@ if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
 if (!require('purrr')) install.packages('purrr'); library('purrr')
 if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
 if (!require('here')) install.packages('here'): library('here')
-
-# Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 900 MB).
-# This process will take 
-prepareDatabase('accessionTaxa.sql')
-
+# Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
+# prepareDatabase('accessionTaxa.sql')
+# This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
+# from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
 if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
 if (!require('taxize')) install.packages('taxize'): library('taxize')
@@ -54,7 +53,7 @@ kraken2_files = lapply(kraken2_files, function(df) {
   return(df)
 })
 
-# We will add the classification information
+# We will add the classification information. Plase note that this will take a little while to generate so be patient!
 classification_ranks <- function(df) {
   taxids <- df[,4]
   Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'accessionTaxa.sql'))
@@ -113,9 +112,8 @@ Hives_counts_vst_family <- varianceStabilizingTransformation(Hives_dds_RLE_famil
 Hives_annotation <- as.data.frame(colData(Hives_dds_family))
 
 get_super_kingdom_or_plant <- function(x) {
-  setwd("C:/Users/user/Desktop/taxdmp")
-  ifelse(getTaxonomy(x, desiredTaxa = "superkingdom") != "Eukaryota", getTaxonomy(x, desiredTaxa = "superkingdom"), ifelse(getTaxonomy(x, desiredTaxa = "kingdom") == "Viridiplantae", getTaxonomy(x, desiredTaxa = "kingdom"), getTaxonomy(x, desiredTaxa = "superkingdom")))
-}
+  ifelse(getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql') != "Eukaryota", getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql'), ifelse(getTaxonomy(x, desiredTaxa = "kingdom", 'accessionTaxa.sql') == "Viridiplantae", getTaxonomy(x, desiredTaxa = "kingdom", 'accessionTaxa.sql'), getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql')))
+  }
 
 TaxonomicIDs_family <- as.numeric(rownames((Hives_counts_vst_family)))
 Taxid_taxonomy_family <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_family)) 
@@ -131,7 +129,7 @@ ann_colors = list(
 
 ordered_counts_family <- order(rowMeans(counts(Hives_dds_RLE_family,normalized=TRUE)), decreasing=TRUE)
 
-final_heatmap_family <- pheatmap(assay(Hives_counts_vst_family)[ordered_counts_family,],cluster_rows = FALSE, show_rownames = FALSE, clustering_distance_cols = "correlation", cluster_cols = TRUE, annotation_col = select(Hives_annotation,Season,Varroa,Population), annotation_row = annotationrows_family, annotation_colors = ann_colors[1:2], main = "Heatmap families", height = 20)
+final_heatmap_family <- pheatmap(assay(Hives_counts_vst_family)[ordered_counts_family,],cluster_rows = FALSE, show_rownames = FALSE, clustering_distance_cols = "correlation", cluster_cols = TRUE, annotation_col = select(Hives_annotation,Season,Varroa,Population), annotation_row = annotationrows_family, annotation_colors = ann_colors[1:2], main = "Heatmap families", height = 20, scale = 'none')
 ggsave(filename="heatmap_family.png", plot=final_heatmap_family, path = "./Figures/Figure_3")
 
 # The same functions as above are applied to Genus and Species levels
@@ -160,6 +158,7 @@ final_heatmap_genus <- pheatmap(assay(Hives_counts_vst_genus)[ordered_counts_gen
 ggsave(filename="heatmap_genus.png", plot=final_heatmap_genus, path ="./Figures/Figure_3")
 
 # Species
+Hives_dds_species <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
 Hives_dds_RLE_species <- estimateSizeFactors(Hives_dds_species,type = "ratio")
 Hives_normalised_counts_species <- counts(Hives_dds_RLE_species, normalized = TRUE)
 Hives_counts_vst_species <- varianceStabilizingTransformation(Hives_dds_RLE_species, blind = FALSE)
@@ -170,21 +169,40 @@ Hives_annotation <- as.data.frame(colData(Hives_dds_species))
 TaxonomicIDs_species <- as.numeric(rownames((Hives_counts_vst_species)))
 Taxid_taxonomy_species <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_species)) 
 Taxonomic_IDs_dataframe_species <- as.data.frame(TaxonomicIDs_species)
-annotationrows_species <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species,generate_species)
-colnames(annotationrows_species) <- c("Domain", "Taxonomic_ID","Species")
 
-setwd("C:/Users/user/Desktop/taxdmp")
-generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = "species")
+generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = "species", 'accessionTaxa.sql')
 generate_species = as.data.frame(generate_species)
 generate_species$species = as.character(generate_species$species)
-generate_species[902,1] <- print("unknown1")
-generate_species[1455,1] <- print("special1")
-generate_species[1790,1] <- print("trial3")
-generate_species[1792,1] <- print("ever2")
-generate_species[1791,1] <- print("mask1")
-generate_species[521,1] <- print("another1")
+generate_species_omit_na <- na.omit(generate_species)
+generate_species_omit_na <- rownames_to_column(generate_species_omit_na, var = "Taxonomic_ID")
 
-annotationrows_species = annotationrows_species[,-2]
+# 4 species were not identified and therefore we have to replace manually by looking up to the NCBI taxonomy database.
+# I create a vector so that it is clear which Taxnomic IDs I am going to replace.
+unidentified_species <- subset(generate_species,is.na(generate_species$species))
+unidentified_species_vector <- rownames(unidentified_species)
+unidentified_species_names_ncbi <- c("Streptomyces sp. WAC08241","Actinomadura sp. WMMB 499","Exaiptasia diaphana","Pseudomonas mediterranea","Xanthomonas hortorum pv. gardneri")
+unidentified_species$species <- unidentified_species_names_ncbi
+unidentified_species <- rownames_to_column(unidentified_species, var = "Taxonomic_ID")
+
+# And now we will add them back to the original dataframe
+generate_species_v2 <- rbind(generate_species_omit_na,unidentified_species)
+
+
+annotationrows_species <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species,generate_species_v2)
+annotationrows_species <- annotationrows_species[,-c(2,3)]
+colnames(annotationrows_species) <- c("Domain","Species")
+
+
+# Fix NA values. For some taxonomizr isn't able to return the superkingdom so we simply remove them from inclusion in the heatmap (approx 10 species)
+na_values <- subset(annotationrows_species, is.na(annotationrows_species$Domain))
+na_values_tax <- getTaxonomy(na_values$Taxonomic_ID, desiredTaxa = "superkingdom",'accessionTaxa.sql')
+na_values_tax_removed_na <- na.omit(na_values_tax)
+na_values_tax <- as.data.frame(na_values_tax) %>% rownames_to_column(var = "Taxonomic_ID")
+na_values_tax_removed_na$Taxonomic_ID <- as.numeric(na_values_tax_removed_na$Taxonomic_ID)
+colnames(na_values_tax) <- c("Taxonomic_ID","Domain")
+
+joined <- full_join(annotationrows_species,na_values_tax_removed_na) %>% na.omit(.)
+
 annotationrows_species <- tibble::column_to_rownames(annotationrows_species, var = "Species")
 
 
@@ -192,33 +210,34 @@ ann_colors = list(
   Domain = c(Bacteria = "#0D0887FF", Viruses = "#F0F921FF", Eukaryota = "#CC4678FF", Viridiplantae = "#73D055FF", Archaea = "#ad05f5"),
   Season = c(May = "#5cb300", July = "#ecf547", November = "#8f7c56"))
 
-rownames(Hives_counts_vst_species) <- generate_species$species
-rownames(annotationrows_species) <- generate_species$species
+rownames(Hives_counts_vst_species) <- generate_species_v2$species
+rownames(annotationrows_species) <- generate_species_v2$species
 
 ordered_counts_species <- order(rowMeans(counts(Hives_dds_RLE_species,normalized=TRUE)), decreasing=TRUE)[1:30]
-final_heatmap_species <- pheatmap(assay(Hives_counts_vst_species)[ordered_counts_species,],clustering_distance_cols = "correlation", cluster_rows = FALSE, show_rownames = TRUE, cluster_cols = TRUE, annotation_col = select(Hives_annotation,Season), labels_col = c("DirectSM H4","DirectSM H5","DirectSM H6" ,"DirectSM H7","SM H4", "SM H5","SM H6","SM H7"), annotation_row = annotationrows_species, annotation_colors = ann_colors[1:2], main = "Heatmap top 30 species", height = 100, fontsize = 20)
+final_heatmap_species <- pheatmap(assay(Hives_counts_vst_species)[ordered_counts_species,],clustering_distance_cols = "correlation", cluster_rows = FALSE, show_rownames = TRUE, cluster_cols = TRUE, annotation_col = select(Hives_annotation,Season), labels_col = c("DirectSM H4","DirectSM H5","DirectSM H6" ,"DirectSM H7","SM H4", "SM H5","SM H6","SM H7"), annotation_row = annotationrows_species, annotation_colors = ann_colors[1:2], height = 100, fontsize = 20)
 
 ggsave(filename="top30_heatmap_species.pdf",device="pdf", plot=final_heatmap_species, height = 13, width = 15, path = "./Figures/Figure_3")
 
-# Significantly abundant species
-dds_object <- DESeq(Hives_dds_RLE_species2)
-res <- results(dds_object)
-resultsNames(dds_object)
-
-resLFC <- lfcShrink(dds_object, coef="Season_November_vs_July", type="apeglm")
 
 
+# Significantly abundant species per season
+Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_species_v2 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
+
+Hives_dds_genus_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_genus_v2 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
+
+Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_family_v2 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
+
+# For MA plot
+resLFC <- lfcShrink(dds_object, coef="Method_SM_vs_Direct_SM", type="apeglm")
+
+# If you want to visualise the MA plot
 plotMA(resLFC)
-
-sum(res$padj < 0.05, na.rm=TRUE)
-
-resOrdered <- res[order(res$pvalue),]
-
-resSig <- subset(resOrdered, padj < 0.05)
 
 # Classification function for the DESeq2 object
 classification_deseq <- function(df) {
-  setwd("C:/Users/user/Desktop/taxdmp")
   taxids <- df$Taxonomic_ID
   Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum",'accessionTaxa.sql'))
   Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom",'accessionTaxa.sql'))
@@ -231,23 +250,21 @@ classification_deseq <- function(df) {
   cbind(df, Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus, Species)
 }
 
-# NOT NEEDED
-taxids112 <- data.frame(Number=is.numeric)
-taxids12 <- rownames(resSig) %>% as.data.frame() %>% dplyr::rename(Taxonomic_ID = ".")
-taxids_with_tax <- classification_deseq(taxids12)
-taxizetry <- ncbi_get_taxon_summary(id = taxids12$Taxonomic_ID)
-
 
 # Plot differentially abundant species
-filtering_sign <- rownames(resSig)
-annotation_sign <- annotationrows_species %>% tibble::rownames_to_column(var = "Taxonomic_ID")
-annotation_sign2 <- annotation_sign %>% filter(., Taxonomic_ID %in% filtering_sign) %>% column_to_rownames(var = "Taxonomic_ID")
+# get the log transforms again
 
-plotUpDownSigGenes <- function(results, colNums, rld, title) {
+# Function to draw the significantly differentially abundant species/genera/families/whatever you throw at it
+plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species","genus","family","order","phylum")) {
+  
+  dds_object <- DESeq(DESeq_RLE_object)
+  rld <- rlog(dds_object, blind=F)
+  results <- subset(results(dds_object, contrast=c("Season","May","July")), padj < 0.05)
+  
   
   # make the lists
-  upgenes <- rownames(head(resSig[ order( resSig$log2FoldChange ), ], n=40))
-  downgenes <- rownames(head(resSig[ order( -resSig$log2FoldChange ), ], n=40))
+  upgenes <- rownames(head(results[ order( results$log2FoldChange ), ], n=40))
+  downgenes <- rownames(head(results[ order( -results$log2FoldChange ), ], n=40))
   
   # this gives us the rows we want
   rows <- match(upgenes, row.names(rld))
@@ -258,38 +275,45 @@ plotUpDownSigGenes <- function(results, colNums, rld, title) {
   Taxid_taxonomy_species <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_species)) 
   Taxonomic_IDs_dataframe_species <- as.data.frame(TaxonomicIDs_species)
   
-  generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = "species", 'accessionTaxa.sql')
+  generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = level, 'accessionTaxa.sql')
   generate_species = as.data.frame(generate_species)
-  generate_species$species = as.character(generate_species$species)
+  generate_species[,1] = as.character(generate_species[,1])
   annotationrows_species1 <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species,generate_species)
-  colnames(annotationrows_species) <- c("Domain", "Taxonomic_ID","Species")
+  colnames(annotationrows_species1) <- c("Domain", "Taxonomic_ID", level)
   
   annotationrows_species1 = annotationrows_species1[,-2]
-  annotationrows_species1 <- tibble::column_to_rownames(annotationrows_species1, var = "Species")
-  rownames(mat) <- generate_species$species
+  annotationrows_species1 <- tibble::column_to_rownames(annotationrows_species1, var = level)
+  rownames(mat) <- generate_species[,1]
   
   
   
   # the labels are hard coded at the moment :(
   df <- as.data.frame(colData(rld)[c("Season")])
-  pheatmap(mat, fontsize=15, annotation_colors = ann_colors, annotation_row = annotationrows_species1, cluster_rows = FALSE, show_rownames = TRUE, main = "Significantly differentially abundant species", height = 100, angle_col = "270", cluster_cols = TRUE, show_colnames = TRUE, border_color = NA, annotation_col = df, labels_col = c("DirectSM H4","DirectSM H5","DirectSM H6" ,"DirectSM H7","SM H4", "SM H5","SM H6","SM H7"))
+  pheatmap(mat, fontsize=15, annotation_colors = ann_colors, annotation_row = annotationrows_species1, cluster_rows = FALSE, show_rownames = TRUE, height = 100, angle_col = "270", cluster_cols = TRUE, show_colnames = TRUE, border_color = NA, annotation_col = df, labels_col = c("DirectSM H4","DirectSM H5","DirectSM H6" ,"DirectSM H7","SM H4", "SM H5","SM H6","SM H7"), scale = 'row')
 }
 
-plotUpDownSigGenes(
-  resSig,
-  colNums = c(1:8),
-  rld)
-
-contrastDEGenes <- subset(results(dds_try, contrast=c("Season","May","July")), padj < 0.05)
-aCols <- c(2,3,4)
-
-
-# get the log transforms again
-rld <- rlog(dds_try, blind=F)
 
 # call
-sig_plot <- plotUpDownSigGenes(
-  resSig,
+differentially_abundant_species <- plotDiffAbund(
+  DESeq_RLE_object =Hives_dds_species_v2,
   colNums = c(1:8),
-  rld)
-ggsave(plot= sig_plot,filename = "significantly_abundant_species4.pdf",device="pdf", height = 9, width = 14)
+  level = "species")
+
+differentially_abundant_genera <- plotDiffAbund(
+  DESeq_RLE_object =Hives_dds_genus_v2,
+  colNums = c(1:8),
+  level = "genus")
+
+differentially_abundant_families <- plotDiffAbund(
+  DESeq_RLE_object =Hives_dds_family_v2,
+  colNums = c(1:8),
+  level = "family")
+
+
+ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species.pdf",device="pdf", height = 9, width = 14)
+ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera.pdf",device="pdf", height = 9, width = 14)
+ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families.pdf",device="pdf", height = 9, width = 14)
+
+
+
+
