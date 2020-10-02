@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3407478584",
+    "hash" : "534852620",
     "id" : "FFD1B764",
-    "lastKnownWriteTime" : 1601644231,
-    "last_content_update" : 1601644231820,
+    "lastKnownWriteTime" : 1601644848,
+    "last_content_update" : 1601644848579,
     "path" : "~/GitHub/honeyDSM-seq/Figures/Figure_3/Figure_3.R",
     "project_path" : "Figures/Figure_3/Figure_3.R",
     "properties" : {
-        "cursorPosition" : "315,0",
-        "scrollLine" : "281"
+        "cursorPosition" : "167,0",
+        "scrollLine" : "144"
     },
     "read_only" : false,
     "read_only_alternatives" : [

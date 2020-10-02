@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1601644731501.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "833CC982",
+    "lastKnownWriteTime" : 7286891406687757684,
+    "last_content_update" : 1601644731501,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "16FF19F2",
+        "caption" : "Hives_normalised_counts_species",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Hives_normalised_counts_species&cache_key=16FF19F2",
+        "displayedObservations" : 1845,
+        "environment" : "",
+        "expression" : "Hives_normalised_counts_species",
+        "object" : "Hives_normalised_counts_species",
+        "preview" : 0,
+        "totalObservations" : 1845,
+        "variables" : 8
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
