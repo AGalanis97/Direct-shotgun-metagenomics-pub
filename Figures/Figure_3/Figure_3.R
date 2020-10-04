@@ -13,11 +13,11 @@ if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr'
 if (!require('here')) install.packages('here'): library('here')
 # Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
 # prepareDatabase('accessionTaxa.sql')
-# This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
+# This process will take over 3 hours on a regular laptop/PC.  
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
 if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
-if (!require('taxize')) install.packages('taxize'): library('taxize')
+if (!require('EnhancedVolcano')) BiocManager::install('EnhancedVolcano'): library('EnhancedVolcano')
 
 
 data_path <- "./Figures/Figure_3/Data_fig_3"
@@ -46,12 +46,6 @@ kraken2_files = lapply(kraken2_files,setNames,kraken2_output_names)
 
 kraken2_files = lapply(kraken2_files,arrange, Taxonomic_ID)
 
-# Optionally add the relative abundance as well
-kraken2_files = lapply(kraken2_files, function(df) {
-  df$Relative_abundance = df$Sample_reads / df[1,1] * 100;
-  df$Relative_abundance_rooted = df$Sample_rooted_reads / df[1,1] * 100;
-  return(df)
-})
 
 # We will add the classification information. Plase note that this will take a little while to generate so be patient!
 classification_ranks <- function(df) {
@@ -68,6 +62,38 @@ kraken2_files = lapply(kraken2_files, classification_ranks)
 kraken2_files_family <- kraken2_files %>% lapply(filter, Rank_code == "F") %>% lapply(filter, Name != "Drosophilidae") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
 kraken2_files_genus <- kraken2_files %>% lapply(filter, Rank_code == "G") %>% lapply(filter, Name != "Drosophila") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
 kraken2_files_species <- kraken2_files %>% lapply(filter, Rank_code == "S") %>% lapply(filter, Name != "Drosophila melanogaster") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
+
+# This will generate a table with total reads per sample and level
+
+get_totals_per_sample <- function(df) {
+  classified <- df[2,1]
+}
+
+totals_classified <- lapply(kraken2_files,get_totals_per_sample) %>% do.call(rbind,.) %>% as.data.frame(.)
+
+count_after_filter <- Hives_comparison_species[,-1]
+totals_filter <- apply(count_after_filter,2,sum) %>% as.data.frame()
+
+# merge the dataframes and calculate percent
+class_filter <- cbind(totals_classified,totals_filter) 
+colnames(class_filter) <- c("Total","Filtered")
+class_filter$Percent <- round((class_filter$Filtered/class_filter$Total)*100, digits = 2) 
+
+
+# This function will grab the number of reads assigned directly to the different levels
+get_reads_per_level <- function(df) {
+  df_1 <-  sum(df$Reads_assigned_directly_to_taxon);
+  return(df_1)
+}
+
+
+family_per_sample <- lapply(kraken2_files_family,get_reads_per_level) %>% do.call(cbind,.) %>% as.data.frame()
+genus_per_sample <-lapply(kraken2_files_genus,get_reads_per_level) %>% do.call(cbind,.) %>% as.data.frame()
+species_per_sample <- lapply(kraken2_files_species,get_reads_per_level) %>% do.call(cbind,.) %>% as.data.frame()
+
+all_reads_per_sample <- rbind(family_per_sample,genus_per_sample,species_per_sample)
+all_reads_per_sample$Level <- c("Family","Genus","Species")
+
 
 # This will only keep the taxonomic ID and number of reads from the table. For Genus and Family the rooted reads are used.
 kraken2_files_filter_genus <- lapply(kraken2_files_genus, "[", c(1,4))
@@ -107,6 +133,13 @@ Hives_dds_family <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, 
 Hives_dds_RLE_family <- estimateSizeFactors(Hives_dds_family,type = "ratio")
 Hives_normalised_counts_family <- counts(Hives_dds_RLE_family, normalized = TRUE)
 Hives_counts_vst_family <- varianceStabilizingTransformation(Hives_dds_RLE_family, blind = FALSE)
+
+
+# Export
+Hives_normalised_counts_family_export <- as.data.frame(Hives_normalised_counts_family)
+Hives_normalised_counts_family_export <- Hives_normalised_counts_family_export %>% rownames_to_column(., var = "Taxonomic_ID")
+write.csv(Hives_normalised_counts_family_export, file = "./Figures/Figure_3/normalised_counts_family.csv")
+
 
 # Create the heatmap
 Hives_annotation <- as.data.frame(colData(Hives_dds_family))
@@ -225,20 +258,51 @@ ggsave(filename="top30_heatmap_species.pdf",device="pdf", plot=final_heatmap_spe
 
 
 # Significantly abundant species per season
-Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_species_v2 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
 
-Hives_dds_genus_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_genus_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_genus_v2 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
 
-Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_family_v2 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
 
-# For MA plot
-resLFC <- lfcShrink(dds_object, coef="Method_SM_vs_Direct_SM", type="apeglm")
+Hives_normalised_counts_family_v2 <- counts(Hives_dds_RLE_family_v2, normalized = TRUE)
 
-# If you want to visualise the MA plot
-plotMA(resLFC)
+# Export the counts because it will be needed for the next figure
+Hives_normalised_counts_family_v2_exprort <- as.data.frame(Hives_normalised_counts_family_v2)
+Hives_normalised_counts_family_v2_exprort <- Hives_normalised_counts_family_v2_exprort %>% rownames_to_column(., var = "Taxonomic_ID")
+write.csv(Hives_normalised_counts_family_v2_exprort, file = "./Figures/Figure_3/normalised_counts_families_v2.csv")
+
+
+# Make an annotation table so we can adjust the circle size
+annotation_volcano_family <- Taxid_taxonomy_family %>% rownames_to_column(var = "Taxonomic_ID")
+annotation_volcano_family$Taxonomic_ID <- as.numeric(annotation_volcano_family$Taxonomic_ID)
+
+
+# draw volcano plots
+get_volcano_plot <- function(dds_rle_object, contrast, annotation) {
+  object <- DESeq(dds_rle_object)
+  res_dds <- results(object, contrast)
+  res <- lfcShrink(object,contrast = contrast, res=res_dds,type = 'normal')
+  annotations <- annotation %>% rownames_to_column(var = "Taxonomic_ID")
+  annotations$Taxonomic_ID <- as.numeric(annotations$Taxonomic_ID)
+  EnhancedVolcano(res, lab = NA, x = 'log2FoldChange',y= 'pvalue', FCcutoff = 1,
+                  colAlpha = 2, pointSize = c(ifelse(annotations$superkingdom[match(rownames(res),annotations$Taxonomic_ID)] == "Viridiplantae", 3,1))
+                  ,labSize = 2, xlim = c(-2,2))
+}
+
+
+family_volcano_plot <- get_volcano_plot(Hives_dds_RLE_family_v2, contrast = c('Method','Direct_SM','SM'), annotation = Taxid_taxonomy_family)
+genus_volcano_plot <- get_volcano_plot(Hives_dds_RLE_genus_v2, contrast = c('Method','Direct_SM','SM'), annotation = Taxid_taxonomy_genus)
+species_volcano_plot <- get_volcano_plot(Hives_dds_RLE_species_v2, contrast = c('Method','Direct_SM','SM'), annotation = Taxid_taxonomy_species)
+
+
+# Save the MA plots
+ggsave(plot = family_volcano_plot, filename = "./Figures/Figure_3/volcano_plot_family.pdf")
+ggsave(plot = genus_volcano_plot, filename = "./Figures/Figure_3/volcano_plot_genus.pdf")
+ggsave(plot = species_volcano_plot, filename = "./Figures/Figure_3/volcano_plot_species.pdf")
+
 
 # Classification function for the DESeq2 object
 classification_deseq <- function(df) {
@@ -263,7 +327,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
   
   dds_object <- DESeq(DESeq_RLE_object)
   rld <- rlog(dds_object, blind=F)
-  results <- subset(results(dds_object, contrast=c("Season","May","July")), padj < 0.05)
+  results <- subset(results(dds_object, contrast=c("Season","May","November")), padj < 0.05)
   
   
   # make the lists
@@ -297,27 +361,33 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
 }
 
 
-# call
+# Normalise using method and season to get the species that are variable by season
+Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v3,type = "ratio")
+Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v3,type = "ratio")
+Hives_dds_family_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v3,type = "ratio")
+
+
 differentially_abundant_species <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_species_v2,
+  DESeq_RLE_object =Hives_dds_species_v3,
   colNums = c(1:8),
   level = "species")
 
 differentially_abundant_genera <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_genus_v2,
+  DESeq_RLE_object =Hives_dds_genus_v3,
   colNums = c(1:8),
   level = "genus")
 
 differentially_abundant_families <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_family_v2,
+  DESeq_RLE_object =Hives_dds_family_v3,
   colNums = c(1:8),
   level = "family")
 
 
-ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species.pdf",device="pdf", height = 9, width = 14)
-ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera.pdf",device="pdf", height = 9, width = 14)
-ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families.pdf",device="pdf", height = 9, width = 14)
-
-
+ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species.pdf",device="pdf", height = 10, width = 14)
+ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera.pdf",device="pdf", height = 10, width = 14)
+ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families.pdf",device="pdf", height = 10, width = 14)
 
 
