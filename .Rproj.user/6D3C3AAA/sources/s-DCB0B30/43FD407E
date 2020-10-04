@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1601815217615.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "536243320",
+    "id" : "43FD407E",
+    "lastKnownWriteTime" : 1593693282,
+    "last_content_update" : 1593693282,
+    "path" : "C:/Users/user/Google Drive/ΗΟΝΕΥ ΜΕΤΑGENOMICS PUBLI/PCA/PCA_COMPOSITIONAL.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "chunk_output_type" : "inline"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
