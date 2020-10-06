@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1601991423800.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "27E7DA13",
+    "lastKnownWriteTime" : 1536737533808,
+    "last_content_update" : 1601991423800,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "34877b5e170342e4a73d1adf1ca35361",
+        "name" : "dds_object",
+        "title" : "dds_object"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

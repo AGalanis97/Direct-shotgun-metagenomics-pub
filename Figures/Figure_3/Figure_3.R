@@ -257,28 +257,34 @@ ggsave(filename="top30_heatmap_species.pdf",device="pdf", plot=final_heatmap_spe
 
 
 # Create MA plots for method
-Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
+Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
 Hives_dds_RLE_species_v2 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
 
-Hives_dds_genus_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
+Hives_dds_genus_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
 Hives_dds_RLE_genus_v2 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
 
-Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
+Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
 Hives_dds_RLE_family_v2 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
 
 Hives_normalised_counts_species_v2 <- counts(Hives_dds_RLE_species_v2, normalized = TRUE)
 Hives_normalised_counts_family_v2 <- counts(Hives_dds_RLE_family_v2, normalized = TRUE)
+Hives_normalised_counts_genus_v2 <- counts(Hives_dds_RLE_genus_v2, normalized = TRUE)
 
 # Export the counts because it will be needed for the next figure
 Hives_normalised_counts_family_v2_exprort <- as.data.frame(Hives_normalised_counts_family_v2)
 Hives_normalised_counts_family_v2_exprort <- Hives_normalised_counts_family_v2_exprort %>% rownames_to_column(., var = "Taxonomic_ID")
-write.csv(Hives_normalised_counts_family_v2_exprort, file = "./Figures/Figure_3/normalised_counts_families_v2.csv")
+write.csv(Hives_normalised_counts_family_v2_exprort, file = "./Figures/Figure_3/normalised_counts_methodhive_family.csv")
 
 # Also export normalised based on method and season to check seasonal fluctuations 
 Hives_normalised_counts_species_v2_export <- as.data.frame(Hives_normalised_counts_species_v2)
 Hives_normalised_counts_species_v2_export <- Hives_normalised_counts_species_v2_export %>% rownames_to_column(., var = "Taxonomic_ID")
-write.csv(Hives_normalised_counts_species_v2_export, file = "./Figures/Figure_6/Data_fig_6/normalised_counts_methodseason_species.csv")
+write.csv(Hives_normalised_counts_species_v2_export, file = "./Figures/Figure_6/Data_fig_6/normalised_counts_methodhive_species.csv")
 
+# Export genus
+# Export the counts because it will be needed for the next figure
+Hives_normalised_counts_genus_v2_exprort <- as.data.frame(Hives_normalised_counts_genus_v2)
+Hives_normalised_counts_genus_v2_exprort <- Hives_normalised_counts_genus_v2_exprort %>% rownames_to_column(., var = "Taxonomic_ID")
+write.csv(Hives_normalised_counts_genus_v2_exprort, file = "./Figures/Figure_3/normalised_counts_methodhive_genus.csv")
 
 # Make an annotation table so we can adjust the circle size
 annotation_volcano_family <- Taxid_taxonomy_family %>% rownames_to_column(var = "Taxonomic_ID")
@@ -325,7 +331,7 @@ classification_deseq <- function(df) {
 
 
 # Plot differentially abundant species per season
-Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Season, tidy = TRUE)
 Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
 
 Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
@@ -338,9 +344,9 @@ Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio
 # Function to draw the significantly differentially abundant species/genera/families/whatever you throw at it
 plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species","genus","family","order","phylum")) {
   
-  dds_object <- DESeq(DESeq_RLE_object)
+  dds_object <- DESeq(Hives_dds_genus_v3, test = "LRT", reduced = ~1)
   rld <- rlog(dds_object, blind=F)
-  results <- subset(results(dds_object, contrast=c("Season","May","November")), padj < 0.05)
+  results <- subset(results(dds_object), padj < 0.05)
   
   
   # make the lists
@@ -377,7 +383,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
 # Normalise using method and season to get the species that are variable by season
 Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v3,type = "ratio")
-Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Season, tidy = TRUE)
 Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v3,type = "ratio")
 Hives_dds_family_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v3,type = "ratio")

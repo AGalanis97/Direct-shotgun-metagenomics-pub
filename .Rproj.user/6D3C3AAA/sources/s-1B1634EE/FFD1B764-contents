@@ -331,7 +331,7 @@ classification_deseq <- function(df) {
 
 
 # Plot differentially abundant species per season
-Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Season, tidy = TRUE)
 Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
 
 Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
@@ -344,9 +344,9 @@ Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio
 # Function to draw the significantly differentially abundant species/genera/families/whatever you throw at it
 plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species","genus","family","order","phylum")) {
   
-  dds_object <- DESeq(DESeq_RLE_object)
+  dds_object <- DESeq(Hives_dds_genus_v3, test = "LRT", reduced = ~1)
   rld <- rlog(dds_object, blind=F)
-  results <- subset(results(dds_object, contrast=c("Season","May","November")), padj < 0.05)
+  results <- subset(results(dds_object), padj < 0.05)
   
   
   # make the lists
@@ -383,7 +383,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
 # Normalise using method and season to get the species that are variable by season
 Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v3,type = "ratio")
-Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Season, tidy = TRUE)
 Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v3,type = "ratio")
 Hives_dds_family_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v3,type = "ratio")
