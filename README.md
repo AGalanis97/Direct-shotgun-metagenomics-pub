@@ -1,6 +1,6 @@
 # Direct shotgun metagenomics captures species abundance of honey samples
-This repository contains all files and code to reproduce the results in the publication [add link]
-When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.
+This repository contains all files and code to reproduce the results in the publication [add link].
+<p>When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.</p>
 
 ### Overview of folders and description
 #### 1. Mocks
