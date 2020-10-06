@@ -329,13 +329,13 @@ classification_deseq <- function(df) {
   cbind(df, Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus, Species)
 }
 
-
+hives_metadata$Hive <- factor(hives_metadata$Hive)
 # Plot differentially abundant species per season
-Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Season, tidy = TRUE)
-Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
+Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
+Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v3,type = "ratio")
 
 Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
-Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
+Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v3,type = "ratio")
 
 Hives_dds_family_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
@@ -344,7 +344,7 @@ Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio
 # Function to draw the significantly differentially abundant species/genera/families/whatever you throw at it
 plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species","genus","family","order","phylum")) {
   
-  dds_object <- DESeq(Hives_dds_genus_v3, test = "LRT", reduced = ~1)
+  dds_object <- DESeq(Hives_dds_RLE_species_v3, test = "LRT", reduced = ~Method, full = ~Season + Method)
   rld <- rlog(dds_object, blind=F)
   results <- subset(results(dds_object), padj < 0.05)
   
