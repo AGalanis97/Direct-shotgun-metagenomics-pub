@@ -37,4 +37,4 @@ first_plot <- facet_plot(facet_tree_simulation, panel = "Genome size (Mb; log10)
 final_facet_tree_simulation <- first_plot + geom_facet(panel = "GC content (%)", data = neworganisms_simulation, aes(x=GC_count), geom = geom_point)
 
 facet_widths(final_facet_tree_simulation, c(Tree = 0.5))
-ggsave(plot=final_facet_tree_simulation, filename="tree_plot_genome_size.pdf", height = 10, width = 8)
+ggsave(plot=final_facet_tree_simulation, filename="./Figures/Figure_5/tree_plot_genome_size.pdf", height = 10, width = 8)

@@ -8,21 +8,12 @@
 
 # Load or install (if not present) the required packages
 if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
-if (!require('purrr')) install.packages('purrr'); library('purrr')
-if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
 if (!require('here')) install.packages('here'): library('here')
-# Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
-# prepareDatabase('accessionTaxa.sql')
-# This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
-# from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
-if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
-if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
-if (!require('taxize')) install.packages('taxize'): library('taxize')
 if (!require('ggplot2')) install.packages('ggplot2'): library('ggplot2')
 if (!require('reshape2')) install.packages('reshape2'): library('reshape2')
+setwd(here::here())
 
-
-Counts_with_taxonomy <- read.csv("./Figures/Figure_3/normalised_counts_species.csv")
+Counts_with_taxonomy <- read.csv("./Figures/Figure_4/Data_fig_4/normalised_counts_species.csv")
 
 # Counts_with_taxonomy <- Counts_with_taxonomy %>% tibble::rownames_to_column(var = "Taxonomic_ID") %>% filter(Phylum == "Streptophyta",) %>% tibble::column_to_rownames("Taxonomic_ID")
 
@@ -49,4 +40,4 @@ data_method_per_hive$value = as.numeric(data_method_per_hive$value)
 barplot_comparison_method_per_hive <- ggplot(data_method_per_hive, aes(x=Hive, y=value, fill=Method)) + geom_bar(position = 'fill',stat = "identity", width = 0.5) + theme_bw() + labs(x="",y="Identified (%)") + scale_fill_viridis_d(labels = c("Only DirectSM","Only SM","Both")) + scale_y_continuous(labels = c(0,25,50,75,100)) + theme(text = element_text(size = 15), aspect.ratio = 0.3, legend.title = element_text(size = 13),
                                                                                                                                                                                                                                                                                                                                               legend.text = element_text(size = 10), legend.position = 'top') + coord_flip() 
 
-ggsave(path = "./Figures/Figure_3/",plot = barplot_comparison_method_per_hive, filename = "barplot_comparison_method_per_hive.pdf")
+ggsave(path = "./Figures/Figure_4/",plot = barplot_comparison_method_per_hive, filename = "barplot_comparison_method_per_hive.pdf")

@@ -16,7 +16,7 @@ if (!require('here')) install.packages('here'): library('here')
 # This process will take over 3 hours on a regular laptop/PC.  
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('BIEN')) install.packages('BIEN'); library('BIEN')
-if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
+if (!require('ggplot2')) install.packages('ggplot2'): library('ggplot2')
 
 setwd(here::here())
 
@@ -45,7 +45,7 @@ Relative_abundance_species_with_taxonomy <- classification_phyloseq(Relative_abu
 
 # Extract the plants
 Relative_abundance_plants <- Relative_abundance_species_with_taxonomy %>% tibble::rownames_to_column(var = "Taxonomic_ID") %>% filter(Phylum == "Streptophyta",) %>% tibble::column_to_rownames("Taxonomic_ID")
-Relative_abundance_plants <- Relative_abundance_plants %>% mutate_if(., is.numeric,funs(ifelse(. <= 0.005, 0, .)))
+Relative_abundance_plants <- Relative_abundance_plants %>% mutate_if(., is.numeric,funs(ifelse(. <= 0.01, 0, .)))
 
 # Get pairs per method
 # First function removes the zeros across the samples 
@@ -150,4 +150,4 @@ data_med_presence$Method <- factor(data_med_presence$Method, levels = c("DirectS
 
 x_axis_labels <- c("SM H4","DirectSM H4","DirectSM H5","SM H5","DirectSM H6","SM H6","DirectSM H7","SM H7")
 plot_med_presence <- ggplot() + geom_bar(aes(y = n, x = Method, fill= Occurs_in_med), data = data_med_presence, stat='identity', width=0.3, position = "fill") + theme_bw() + labs(y = "Present in the Mediterranean (%)", x="",title = "Plant species in the Mediterranean") + theme(text = element_text(size=12),axis.text.x = element_text(angle=45, hjust=1, size = 10)) + scale_fill_manual("Plant occurs in the Mediterranean", values=c("#ff9966","#3377ff")) + scale_y_continuous(labels = c(0,25,50,75,100)) + scale_x_discrete(labels = x_axis_labels)
-ggsave(plot = plot_med_presence, filename = "./Figures/Figure_6/plants_med_filtered_abund005percent.pdf", height = 5, width = 6)
+ggsave(plot = plot_med_presence, filename = "./Figures/Figure_6/plants_med_filtered_abund1percent.pdf", height = 5, width = 6)
