@@ -15,8 +15,9 @@ Contains the raw figures that were used in the publication. They are deposited h
 #### 3. Useful scripts
 It contains bash scripts used to generate mocks and evaluate kraken2, mostly for archive purposes and distribution. All custom functions have been combined into the honeyDSM-seq-analysis R package that can be found here:
 
+
 <details closed>
-<summary> <span title='Click to Expand'> current session info </span> </summary>
+ <summary> <span title='Click to Expand'> <b> current session info </b> </span> </summary>
 
 ```r
 
