@@ -12,7 +12,7 @@ if (!require('purrr')) install.packages('purrr'); library('purrr')
 if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
 if (!require('here')) install.packages('here'): library('here')
 # Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
-# prepareDatabase('accessionTaxa.sql')
+# prepareDatabase('nameNode.sqlite')
 # This process will take over 3 hours on a regular laptop/PC.  
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
@@ -50,9 +50,9 @@ kraken2_files = lapply(kraken2_files,arrange, Taxonomic_ID)
 # We will add the classification information. Plase note that this will take a little while to generate so be patient!
 classification_ranks <- function(df) {
   taxids <- df[,4]
-  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'accessionTaxa.sql'))
-  Kingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "kingdom", 'accessionTaxa.sql'))
-  Superkingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'accessionTaxa.sql'))
+  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'nameNode.sqlite'))
+  Kingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "kingdom", 'nameNode.sqlite'))
+  Superkingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'nameNode.sqlite'))
   cbind(df, Phylum, Kingdom, Superkingdom)
 }
 
@@ -128,8 +128,8 @@ Hives_comparison_family <- Hives_family %>% purrr::reduce(full_join, by = "Taxon
 # Normalisation with DESeq2 requires a metadata file
 hives_metadata <- read.csv("./Figures/Figure_3/Data_fig_3/metadata_hives.csv")
 
-# We apply the RLE normalisation
-Hives_dds_family <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Hive, tidy = TRUE)
+# We apply the RLE normalisation but using the Hive + Method to observe the method effect so we can use it for the tree figure
+Hives_dds_family <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_family <- estimateSizeFactors(Hives_dds_family,type = "ratio")
 Hives_normalised_counts_family <- counts(Hives_dds_RLE_family, normalized = TRUE)
 Hives_counts_vst_family <- varianceStabilizingTransformation(Hives_dds_RLE_family, blind = FALSE)
@@ -145,7 +145,7 @@ write.csv(Hives_normalised_counts_family_export, file = "./Figures/Figure_3/norm
 Hives_annotation <- as.data.frame(colData(Hives_dds_family))
 
 get_super_kingdom_or_plant <- function(x) {
-  ifelse(getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql') != "Eukaryota", getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql'), ifelse(getTaxonomy(x, desiredTaxa = "kingdom", 'accessionTaxa.sql') == "Viridiplantae", getTaxonomy(x, desiredTaxa = "kingdom", 'accessionTaxa.sql'), getTaxonomy(x, desiredTaxa = "superkingdom", 'accessionTaxa.sql')))
+  ifelse(getTaxonomy(x, desiredTaxa = "superkingdom", sqlFile = 'nameNode.sqlite') != "Eukaryota", getTaxonomy(x, desiredTaxa = "superkingdom", sqlFile = 'nameNode.sqlite'), ifelse(getTaxonomy(x, desiredTaxa = "kingdom", sqlFile = 'nameNode.sqlite') == "Viridiplantae", getTaxonomy(x, desiredTaxa = "kingdom",sqlFile =  'nameNode.sqlite'), getTaxonomy(x, desiredTaxa = "superkingdom", sqlFile = 'nameNode.sqlite')))
   }
 
 TaxonomicIDs_family <- as.numeric(rownames((Hives_counts_vst_family)))
@@ -201,13 +201,14 @@ Hives_normalised_counts_species_export <- as.data.frame(Hives_normalised_counts_
 Hives_normalised_counts_species_export <- Hives_normalised_counts_species_export %>% rownames_to_column(., var = "Taxonomic_ID")
 write.csv(Hives_normalised_counts_species_export, file = "./Figures/Figure_3/normalised_counts_species.csv")
 
+
 Hives_annotation <- as.data.frame(colData(Hives_dds_species))
 
 TaxonomicIDs_species <- as.numeric(rownames((Hives_counts_vst_species)))
 Taxid_taxonomy_species <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_species)) 
 Taxonomic_IDs_dataframe_species <- as.data.frame(TaxonomicIDs_species)
 
-generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = "species", 'accessionTaxa.sql')
+generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = "species", 'nameNode.sqlite')
 generate_species = as.data.frame(generate_species)
 generate_species$species = as.character(generate_species$species)
 generate_species_omit_na <- na.omit(generate_species)
@@ -232,13 +233,11 @@ colnames(annotationrows_species) <- c("Domain","Species")
 
 # Fix NA values. For some taxonomizr isn't able to return the superkingdom so we simply remove them from inclusion in the heatmap (approx 10 species)
 na_values <- subset(annotationrows_species, is.na(annotationrows_species$Domain))
-na_values_tax <- getTaxonomy(na_values$Taxonomic_ID, desiredTaxa = "superkingdom",'accessionTaxa.sql')
+na_values_tax <- getTaxonomy(na_values$Taxonomic_ID, desiredTaxa = "superkingdom",'nameNode.sqlite')
 na_values_tax_removed_na <- na.omit(na_values_tax)
 na_values_tax <- as.data.frame(na_values_tax) %>% rownames_to_column(var = "Taxonomic_ID")
 na_values_tax_removed_na$Taxonomic_ID <- as.numeric(na_values_tax_removed_na$Taxonomic_ID)
 colnames(na_values_tax) <- c("Taxonomic_ID","Domain")
-
-joined <- full_join(annotationrows_species,na_values_tax_removed_na) %>% na.omit(.)
 
 annotationrows_species <- tibble::column_to_rownames(annotationrows_species, var = "Species")
 
@@ -257,7 +256,7 @@ ggsave(filename="top30_heatmap_species.pdf",device="pdf", plot=final_heatmap_spe
 
 
 
-# Significantly abundant species per season
+# Create MA plots for method
 Hives_dds_species_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_species_v2 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
 
@@ -267,12 +266,18 @@ Hives_dds_RLE_genus_v2 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
 Hives_dds_family_v2 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
 Hives_dds_RLE_family_v2 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
 
+Hives_normalised_counts_species_v2 <- counts(Hives_dds_RLE_species_v2, normalized = TRUE)
 Hives_normalised_counts_family_v2 <- counts(Hives_dds_RLE_family_v2, normalized = TRUE)
 
 # Export the counts because it will be needed for the next figure
 Hives_normalised_counts_family_v2_exprort <- as.data.frame(Hives_normalised_counts_family_v2)
 Hives_normalised_counts_family_v2_exprort <- Hives_normalised_counts_family_v2_exprort %>% rownames_to_column(., var = "Taxonomic_ID")
 write.csv(Hives_normalised_counts_family_v2_exprort, file = "./Figures/Figure_3/normalised_counts_families_v2.csv")
+
+# Also export normalised based on method and season to check seasonal fluctuations 
+Hives_normalised_counts_species_v2_export <- as.data.frame(Hives_normalised_counts_species_v2)
+Hives_normalised_counts_species_v2_export <- Hives_normalised_counts_species_v2_export %>% rownames_to_column(., var = "Taxonomic_ID")
+write.csv(Hives_normalised_counts_species_v2_export, file = "./Figures/Figure_6/Data_fig_6/normalised_counts_methodseason_species.csv")
 
 
 # Make an annotation table so we can adjust the circle size
@@ -307,20 +312,28 @@ ggsave(plot = species_volcano_plot, filename = "./Figures/Figure_3/volcano_plot_
 # Classification function for the DESeq2 object
 classification_deseq <- function(df) {
   taxids <- df$Taxonomic_ID
-  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum",'accessionTaxa.sql'))
-  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom",'accessionTaxa.sql'))
-  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'accessionTaxa.sql'))
-  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'accessionTaxa.sql'))
-  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'accessionTaxa.sql'))
-  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'accessionTaxa.sql'))
-  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'accessionTaxa.sql'))
-  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", 'accessionTaxa.sql'))
+  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum",'nameNode.sqlite'))
+  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom",'nameNode.sqlite'))
+  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'nameNode.sqlite'))
+  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'nameNode.sqlite'))
+  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'nameNode.sqlite'))
+  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'nameNode.sqlite'))
+  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'nameNode.sqlite'))
+  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", sqlFile = 'nameNode.sqlite'))
   cbind(df, Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus, Species)
 }
 
 
-# Plot differentially abundant species
-# get the log transforms again
+# Plot differentially abundant species per season
+Hives_dds_species_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_species_v3 <- estimateSizeFactors(Hives_dds_species_v2,type = "ratio")
+
+Hives_dds_genus_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_genus, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_genus_v3 <- estimateSizeFactors(Hives_dds_genus_v2,type = "ratio")
+
+Hives_dds_family_v3 <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
+Hives_dds_RLE_family_v3 <- estimateSizeFactors(Hives_dds_family_v2,type = "ratio")
+
 
 # Function to draw the significantly differentially abundant species/genera/families/whatever you throw at it
 plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species","genus","family","order","phylum")) {
@@ -343,7 +356,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
   Taxid_taxonomy_species <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_species)) 
   Taxonomic_IDs_dataframe_species <- as.data.frame(TaxonomicIDs_species)
   
-  generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = level, 'accessionTaxa.sql')
+  generate_species <- getTaxonomy(TaxonomicIDs_species,desiredTaxa = level, sqlFile = 'nameNode.sqlite')
   generate_species = as.data.frame(generate_species)
   generate_species[,1] = as.character(generate_species[,1])
   annotationrows_species1 <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species,generate_species)

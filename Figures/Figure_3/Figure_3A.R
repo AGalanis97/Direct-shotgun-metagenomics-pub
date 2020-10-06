@@ -12,7 +12,7 @@ if (!require('purrr')) install.packages('purrr'); library('purrr')
 if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
 if (!require('here')) install.packages('here'): library('here')
 # Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
-# prepareDatabase('accessionTaxa.sql')
+# prepareDatabase('nameNode.sqlite')
 # This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
@@ -27,14 +27,14 @@ Rounded_counts <- Hives_normalised_counts %>% mutate_at(colnames(Hives_normalise
 
 classification_phyloseq <- function(df) {
   taxids <- rownames(df)
-  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'accessionTaxa.sql'))
-  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'accessionTaxa.sql'))
-  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'accessionTaxa.sql'))
-  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'accessionTaxa.sql'))
-  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'accessionTaxa.sql'))
-  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'accessionTaxa.sql'))
-  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'accessionTaxa.sql'))
-  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", 'accessionTaxa.sql'))
+  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'nameNode.sqlite'))
+  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'nameNode.sqlite'))
+  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'nameNode.sqlite'))
+  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'nameNode.sqlite'))
+  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'nameNode.sqlite'))
+  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'nameNode.sqlite'))
+  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'nameNode.sqlite'))
+  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", 'nameNode.sqlite'))
   cbind(df, Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus, Species)
 }
 
@@ -108,4 +108,4 @@ x_axis_labels <- c("SM H4","SM H5","SM H6","SM H7","DirectSM H4","DirectSM H5","
 # Plot the data. Annotate the parts that have more than 20 species.
 barplot_species_absolute <- ggplot(kingdom_melt, aes(x=Sample, y= value, fill=variable)) + geom_bar(stat = "identity") + theme_bw() + scale_fill_manual(values=c("#0D0887FF","#F0F921FF","#73D055FF","#CC4678FF")) + labs(y = "Number of species", x="", fill="Domain") + theme(text = element_text(size=15),axis.text.x = element_text(angle=45, hjust=1, size = 10)) + scale_x_discrete(labels = x_axis_labels) + geom_text(aes(label=ifelse(value>20,paste0(kingdom_melt_percent5$value,"%"),"")), position=position_stack(vjust=0.5) , colour="white") 
 
-ggsave(path = "./Figures/Figure_3" ,plot = barplot_species_absolute, filename = "barplot_species_absolute1.pdf", device = "pdf", height = 5, width = 9)
+ggsave(path = "./Figures/Figure_3" ,plot = barplot_species_absolute, filename = "barplot_species_absolute.pdf", device = "pdf", height = 5, width = 9)

@@ -12,7 +12,7 @@ if (!require('purrr')) install.packages('purrr'); library('purrr')
 if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
 if (!require('here')) install.packages('here'): library('here')
 # Taxonomizr will return the taxonomy for each species. However, this requires that a database is built locally (requires 60 GB of space).
-# prepareDatabase('accessionTaxa.sql')
+# prepareDatabase('nameNode.sqlite')
 # This process will take over 3 hours on a regular laptop/PC. Othherwise, please consider dowloading the zipped file 
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
@@ -33,14 +33,14 @@ Rounded_counts <- Hives_normalised_counts %>% mutate_at(colnames(Hives_normalise
 
 classification_phyloseq <- function(df) {
   taxids <- rownames(df)
-  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'accessionTaxa.sql'))
-  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'accessionTaxa.sql'))
-  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'accessionTaxa.sql'))
-  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'accessionTaxa.sql'))
-  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'accessionTaxa.sql'))
-  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'accessionTaxa.sql'))
-  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'accessionTaxa.sql'))
-  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", 'accessionTaxa.sql'))
+  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum", 'nameNode.sqlite'))
+  Superkingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "superkingdom", 'nameNode.sqlite'))
+  Kingdom <- as.character(getTaxonomy(taxids, desiredTaxa = "kingdom", 'nameNode.sqlite'))
+  Class <- as.character(getTaxonomy(taxids, desiredTaxa = "class", 'nameNode.sqlite'))
+  Order <- as.character(getTaxonomy(taxids, desiredTaxa = "order", 'nameNode.sqlite'))
+  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family", 'nameNode.sqlite'))
+  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus", 'nameNode.sqlite'))
+  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species", 'nameNode.sqlite'))
   cbind(df, Superkingdom, Kingdom, Phylum, Class, Order, Family, Genus, Species)
 }
 
@@ -101,5 +101,5 @@ p2 <- gheatmap(circ2, differences, colnames_angle=0, colnames_offset_y = 0) + sc
 # Add annotation to the Domains as we've done so far 
 p3 <- p2  + geom_cladelabel(node = 486, color ="#CC4678FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#73D055FF", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#0D0887FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#F0F921FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#ad05f5", align = T, label = "", barsize = 3)
 
-ggsave(p3, filename="circlularplot.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
+ggsave(p3, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
 
