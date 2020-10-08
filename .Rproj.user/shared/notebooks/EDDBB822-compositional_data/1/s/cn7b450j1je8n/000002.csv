@@ -1,0 +1,5 @@
+"0","```r
+conds <- c(\"DirectSM\",\"DirectSM\",\"DirectSM\",\"SM\",\"SM\",\"SM\")
+
+x_distr <- aldex.clr(Genus_no_Hive7_all_2, conds, mc.samples=128, verbose=TRUE)
+```"

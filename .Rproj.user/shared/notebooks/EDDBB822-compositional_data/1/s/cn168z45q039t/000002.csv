@@ -1,0 +1,21 @@
+"0","```r
+conds2 <- c(\"DirectSM\",\"DirectSM\",\"DirectSM\",\"DirectSM\",\"SM\",\"SM\",\"SM\",\"SM\")
+
+trial_samples <- column_to_rownames(Hives_comparison_species, \"Taxonomic_ID\")
+
+trial_samples_df <- data.frame(trial_samples[which(apply(trial_samples, 1, function(x){mean(x)}) > 1),], check.names=F)
+
+x_distr_try <- aldex.clr(trial_samples_df, conds2, mc.samples=128, verbose=TRUE)
+
+distr_valus <- getMonteCarloInstances(x_distr_try)
+
+
+sample_trial <- read.csv(\"C:/Users/user/Desktop/data_frames/simulations/sample.csv\")
+conds3 <- c(\"Sample1\",\"Sample1\",\"Sample2\",\"Sample2\")
+x_distr_try2 <- aldex.clr(sample_trial, conds3, mc.samples=128, verbose=TRUE)
+distr_valus1 <- getDenom(x_distr_try2)
+
+sample_czm <- codaSeq.clr(sample_trial)
+
+
+```"

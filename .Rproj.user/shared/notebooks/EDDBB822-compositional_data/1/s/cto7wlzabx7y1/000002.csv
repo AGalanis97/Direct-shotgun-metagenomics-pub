@@ -1,0 +1,48 @@
+"0","```r
+Genus_DSM <- data.frame(Only_DSM_Genus[which(apply(Only_DSM_Genus, 1, function(x){mean(x)}) > 1),], check.names=F)
+
+
+Only_DSM_Genus_czm <- cmultRepl(t(Genus_DSM),  label=0, method=\"CZM\")
+
+```"
+"1","No. corrected values:  20 
+"
+"0","```r
+
+Only_DSM_Genus_clr <- t(apply(Only_DSM_Genus_czm, 1, function(x){log(x) - mean(log(x))}))
+
+Only_DSM_Genus_pcx <- prcomp(Only_DSM_Genus_clr)
+
+Only_DSM_Genus_mvar <- sum(Only_DSM_Genus_pcx$sdev^2)
+# Calculate the PC1 and PC2 variance
+
+PC1_no <- paste(\"PC1: \", round(sum(Only_DSM_Genus_pcx$sdev[1]^2)/Only_DSM_Genus_mvar, 3))
+PC2_no <- paste(\"PC2: \", round(sum(Only_DSM_Genus_pcx$sdev[2]^2)/Only_DSM_Genus_mvar, 3))
+
+col.g=c(\"black\",rgb(1,0,0,0.4))
+size.g=c(0.5, 0.4)
+
+png(\"Biplot_Only_DSM_Genus.png\", width = 5, height = 5, units = \"in\", res = 300)
+biplot(Only_DSM_Genus_pcx, cex=size.g, col=col.g, var.axes=F,
+    xlab=paste(\"PC1: \", round(sum(Only_DSM_Genus_pcx$sdev[1]^2)/Only_DSM_Genus_mvar, 3)),
+    ylab=paste(\"PC2: \", round(sum(Only_DSM_Genus_pcx$sdev[2]^2)/Only_DSM_Genus_mvar, 3)),
+    scale=0, 
+)
+abline(h=0, lty=2, col=rgb(0,0,0,0.1))
+abline(v=0, lty=2, col=rgb(0,0,0,0.1))
+dev.off()
+```"
+"1","null device 
+          1 
+"
+"0","```r
+png(\"Only_DSM_Genus_clusstering.png\", width = 5, height = 5, units = \"in\", res = 300)
+```"
+"0","```r
+hc_Only_DSM_Genus <- hclust(dist(Only_DSM_Genus_clr))
+plot(hc_Only_DSM_Genus, hang=-1)
+dev.off()
+```"
+"1","null device 
+          1 
+"
