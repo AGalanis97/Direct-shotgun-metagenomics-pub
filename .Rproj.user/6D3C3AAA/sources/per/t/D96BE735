@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1603539869422.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D96BE735",
+    "lastKnownWriteTime" : 7885362534758641253,
+    "last_content_update" : 1603539869422,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "410AB88F",
+        "caption" : "hives_metadata_new",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=hives_metadata_new&cache_key=410AB88F",
+        "displayedObservations" : 8,
+        "environment" : "",
+        "expression" : "hives_metadata_new",
+        "object" : "hives_metadata_new",
+        "preview" : 0,
+        "totalObservations" : 8,
+        "variables" : 5
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1602259120967.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "185456026",
+    "id" : "1A6AE702",
+    "lastKnownWriteTime" : 1602285279,
+    "last_content_update" : 1602285279610,
+    "path" : "C:/Users/user/Desktop/get_angiosperm_genera.r",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "11,82",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
