@@ -9,12 +9,13 @@
 # Load or install (if not present) the required packages
 if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
 if (!require('purrr')) install.packages('purrr'); library('purrr')
-if (!require('here')) install.packages('here'): library('here')
-if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
+if (!require('here')) install.packages('here'); library('here')
+if (!require('pheatmap')) install.packages('pheatmap'); library('pheatmap')
 if (!require('EnhancedVolcano')) BiocManager::install('EnhancedVolcano'): library('EnhancedVolcano')
 if (!require("DEGreport")) BiocManager::install("DEGreport"): library('DEGreport')
-if (!require("reshape2")) install.packages("reshape2"): library('reshape2')
-if (!require('DESeq2')) install.packages('DESeq2'): library('DESeq2')
+if (!require("reshape2")) install.packages("reshape2"); library('reshape2')
+if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
+if (!require('VennDiagram')) install.packages('VennDiagram'); library('VennDiagram')
 
 
 df_humann <- read.table('./Figures/Figure_7/go_annotation_notnorm.tsv',
@@ -126,8 +127,12 @@ top_20_gos <- get_most_abundant_go(Hives_normalised_counts_go, top_x_gos = c(1:2
 go_for_plot <- reshape2::melt(functional_diversity_samples)
 
 go_for_plot3 <- go_for_plot2[go_for_plot2$go_function %in% top_20_gos,]
+go_for_plot3$go_function <-  go_for_plot3$go_function %>% str_replace(".*\\] ","")
 
-functional_diversity_per_species <- ggplot(go_for_plot3, aes(x=species, y=value, fill = go_function)) + geom_bar(stat = "identity", position = "fill") + theme_minimal() + theme(legend.position="none", axis.text.x = element_text(face = "italic", angle = 45, hjust = 1, size = 10), axis.title.x = element_blank()) + scale_fill_viridis_d(option = "magma") + ylab("GO function (%)") + labs(fill = "GO function") + scale_y_continuous(labels = c(0,25,50,75,100))
+functional_diversity_per_species <- ggplot(go_for_plot3, aes(x=species, y=value, fill = go_function)) + geom_bar(stat = "identity", position = "fill") + theme_minimal() + theme(legend.position="right", legend.text = element_text(size=8), axis.text.x = element_text(face = "italic", angle = 45, hjust = 1, size = 10), axis.title.x = element_blank()) + guides(fill=guide_legend(ncol=2)) + scale_fill_viridis_d(option = "magma") + ylab("GO function (%)") + labs(fill = "GO function") + scale_y_continuous(labels = c(0,25,50,75,100))
+ggsave(plot = functional_diversity_per_species, filename = "./Figures/Figure_7/functional_diversity_per_species.pdf", width = 7.5)
+
+
 # Process previous honey samples
 go_names_previous <- read.table('./Figures/Figure_7/combined_tables_with_go_names_previous.tsv',
                        row.names=1, header=T, sep='\t', 
@@ -156,8 +161,42 @@ top_30_previous <- get_most_abundant_go(Hives_normalised_counts_go_previous, top
 go_for_plot_previous <- reshape2::melt(previous_functional_diversity)
 
 go_for_plot_previous2 <- go_for_plot_previous[go_for_plot_previous$go_function %in% top_30_previous,]
+go_for_plot_previous2$go_function <-  go_for_plot_previous2$go_function %>% str_replace(".*\\] ","")
 
-functional_diversity_per_species_previous <- ggplot(go_for_plot_previous2, aes(x=species, y=value, fill = go_function)) + geom_bar(stat = "identity", position = "fill") + theme_minimal() + theme(legend.position="none", axis.text.x = element_text(face = "italic", angle = 45, hjust = 1, size = 10), axis.title.x = element_blank()) + scale_fill_viridis_d(option = "magma") + ylab("GO function (%)") + labs(fill = "GO function") + scale_y_continuous(labels = c(0,25,50,75,100))
+
+functional_diversity_per_species_previous <- ggplot(go_for_plot_previous2, aes(x=species, y=value, fill = go_function)) + geom_bar(stat = "identity", position = "fill") + theme_minimal() + theme(legend.position="right", legend.text = element_text(size=8), axis.text.x = element_text(face = "italic", angle = 45, hjust = 1, size = 10), axis.title.x = element_blank()) + guides(fill=guide_legend(ncol=2)) + scale_fill_viridis_d(option = "magma") + ylab("GO function (%)") + labs(fill = "GO function") + scale_y_continuous(labels = c(0,25,50,75,100))
+ggsave(plot = functional_diversity_per_species_previous, filename = "./Figures/Figure_7/functional_diversity_per_species_previous.pdf", width = 7.5)
 
 
 # Create venn diagram to compare the gos from our samples to the previously published ones
+venn.diagram(
+  x = list(get_most_abundant_go(Hives_normalised_counts_go, top_x_gos = c(1:1000)), get_most_abundant_go(Hives_normalised_counts_go_previous, top_x_gos = c(1:1000))),
+  category.names = c("DSM+SM samples" , "Published datasets"),
+  filename = './Figures/Figure_7/venndiagram_gos_smdsm_and_previousdatasets.png',
+  output=T,
+  imagetype="png" ,
+  height = 800 , 
+  width = 800 , 
+  resolution = 300,
+  compression = "lzw",
+  
+  # Circles
+  lwd = 2,
+  lty = 1,
+  fill = viridis_pal(alpha = 0.3)(2),
+  col = viridis_pal(alpha = 0.5)(2),
+
+  # Numbers
+  cex = .6,
+  fontface = "bold",
+  fontfamily = "sans",
+  
+  # Set names
+  cat.cex = 0.6,
+  cat.fontface = "bold",
+  cat.default.pos = "outer",
+  cat.pos = c(-27, 27),
+  cat.dist = c(0.055, 0.055),
+  cat.fontfamily = "sans",
+  cat.col = viridis_pal()(2)
+)
