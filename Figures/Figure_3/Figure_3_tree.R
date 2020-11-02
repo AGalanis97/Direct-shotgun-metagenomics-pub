@@ -17,7 +17,7 @@ if (!require('here')) install.packages('here'): library('here')
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
 if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
-if (!require('ggtree')) install.packages('ggtree'): library('ggtree')
+if (!require('gagtree')) install.packages('ggtree'): library('ggtree')
 
 
 data_path <- "./Figures/Figure_3/Data_fig_3"
@@ -53,9 +53,11 @@ write.table(ids,"./Figures/Figure_3/taxids_fam.csv",row.names = FALSE, col.names
 
 # Import the tree
 tree1 <- read.tree("./Figures/Figure_3/treefam.newick")
+tree1
 
 # generate a circular tree
-circ <- ggtree(tree1, branch.length = "none", layout = "circular", ladderize = TRUE) + theme_tree()
+circ <- ggtree(tree1, branch.length = "none", layout = "circular", ladderize = TRUE) + geom_tiplab(size=1.2)
+circ
 
 # Create a dataframe with node numbers and their labels so that we can colour the domains later
 node <- circ[["data"]][["node"]]
@@ -67,6 +69,7 @@ colouring <- data.frame(nodes=label,color = "grey")
 
 # Attach the data to the tree
 circ2 <- circ %<+% colouring + aes(color = I(color))
+circ2
 
 # Change the rownames of the dataframe so they match the tree
 rownames(differences) <- tree1$tip.label
@@ -77,10 +80,10 @@ differences[differences > 10000] <- 10000
 differences[differences < -10000] <- -10000
 
 # We can now build the heatmap
-p2 <- gheatmap(circ2, differences, colnames_angle=0, colnames_offset_y = 0, width = 0.3, colnames = F) + scale_fill_gradientn(colours =c("#440154FF","white","#FDE725FF"),breaks = c(-10000,0,10000), labels=c("SM","","DSM")) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Higher in:", title.position = "top"))
+p2 <- gheatmap(circ2, differences, colnames_angle=0, colnames_offset_y = 0, width = 0.3, colnames = F) + scale_fill_gradientn(colours =c("#440154FF","white","#FDE725FF"),breaks = c(-10000,0,10000), labels=c("SM","","DSM")) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Read difference: \n-10000   +10000", title.position = "top"))
 
 # Add annotation to the Domains as we've done so far 
 p3 <- p2  + geom_cladelabel(node = 486, color ="#CC4678FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#73D055FF", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#0D0887FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#F0F921FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#ad05f5", align = T, label = "", barsize = 3)
-
+p3
 ggsave(p3, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
 
