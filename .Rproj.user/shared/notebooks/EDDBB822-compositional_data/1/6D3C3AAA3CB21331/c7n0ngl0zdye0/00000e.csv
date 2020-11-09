@@ -1,0 +1,4 @@
+"0","Taxid_taxonomy_genus <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_genus)) 
+"
+"2","Error: no such table: nodes
+"

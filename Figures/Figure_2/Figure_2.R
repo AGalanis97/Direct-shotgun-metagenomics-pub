@@ -82,7 +82,7 @@ minimap2_community <- read.csv("./Figures/Figure_2/Data_fig_2/minimap2_community
 
 # Create a function to make a scatter plot
 scatterplot <- function(df, x, y) {
-  ggscatter(df, x="Observed_Abundance", y= "Expected_Abundance", color = "Taxonomic_Domain", size = 3, palette = c("#0D0887FF","#8a8a5c","#CC4678FF","#73D055FF","#F0F921FF")) + stat_cor(size=7, label.x = 4, label.y = 18) + labs(x="Observed Abundance (%)", y="Expected Abundance (%)", color = "Taxonomic Domain", title = "") + theme_bw(base_size = 15) + geom_abline(intercept = 0, slope =1) + theme(legend.text = element_text(size=10))
+  ggscatter(df, x="Observed_Abundance", y= "Expected_Abundance", color = "Taxonomic_Domain", size = 3, palette = c("#E6AB02","#8a8a5c","#7570B3","#1B9E77","#eb53a1")) + stat_cor(size=7, label.x = 4, label.y = 18) + labs(x="Observed Abundance (%)", y="Expected Abundance (%)", color = "Taxonomic Domain", title = "") + theme_bw(base_size = 15) + geom_abline(intercept = 0, slope =1) + theme(legend.text = element_text(size=10))
 }
 
 # Apply the function to make scatter plots per tool
