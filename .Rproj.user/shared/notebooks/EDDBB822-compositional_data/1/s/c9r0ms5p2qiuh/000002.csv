@@ -1,6 +1,0 @@
-"0","```r
-species_colours <- annotationrows_species %>% rownames_to_column(var = \"Species\")
-
-```"
-"1","Error: Column `Species` already exists in `.data`.
-"
