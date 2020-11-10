@@ -17,55 +17,12 @@ if (!require('here')) install.packages('here'): library('here')
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
 if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
-if (!require('ggtree')) install.packages('ggtree'): library('ggtree')
+if (!require('gagtree')) install.packages('ggtree'): library('ggtree')
 
 
 data_path <- "./Figures/Figure_3/Data_fig_3"
 
-# Import the tree
-tree1 <- read.tree("./Figures/Figure_3/treefam.newick")
 
-# generate a circular tree
-circ <- ggtree(tree1, branch.length = "none", layout = "circular", ladderize = TRUE) + theme_tree()
-
-# Create a dataframe with node numbers and their labels so that we can colour the domains later
-node <- circ[["data"]][["node"]]
-label <- circ[["data"]][["label"]]
-node_table <- cbind(node,label)
-
-# We create a dataframe that colours all nodes grey. Custom colour of gheatmap is black and I don't like it.
-colouring <- data.frame(nodes=label,color = "grey")
-
-# Attach the data to the tree
-circ2 <- circ %<+% colouring + aes(color = I(color))
-
-# Import the padj values
-padj_values_family <- read.csv("./Figures/Figure_3/padj_family_method.csv") %>% select(.,padj)
-rownames(padj_values_family) = tree1$tip.label
-
-
-# We can now build the heatmap
-p2 <- gheatmap(circ2, padj_values_family, colnames_angle=0, colnames_offset_y = 0, width = 0.1, colnames = F, offset = 0.2) + scale_fill_gradientn(colours =c("#D73027","white","#4575B4"),breaks = c(0,1), labels=c("0","1"), limits=c(0,1)) + theme(legend.position = "right",legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "p-value (adjusted)", title.position = "top"))
-
-# Add annotation to the Domains as we've done so far 
-p3 <- p2  + geom_cladelabel(node = 486, color ="#7570B3", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#1B9E77", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#E6AB02", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#eb53a1", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#D95F02", align = T, label = "", barsize = 3)
-
-# Import data about log2fc
-logfc_data <- read.csv("./Output_data/Figure_3_output/family_lfc.csv")
-logfc_data_select <- logfc_data %>% select(c("log2FoldChange","Family"))
-logfc_data_select$Family <- shQuote(logfc_data_select$Family)
-logfc_data_select <- logfc_data_select %>% column_to_rownames("Family")
-
-
-p4 <- p3 + new_scale_fill()
-p5 <- gheatmap(p4, logfc_data_select, colnames_angle = 0, colnames_offset_y = 0, width = 0.1, colnames = F, offset = 1) + scale_fill_gradientn(colours =c("#C51B7D","white","#4D9221"),breaks = c(-2,2), labels=c("-2","2"), limits=c(-2,2)) + theme(legend.position = "bottom",legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "log2FoldChange", title.position = "top"))
-p5$labels$fill_new <- "p-value (adjusted)"
-
-
-ggsave(p5, filename="circularplot_family2.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
-
-
-### DO NOT RUN CODE. REMAINS AS LEGACY IN CASE WE WANT TO REVERT BACK ###
 
 # Now we will build a figure that shows whether Families are overrepresented in DSM or SM
 Hives_normalised_counts <- read.csv("./Figures/Figure_3/normalised_methodseason_family.csv")
@@ -75,7 +32,6 @@ Hives_normalised_counts <- Hives_normalised_counts[,-1] %>% column_to_rownames(v
 Rounded_counts_with_tax <- Hives_normalised_counts %>% rownames_to_column(var="Taxonomic_ID") %>%  drop_na(Superkingdom)
 
 # Subtract the abundance of DSM and SM to calculate their difference
-
 Family_counts_DSM <- Rounded_counts_with_tax[,c(2:5)]
 Family_counts_SM <- Rounded_counts_with_tax[,c(6:9)]
 Family_counts_SM$Sum_SM <- rowSums(Family_counts_SM)
@@ -94,6 +50,27 @@ ids <- as.data.frame(Rounded_counts_with_tax$Family)
 colnames(ids) <- "ids"
 write.table(ids,"./Figures/Figure_3/taxids_fam.csv",row.names = FALSE, col.names = FALSE)
 
+
+# Import the tree
+tree1 <- read.tree("./Figures/Figure_3/treefam.newick")
+tree1
+
+# generate a circular tree
+circ <- ggtree(tree1, branch.length = "none", layout = "circular", ladderize = TRUE) + geom_tiplab(size=1.2)
+circ
+
+# Create a dataframe with node numbers and their labels so that we can colour the domains later
+node <- circ[["data"]][["node"]]
+label <- circ[["data"]][["label"]]
+node_table <- cbind(node,label)
+
+# We create a dataframe that colours all nodes grey. Custom colour of gheatmap is black and I don't like it.
+colouring <- data.frame(nodes=label,color = "grey")
+
+# Attach the data to the tree
+circ2 <- circ %<+% colouring + aes(color = I(color))
+circ2
+
 # Change the rownames of the dataframe so they match the tree
 rownames(differences) <- tree1$tip.label
 
@@ -101,3 +78,12 @@ rownames(differences) <- tree1$tip.label
 # Now we set an arbitrary limit of 10000 reads difference between the libraries. This should result in approximately 2% difference in abundance
 differences[differences > 10000] <- 10000
 differences[differences < -10000] <- -10000
+
+# We can now build the heatmap
+p2 <- gheatmap(circ2, differences, colnames_angle=0, colnames_offset_y = 0, width = 0.3, colnames = F) + scale_fill_gradientn(colours =c("#440154FF","white","#FDE725FF"),breaks = c(-10000,0,10000), labels=c("SM","","DSM")) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Read difference: \n-10000   +10000", title.position = "top"))
+
+# Add annotation to the Domains as we've done so far 
+p3 <- p2  + geom_cladelabel(node = 486, color ="#CC4678FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#73D055FF", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#0D0887FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#F0F921FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#ad05f5", align = T, label = "", barsize = 3)
+p3
+ggsave(p3, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
+

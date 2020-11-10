@@ -37,6 +37,9 @@ data_method_to_reshape <- rbind(Hive4_barplot,Hive5_barplot,Hive6_barplot,Hive7_
 data_method_per_hive <- melt(data_method_to_reshape, id.vars = "Hive") %>% dplyr::rename(Method = variable)
 data_method_per_hive$value = as.numeric(data_method_per_hive$value)
 
-barplot_comparison_method_per_hive <- ggplot(data_method_per_hive, aes(x=Hive, y=value, fill=Method)) + geom_bar(position = 'fill',stat = "identity", width = 0.5) + theme_bw() + labs(x="",y="Identified (%)") + scale_fill_manual(name = c("Method"), labels = c("Only DirectSM","Only SM","Both"), values = c("#E41A1C","#377EB8","#984EA3")) + scale_y_continuous(labels = c(0,25,50,75,100)) + theme(text = element_text(size = 15), aspect.ratio = 0.3, legend.title = element_text(size = 13), legend.text = element_text(size = 10), legend.position = 'top') + coord_flip() 
+barplot_comparison_method_per_hive <- ggplot(data_method_per_hive, aes(x=Hive, y=value, fill=Method)) + geom_bar(position = 'fill',stat = "identity", width = 0.5) + theme_bw() + labs(x="",y="Identified (%)") + scale_fill_viridis_d(labels = c("Only DirectSM","Only SM","Both")) + scale_y_continuous(labels = c(0,25,50,75,100)) + 
+  theme(text = element_text(size = 15), aspect.ratio = 0.3, legend.title = element_blank(),legend.text = element_text(size = 10), legend.position = 'top') + 
+  coord_flip() 
+barplot_comparison_method_per_hive
 
 ggsave(path = "./Figures/Figure_4/",plot = barplot_comparison_method_per_hive, filename = "barplot_comparison_method_per_hive.pdf")
