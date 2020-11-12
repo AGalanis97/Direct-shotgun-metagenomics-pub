@@ -1,6 +1,0 @@
-"0","```r
-install.packages('devtools')
-BiocManager::install(\"ALDEx2\")
-
-devtools::install_github('ggloor/CoDaSeq/CoDaSeq')
-```"
