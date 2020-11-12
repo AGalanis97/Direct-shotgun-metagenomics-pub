@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1605175541832.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E45E6DFA",
+    "lastKnownWriteTime" : 8315165955120652656,
+    "last_content_update" : 1605175541832,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "6CCC6947",
+        "caption" : "family_lfc_threshold_total",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=family_lfc_threshold_total&cache_key=6CCC6947",
+        "displayedObservations" : "4",
+        "environment" : "",
+        "expression" : "family_lfc_threshold_total",
+        "object" : "family_lfc_threshold_total",
+        "preview" : "0",
+        "totalObservations" : "4",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

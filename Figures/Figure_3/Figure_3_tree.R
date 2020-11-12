@@ -111,8 +111,9 @@ rownames(padj_values_family) <- tree1$tip.label
 # We can now build the heatmap
 p2 <- gheatmap(circ2, padj_values_family, colnames_angle=0, offset = 0, width = 0.4, colnames = F) + scale_fill_distiller(palette = "RdGy", limits=c(0,1), direction = 1) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "p-value (adjusted)", title.position = "top"))
 
+
 # Add annotation to the Domains as we've done so far 
-p3 <- p2  + geom_cladelabel(node = 486, color ="#CC4678FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#73D055FF", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#0D0887FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#F0F921FF", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#ad05f5", align = T, label = "", barsize = 3)
+p3 <- p2  + geom_cladelabel(node = 486, color ="#7570B3", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#1B9E77", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#E6AB02", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#eb53a1", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#D95F02", align = T, label = "", barsize = 3)
 
 p4 <- p3 + new_scale_fill()
 p5 <- gheatmap(p4, family_lfc_plot, colnames_angle=0, offset = 0.7, width = 0.15, colnames = F) + scale_fill_distiller(palette = "PiYG", limits = c(-2,2)) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Log2FC", title.position = "top"))
@@ -122,3 +123,19 @@ p7 <- gheatmap(p6, direction, colnames_angle=0, offset = 1.5, width = 0.15, coln
 
 ggsave(p7, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
 
+
+family_lfc_replace_plant <- family_lfc
+family_lfc_replace_plant$Kingdom <- as.character(family_lfc_replace_plant$Kingdom)
+family_lfc_replace_plant$Kingdom <- replace_na(family_lfc_replace_plant$Kingdom, "Unknown")
+family_lfc_replace_plant$Superkingdom <- ifelse(family_lfc_replace_plant$Kingdom == "Viridiplantae", 
+                                                as.character(family_lfc_replace_plant$Kingdom), as.character(family_lfc_replace_plant$Superkingdom))
+
+family_lfc_threshold <- subset(family_lfc_replace_plant, abs(family_lfc_replace_plant$log2FoldChange) >= 1)
+family_lfc_threshold_total <- family_lfc_threshold %>% group_by(Superkingdom) %>% summarise(Number = n())
+family_lfc_threshold_total <- as.data.frame(family_lfc_threshold_total)
+
+lfc_bars <- ggplot(family_lfc_threshold_total, aes(x=Superkingdom, y= Number, fill=Superkingdom)) + geom_bar(stat="identity") + coord_flip() + scale_fill_manual(values = c("#E6AB02","#7570B3","#1B9E77","#eb53a1"))+ theme_minimal() + theme(legend.position = "none", axis.title.x=element_blank(),
+                                                                                                                                                                                                                                                                               axis.text.x=element_blank(),
+                                                                                                                                                                                                                                                                               axis.ticks.x=element_blank(),
+                                                                                                                                                                                                                                               axis.text.y = element_text(size=15), plot.title = element_text(size=18)) + geom_text(aes(label=Number), vjust = 0, hjust=-2, size = 10) + ylim(c(0,11)) + labs(title="Distribution of most variable Families", x = "")
+ggsave(plot = lfc_bars, filename = "./Figures/Figure_3/distribution_families.pdf")
