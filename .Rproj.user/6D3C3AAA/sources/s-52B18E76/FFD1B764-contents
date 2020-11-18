@@ -233,6 +233,14 @@ Hives_dds_RLE_species <- estimateSizeFactors(Hives_dds_species,type = "ratio")
 Hives_normalised_counts_species <- counts(Hives_dds_RLE_species, normalized = TRUE)
 Hives_counts_vst_species <- varianceStabilizingTransformation(Hives_dds_RLE_species, blind = FALSE)
 
+# QC for species
+
+degCheckFactors(Hives_normalised_counts_species[, 1:8])
+res1 <- DESeq(Hives_dds_RLE_species)
+res2 <- results(res1)
+degQC(Hives_normalised_counts_species, colData(res1)[["Method"]], pvalue = res2[["pvalue"]])
+
+
 
 # Export the counts because it will be needed for the next figure
 classification_deseq_export(normalised_reads = Hives_normalised_counts_species, path_filename = "./Figures/Figure_3/normalised_methodseason_species.csv")
@@ -367,13 +375,12 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
   rld <- rlog(dds_object, blind=F)
   results <- subset(results(dds_object), padj < 0.05)
   
-  results_export <- as.data.frame(rownames(results))
-  colnames(results_export) <- c("Taxonomic_ID")
-  write.csv(results_export,pathcsv)
+  #results_export <- as.data.frame(rownames(results))
+  #colnames(results_export) <- c("Taxonomic_ID")
   
   # make the lists
-  upgenes <- rownames(head(results[ order( results$log2FoldChange ), ], n=40))
-  downgenes <- rownames(head(results[ order( -results$log2FoldChange ), ], n=40))
+  upgenes <- rownames(head(results[ order( results$log2FoldChange ), ], n=1000))
+  downgenes <- rownames(head(results[ order( -results$log2FoldChange ), ], n=1000))
   
   # this gives us the rows we want
   rows <- match(upgenes, row.names(rld))
@@ -389,6 +396,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
   generate_species[,1] = as.character(generate_species[,1])
   annotationrows_species1 <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species,generate_species)
   colnames(annotationrows_species1) <- c("Domain", "Taxonomic_ID", level)
+  write.csv(annotationrows_species1,pathcsv)
   
   annotationrows_species1 = annotationrows_species1[,-2]
   annotationrows_species1 <- tibble::column_to_rownames(annotationrows_species1, var = level)
@@ -405,7 +413,7 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
 differentially_abundant_species <- plotDiffAbund(
   DESeq_RLE_object =Hives_dds_RLE_species,
   colNums = c(1:8),
-  level = "species")
+  level = "species", pathcsv = "./Figures/Figure_3/significant_species.csv")
 
 differentially_abundant_genera <- plotDiffAbund(
   DESeq_RLE_object =Hives_dds_RLE_genus,
@@ -570,7 +578,7 @@ pca_biplots <- function(dds_rle_object, annotation, filename) {
 
   # this will increase the line width
   biplot[["layers"]][[2]][["aes_params"]][["size"]] <- 1
-  to_export <- biplot + labs(x = paste("PC1:", paste0(round(eig[["data"]][["eig"]][1], digits = 1),"%")), y = paste("PC1:", paste0(round(eig[["data"]][["eig"]][2], digits = 1),"%")))
+  to_export <- biplot + labs(x = paste("PC1:", paste0(round(eig[["data"]][["eig"]][1], digits = 1),"%")), y = paste("PC2:", paste0(round(eig[["data"]][["eig"]][2], digits = 1),"%")))
   ggsave(to_export,filename = paste0(output_path,filename,"PCA_biplot.pdf"))
   }
 

@@ -1,0 +1,1 @@
+{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"setwd(\"~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Varroa 2\")","line_number":0}],"message":"Error in setwd(\"~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Varroa 2\") : \n  cannot change working directory\n"}
