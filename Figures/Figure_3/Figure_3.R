@@ -442,7 +442,7 @@ sig_res_LRT <- function(dds_object1, meta, replacegenes) {
   rld_mat <- assay(rld)
   cluster_rlog <- cluster_rlog <- rld_mat[clustering$Taxonomic_ID, ]
   meta$Method <- c("DirectSM","DirectSM","DirectSM","DirectSM","SM","SM","SM","SM")
-  results_deg <- degPatterns(cluster_rlog, metadata = meta, time = "Season", col="Method", minc = 3)
+  results_deg <- degPatterns(cluster_rlog, metadata = meta, time = "Season", col="Method", minc = 2)
   primary_plot <- degPlotCluster(results_deg$normalized, time = "Season", color = "Method", facet = T) + theme_bw() + scale_x_discrete(limits = c("May","July","November")) + scale_colour_brewer(type = "qual", palette = "Set1") + labs(title = "", y = "Z-score of abundance")
   primary_plot$data$title <- str_replace(primary_plot$data$title, "genes", print(replacegenes));
   return(primary_plot)
@@ -483,7 +483,7 @@ export_list <- function(lst, FamGenSp, output_path) {
 
 # Taxonomy list
 taxonomy_per_cluster <- function(sig_res_object) {
- df <- sig_res_object$data[,c(1,9)]
+ df <- sig_res_object$data[,c(1,7)]
  df[,1] <- str_replace(df[,1], "X", "")
  colnames(df) <- c("Taxonomic_ID", "cluster")
  df_new <- distinct(df, df$Taxonomic_ID, .keep_all = TRUE)
@@ -494,6 +494,7 @@ taxonomy_per_cluster <- function(sig_res_object) {
 listfamily <- taxonomy_per_cluster(family_sig_res)
 listgenus <- taxonomy_per_cluster(genus_sig_res)
 listspecies <- taxonomy_per_cluster(species_sig_res)
+
 
 export_list(listfamily, FamGenSp = "Family",output_path = "./Figures/Figure_3/")
 export_list(listgenus, FamGenSp = "Genus",output_path = "./Figures/Figure_3/")
@@ -521,22 +522,17 @@ ggsave(plot = arranged_species, filename = "./Figures/Figure_3/species_cluster_c
 
 
 # PCA analysis
-dds_family <- DESeq(Hives_dds_RLE_species, test = "LRT", reduced = ~Method, full = ~Method+Season)
-rld_family <- rlog(dds_family, blind=T)
-mat <- assay(rld_family)
-pca<-prcomp(t(mat))
 
-colnames(mat) <- str_replace(colnames(mat), pattern = "_", replacement = " ")
+# Filter for low counts
+filtered_family <- rowSums( counts(Hives_dds_RLE_family) >= 5) >=2
+Hives_dds_RLE_family_filtered <- Hives_dds_RLE_family[filtered_family,]
 
+filtered_genus <- rowSums( counts(Hives_dds_RLE_genus) >= 5) >=2
+Hives_dds_RLE_genus_filtered <- Hives_dds_RLE_genus[filtered_genus,]
 
-species_annot <- generate_species_v2
-species_annot$Taxonomic_ID <- str_replace_all(species_annot$Taxonomic_ID, pattern = " ", replacement = "")
-species_annot$Taxonomic_ID <- as.character(species_annot$Taxonomic_ID)
+filtered_species <- rowSums( counts(Hives_dds_RLE_species) >= 5) >=2
+Hives_dds_RLE_species_filtered <- Hives_dds_RLE_species[filtered_species,]
 
-species_annot2 <- species_annot[match(rownames(mat),species_annot$Taxonomic_ID),]
-annotation_biplot <- get_super_kingdom_or_plant(species_annot2$Taxonomic_ID)
-annotation_biplot <- as.data.frame(annotation_biplot)
-rownames(annotation_biplot) <- species_annot2$Taxonomic_ID
 
 # Visualise dimensions
 
@@ -596,9 +592,9 @@ annotationrows_genus_plot$genus <- as.character(annotationrows_genus_plot$genus)
 annotationrows_genus_plot[740,2] <- "Bacillus (walking stick)"
 
 # Create the plots
-pca_biplots(Hives_dds_RLE_species, annotation = generate_species_v2, filename = "species")
-pca_biplots(Hives_dds_RLE_genus, annotation = annotationrows_genus_plot , filename = "genus")
-pca_biplots(Hives_dds_RLE_family, annotation = annotationrows_family_plot , filename = "family")
+pca_biplots(Hives_dds_RLE_family_filtered, annotation = annotationrows_family_plot, filename = "family_filtered")
+pca_biplots(Hives_dds_RLE_genus_filtered, annotation = annotationrows_genus_plot , filename = "genus_filtered")
+pca_biplots(Hives_dds_RLE_species_filtered, annotation = generate_species_v2 , filename = "species_filtered")
 
 ### PASTED COLOUR PALETTE SO I CAN EASILY ACCESS IT
 

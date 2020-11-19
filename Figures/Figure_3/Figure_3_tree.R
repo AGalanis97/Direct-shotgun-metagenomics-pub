@@ -109,19 +109,16 @@ colnames(padj_values_family) <- c("padjvalue")
 rownames(padj_values_family) <- tree1$tip.label
 
 # We can now build the heatmap
-p2 <- gheatmap(circ2, padj_values_family, colnames_angle=0, offset = 0, width = 0.4, colnames = F) + scale_fill_distiller(palette = "RdGy", limits=c(0,1), direction = 1) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "p-value (adjusted)", title.position = "top"))
+p2 <- gheatmap(circ2, padj_values_family, colnames_angle=0, offset = 0, width = 0.2, colnames = F) + scale_fill_distiller(palette = "RdGy", limits=c(0,1), direction = 1, breaks = c(0, 1)) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "p-value (adjusted)", title.position = "top"))
 
 
 # Add annotation to the Domains as we've done so far 
 p3 <- p2  + geom_cladelabel(node = 486, color ="#7570B3", align = T, label = "", barsize = 3) + geom_cladelabel(node = 543, color = "#1B9E77", align = T, label = "", barsize = 3, offset = 0) + geom_cladelabel(node = 578, color = "#E6AB02", align = T, label = "", barsize = 3) + geom_cladelabel(node = 479, color = "#eb53a1", align = T, label = "", barsize = 3) + geom_cladelabel(node = 575, color = "#D95F02", align = T, label = "", barsize = 3)
 
 p4 <- p3 + new_scale_fill()
-p5 <- gheatmap(p4, family_lfc_plot, colnames_angle=0, offset = 0.7, width = 0.15, colnames = F) + scale_fill_distiller(palette = "PiYG", limits = c(-2,2)) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Log2FC", title.position = "top"))
-p6 <- p5 + new_scale_fill()
-p7 <- gheatmap(p6, direction, colnames_angle=0, offset = 1.5, width = 0.15, colnames = F) + scale_fill_brewer(palette = "Set1") + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = "legend")
+p5 <- gheatmap(p4, family_lfc_plot, colnames_angle=0, offset = 1, width = 0.15, colnames = F) + scale_fill_distiller(palette = "PiYG", limits = c(-2,2), labels = c("DirectSM","","SM"), breaks = c(-2,0,2)) + theme(legend.position = "bottom", legend.title.align = 0.5) + guides(fill = guide_colourbar(barwidth = 5, ticks = FALSE, title = "Log2FC", title.position = "top"))
 
-
-ggsave(p7, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
+ggsave(p5, filename="circlularplot_families.pdf", device = "pdf", width = 15, height = 15, path = "./Figures/Figure_3/")
 
 
 family_lfc_replace_plant <- family_lfc

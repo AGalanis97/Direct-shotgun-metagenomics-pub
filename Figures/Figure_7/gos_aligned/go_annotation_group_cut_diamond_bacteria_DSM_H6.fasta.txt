@@ -1,0 +1,961 @@
+GO_annotation	 1
+UNGROUPED|1239307_DSM_H6.fastq_extracted	7.0
+UNGROUPED|1267021_DSM_H6.fastq_extracted	569.0
+UNGROUPED|138074_DSM_H6.fastq_extracted	1278.0
+UNGROUPED|1914861_DSM_H6.fastq_extracted	14.0
+UNGROUPED|33968_DSM_H6.fastq_extracted	44.0
+UNGROUPED|470_DSM_H6.fastq_extracted	19.0
+UNGROUPED|47885_DSM_H6.fastq_extracted	101.0
+UNGROUPED|48296_DSM_H6.fastq_extracted	16.0
+UNGROUPED|548_DSM_H6.fastq_extracted	12.0
+UNGROUPED|69218_DSM_H6.fastq_extracted	44.0
+UNGROUPED|82987_DSM_H6.fastq_extracted	123.0
+GO:0000027: [BP] ribosomal large subunit assembly|138074_DSM_H6.fastq_extracted	40.0
+GO:0000049: [MF] tRNA binding|1267021_DSM_H6.fastq_extracted	107.0
+GO:0000049: [MF] tRNA binding|138074_DSM_H6.fastq_extracted	58.0
+GO:0000105: [BP] histidine biosynthetic process|1267021_DSM_H6.fastq_extracted	22.0
+GO:0000155: [MF] phosphorelay sensor kinase activity|1267021_DSM_H6.fastq_extracted	28.0
+GO:0000155: [MF] phosphorelay sensor kinase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0000155: [MF] phosphorelay sensor kinase activity|33968_DSM_H6.fastq_extracted	4.0
+GO:0000160: [BP] phosphorelay signal transduction system|138074_DSM_H6.fastq_extracted	2.0
+GO:0000160: [BP] phosphorelay signal transduction system|33968_DSM_H6.fastq_extracted	39.0
+GO:0000166: [MF] nucleotide binding|1267021_DSM_H6.fastq_extracted	1.0
+GO:0000166: [MF] nucleotide binding|138074_DSM_H6.fastq_extracted	89.0
+GO:0000175: [MF] 3'-5'-exoribonuclease activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0000270: [BP] peptidoglycan metabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0000271: [BP] polysaccharide biosynthetic process|138074_DSM_H6.fastq_extracted	35.0
+GO:0000272: [BP] polysaccharide catabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0000287: [MF] magnesium ion binding|1267021_DSM_H6.fastq_extracted	66.0
+GO:0000287: [MF] magnesium ion binding|138074_DSM_H6.fastq_extracted	93.0
+GO:0000287: [MF] magnesium ion binding|47885_DSM_H6.fastq_extracted	32.0
+GO:0000287: [MF] magnesium ion binding|82987_DSM_H6.fastq_extracted	21.0
+GO:0000724: [BP] double-strand break repair via homologous recombination|82987_DSM_H6.fastq_extracted	4.0
+GO:0000902: [BP] cell morphogenesis|1267021_DSM_H6.fastq_extracted	23.0
+GO:0000917: [BP] barrier septum assembly|47885_DSM_H6.fastq_extracted	19.0
+GO:0001123: [BP] transcription initiation from bacterial-type RNA polymerase promoter|138074_DSM_H6.fastq_extracted	9.0
+GO:0001510: [BP] RNA methylation|1267021_DSM_H6.fastq_extracted	5.0
+GO:0001522: [BP] pseudouridine synthesis|138074_DSM_H6.fastq_extracted	3.0
+GO:0001680: [BP] tRNA 3'-terminal CCA addition|1267021_DSM_H6.fastq_extracted	1.0
+GO:0002097: [BP] tRNA wobble base modification|138074_DSM_H6.fastq_extracted	14.0
+GO:0002098: [BP] tRNA wobble uridine modification|1267021_DSM_H6.fastq_extracted	16.0
+GO:0002101: [BP] tRNA wobble cytosine modification|1267021_DSM_H6.fastq_extracted	22.0
+GO:0002101: [BP] tRNA wobble cytosine modification|138074_DSM_H6.fastq_extracted	25.0
+GO:0002143: [BP] tRNA wobble position uridine thiolation|1267021_DSM_H6.fastq_extracted	1.0
+GO:0002161: [MF] aminoacyl-tRNA editing activity|1267021_DSM_H6.fastq_extracted	95.0
+GO:0003676: [MF] nucleic acid binding|1267021_DSM_H6.fastq_extracted	57.0
+GO:0003676: [MF] nucleic acid binding|138074_DSM_H6.fastq_extracted	186.0
+GO:0003676: [MF] nucleic acid binding|33968_DSM_H6.fastq_extracted	28.0
+GO:0003676: [MF] nucleic acid binding|47885_DSM_H6.fastq_extracted	18.0
+GO:0003677: [MF] DNA binding|1267021_DSM_H6.fastq_extracted	213.0
+GO:0003677: [MF] DNA binding|138074_DSM_H6.fastq_extracted	493.0
+GO:0003677: [MF] DNA binding|33968_DSM_H6.fastq_extracted	62.0
+GO:0003677: [MF] DNA binding|47885_DSM_H6.fastq_extracted	29.0
+GO:0003677: [MF] DNA binding|82987_DSM_H6.fastq_extracted	6.0
+GO:0003684: [MF] damaged DNA binding|1267021_DSM_H6.fastq_extracted	13.0
+GO:0003700: [MF] transcription factor activity, sequence-specific DNA binding|138074_DSM_H6.fastq_extracted	100.0
+GO:0003700: [MF] transcription factor activity, sequence-specific DNA binding|1914861_DSM_H6.fastq_extracted	1.0
+GO:0003700: [MF] transcription factor activity, sequence-specific DNA binding|33968_DSM_H6.fastq_extracted	1.0
+GO:0003700: [MF] transcription factor activity, sequence-specific DNA binding|47885_DSM_H6.fastq_extracted	50.0
+GO:0003723: [MF] RNA binding|1267021_DSM_H6.fastq_extracted	24.0
+GO:0003723: [MF] RNA binding|138074_DSM_H6.fastq_extracted	105.0
+GO:0003723: [MF] RNA binding|47885_DSM_H6.fastq_extracted	22.0
+GO:0003735: [MF] structural constituent of ribosome|138074_DSM_H6.fastq_extracted	1.0
+GO:0003743: [MF] translation initiation factor activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0003743: [MF] translation initiation factor activity|138074_DSM_H6.fastq_extracted	64.0
+GO:0003746: [MF] translation elongation factor activity|138074_DSM_H6.fastq_extracted	27.0
+GO:0003755: [MF] peptidyl-prolyl cis-trans isomerase activity|1267021_DSM_H6.fastq_extracted	14.0
+GO:0003755: [MF] peptidyl-prolyl cis-trans isomerase activity|138074_DSM_H6.fastq_extracted	51.0
+GO:0003774: [MF] motor activity|1267021_DSM_H6.fastq_extracted	48.0
+GO:0003796: [MF] lysozyme activity|138074_DSM_H6.fastq_extracted	17.0
+GO:0003824: [MF] catalytic activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0003824: [MF] catalytic activity|138074_DSM_H6.fastq_extracted	107.0
+GO:0003824: [MF] catalytic activity|48296_DSM_H6.fastq_extracted	19.0
+GO:0003824: [MF] catalytic activity|69218_DSM_H6.fastq_extracted	10.0
+GO:0003849: [MF] 3-deoxy-7-phosphoheptulonate synthase activity|33968_DSM_H6.fastq_extracted	6.0
+GO:0003849: [MF] 3-deoxy-7-phosphoheptulonate synthase activity|69218_DSM_H6.fastq_extracted	1.0
+GO:0003861: [MF] 3-isopropylmalate dehydratase activity|1267021_DSM_H6.fastq_extracted	19.0
+GO:0003861: [MF] 3-isopropylmalate dehydratase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0003872: [MF] 6-phosphofructokinase activity|1267021_DSM_H6.fastq_extracted	18.0
+GO:0003872: [MF] 6-phosphofructokinase activity|138074_DSM_H6.fastq_extracted	9.0
+GO:0003879: [MF] ATP phosphoribosyltransferase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0003887: [MF] DNA-directed DNA polymerase activity|1267021_DSM_H6.fastq_extracted	81.0
+GO:0003887: [MF] DNA-directed DNA polymerase activity|138074_DSM_H6.fastq_extracted	86.0
+GO:0003887: [MF] DNA-directed DNA polymerase activity|33968_DSM_H6.fastq_extracted	11.0
+GO:0003896: [MF] DNA primase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0003899: [MF] DNA-directed RNA polymerase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0003899: [MF] DNA-directed RNA polymerase activity|33968_DSM_H6.fastq_extracted	7.0
+GO:0003904: [MF] deoxyribodipyrimidine photo-lyase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0003916: [MF] DNA topoisomerase activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0003917: [MF] DNA topoisomerase type I activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0003918: [MF] DNA topoisomerase type II (ATP-hydrolyzing) activity|1267021_DSM_H6.fastq_extracted	87.0
+GO:0003918: [MF] DNA topoisomerase type II (ATP-hydrolyzing) activity|138074_DSM_H6.fastq_extracted	48.0
+GO:0003918: [MF] DNA topoisomerase type II (ATP-hydrolyzing) activity|33968_DSM_H6.fastq_extracted	22.0
+GO:0003920: [MF] GMP reductase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0003924: [MF] GTPase activity|1267021_DSM_H6.fastq_extracted	45.0
+GO:0003924: [MF] GTPase activity|138074_DSM_H6.fastq_extracted	64.0
+GO:0003937: [MF] IMP cyclohydrolase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0003938: [MF] IMP dehydrogenase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0003957: [MF] NAD(P)+ transhydrogenase (B-specific) activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0003964: [MF] RNA-directed DNA polymerase activity|138074_DSM_H6.fastq_extracted	12.0
+GO:0003978: [MF] UDP-glucose 4-epimerase activity|138074_DSM_H6.fastq_extracted	3.0
+GO:0003979: [MF] UDP-glucose 6-dehydrogenase activity|138074_DSM_H6.fastq_extracted	37.0
+GO:0003984: [MF] acetolactate synthase activity|82987_DSM_H6.fastq_extracted	18.0
+GO:0003992: [MF] N2-acetyl-L-ornithine:2-oxoglutarate 5-aminotransferase activity|1267021_DSM_H6.fastq_extracted	19.0
+GO:0004003: [MF] ATP-dependent DNA helicase activity|138074_DSM_H6.fastq_extracted	38.0
+GO:0004003: [MF] ATP-dependent DNA helicase activity|82987_DSM_H6.fastq_extracted	4.0
+GO:0004004: [MF] ATP-dependent RNA helicase activity|138074_DSM_H6.fastq_extracted	40.0
+GO:0004004: [MF] ATP-dependent RNA helicase activity|47885_DSM_H6.fastq_extracted	40.0
+GO:0004008: [MF] copper-exporting ATPase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0004016: [MF] adenylate cyclase activity|138074_DSM_H6.fastq_extracted	117.0
+GO:0004035: [MF] alkaline phosphatase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004048: [MF] anthranilate phosphoribosyltransferase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004049: [MF] anthranilate synthase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004065: [MF] arylsulfatase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0004066: [MF] asparagine synthase (glutamine-hydrolyzing) activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0004070: [MF] aspartate carbamoyltransferase activity|82987_DSM_H6.fastq_extracted	22.0
+GO:0004071: [MF] aspartate-ammonia ligase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004072: [MF] aspartate kinase activity|138074_DSM_H6.fastq_extracted	58.0
+GO:0004084: [MF] branched-chain-amino-acid transaminase activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0004089: [MF] carbonate dehydratase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0004096: [MF] catalase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0004106: [MF] chorismate mutase activity|69218_DSM_H6.fastq_extracted	20.0
+GO:0004143: [MF] diacylglycerol kinase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004170: [MF] dUTP diphosphatase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0004176: [MF] ATP-dependent peptidase activity|1267021_DSM_H6.fastq_extracted	25.0
+GO:0004176: [MF] ATP-dependent peptidase activity|138074_DSM_H6.fastq_extracted	14.0
+GO:0004177: [MF] aminopeptidase activity|1267021_DSM_H6.fastq_extracted	24.0
+GO:0004177: [MF] aminopeptidase activity|138074_DSM_H6.fastq_extracted	43.0
+GO:0004180: [MF] carboxypeptidase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004222: [MF] metalloendopeptidase activity|138074_DSM_H6.fastq_extracted	46.0
+GO:0004252: [MF] serine-type endopeptidase activity|1267021_DSM_H6.fastq_extracted	25.0
+GO:0004252: [MF] serine-type endopeptidase activity|138074_DSM_H6.fastq_extracted	70.0
+GO:0004252: [MF] serine-type endopeptidase activity|82987_DSM_H6.fastq_extracted	4.0
+GO:0004303: [MF] estradiol 17-beta-dehydrogenase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004342: [MF] glucosamine-6-phosphate deaminase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004355: [MF] glutamate synthase (NADPH) activity|1267021_DSM_H6.fastq_extracted	16.0
+GO:0004355: [MF] glutamate synthase (NADPH) activity|138074_DSM_H6.fastq_extracted	57.0
+GO:0004357: [MF] glutamate-cysteine ligase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0004364: [MF] glutathione transferase activity|1267021_DSM_H6.fastq_extracted	18.0
+GO:0004364: [MF] glutathione transferase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004373: [MF] glycogen (starch) synthase activity|138074_DSM_H6.fastq_extracted	3.0
+GO:0004386: [MF] helicase activity|138074_DSM_H6.fastq_extracted	48.0
+GO:0004386: [MF] helicase activity|47885_DSM_H6.fastq_extracted	18.0
+GO:0004400: [MF] histidinol-phosphate transaminase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0004412: [MF] homoserine dehydrogenase activity|138074_DSM_H6.fastq_extracted	57.0
+GO:0004414: [MF] homoserine O-acetyltransferase activity|1267021_DSM_H6.fastq_extracted	24.0
+GO:0004417: [MF] hydroxyethylthiazole kinase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004425: [MF] indole-3-glycerol-phosphate synthase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004452: [MF] isopentenyl-diphosphate delta-isomerase activity|47885_DSM_H6.fastq_extracted	15.0
+GO:0004458: [MF] D-lactate dehydrogenase (cytochrome) activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004471: [MF] malate dehydrogenase (decarboxylating) (NAD+) activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0004497: [MF] monooxygenase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0004497: [MF] monooxygenase activity|47885_DSM_H6.fastq_extracted	4.0
+GO:0004518: [MF] nuclease activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0004518: [MF] nuclease activity|138074_DSM_H6.fastq_extracted	36.0
+GO:0004519: [MF] endonuclease activity|1267021_DSM_H6.fastq_extracted	6.0
+GO:0004519: [MF] endonuclease activity|138074_DSM_H6.fastq_extracted	13.0
+GO:0004520: [MF] endodeoxyribonuclease activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004527: [MF] exonuclease activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0004553: [MF] hydrolase activity, hydrolyzing O-glycosyl compounds|1239307_DSM_H6.fastq_extracted	12.0
+GO:0004553: [MF] hydrolase activity, hydrolyzing O-glycosyl compounds|1267021_DSM_H6.fastq_extracted	43.0
+GO:0004553: [MF] hydrolase activity, hydrolyzing O-glycosyl compounds|69218_DSM_H6.fastq_extracted	3.0
+GO:0004563: [MF] beta-N-acetylhexosaminidase activity|138074_DSM_H6.fastq_extracted	18.0
+GO:0004568: [MF] chitinase activity|1239307_DSM_H6.fastq_extracted	7.0
+GO:0004568: [MF] chitinase activity|69218_DSM_H6.fastq_extracted	42.0
+GO:0004601: [MF] peroxidase activity|138074_DSM_H6.fastq_extracted	14.0
+GO:0004616: [MF] phosphogluconate dehydrogenase (decarboxylating) activity|138074_DSM_H6.fastq_extracted	18.0
+GO:0004617: [MF] phosphoglycerate dehydrogenase activity|1267021_DSM_H6.fastq_extracted	35.0
+GO:0004617: [MF] phosphoglycerate dehydrogenase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0004618: [MF] phosphoglycerate kinase activity|138074_DSM_H6.fastq_extracted	40.0
+GO:0004632: [MF] phosphopantothenate--cysteine ligase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004633: [MF] phosphopantothenoylcysteine decarboxylase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004638: [MF] phosphoribosylaminoimidazole carboxylase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0004639: [MF] phosphoribosylaminoimidazolesuccinocarboxamide synthase activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0004640: [MF] phosphoribosylanthranilate isomerase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004641: [MF] phosphoribosylformylglycinamidine cyclo-ligase activity|1267021_DSM_H6.fastq_extracted	44.0
+GO:0004642: [MF] phosphoribosylformylglycinamidine synthase activity|138074_DSM_H6.fastq_extracted	14.0
+GO:0004643: [MF] phosphoribosylaminoimidazolecarboxamide formyltransferase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0004647: [MF] phosphoserine phosphatase activity|138074_DSM_H6.fastq_extracted	6.0
+GO:0004652: [MF] polynucleotide adenylyltransferase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0004654: [MF] polyribonucleotide nucleotidyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0004665: [MF] prephenate dehydrogenase (NADP+) activity|69218_DSM_H6.fastq_extracted	17.0
+GO:0004672: [MF] protein kinase activity|138074_DSM_H6.fastq_extracted	18.0
+GO:0004672: [MF] protein kinase activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0004673: [MF] protein histidine kinase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0004674: [MF] protein serine/threonine kinase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0004674: [MF] protein serine/threonine kinase activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0004721: [MF] phosphoprotein phosphatase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004730: [MF] pseudouridylate synthase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004735: [MF] pyrroline-5-carboxylate reductase activity|1267021_DSM_H6.fastq_extracted	13.0
+GO:0004743: [MF] pyruvate kinase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0004748: [MF] ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor|138074_DSM_H6.fastq_extracted	20.0
+GO:0004748: [MF] ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor|33968_DSM_H6.fastq_extracted	23.0
+GO:0004750: [MF] ribulose-phosphate 3-epimerase activity|138074_DSM_H6.fastq_extracted	47.0
+GO:0004751: [MF] ribose-5-phosphate isomerase activity|33968_DSM_H6.fastq_extracted	78.0
+GO:0004775: [MF] succinate-CoA ligase (ADP-forming) activity|138074_DSM_H6.fastq_extracted	3.0
+GO:0004783: [MF] sulfite reductase (NADPH) activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0004783: [MF] sulfite reductase (NADPH) activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004784: [MF] superoxide dismutase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004803: [MF] transposase activity|138074_DSM_H6.fastq_extracted	39.0
+GO:0004808: [MF] tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase activity|138074_DSM_H6.fastq_extracted	14.0
+GO:0004812: [MF] aminoacyl-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0004812: [MF] aminoacyl-tRNA ligase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004816: [MF] asparagine-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0004818: [MF] glutamate-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	19.0
+GO:0004822: [MF] isoleucine-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	41.0
+GO:0004823: [MF] leucine-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0004830: [MF] tryptophan-tRNA ligase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0004832: [MF] valine-tRNA ligase activity|1267021_DSM_H6.fastq_extracted	40.0
+GO:0004834: [MF] tryptophan synthase activity|138074_DSM_H6.fastq_extracted	44.0
+GO:0004842: [MF] ubiquitin-protein transferase activity|138074_DSM_H6.fastq_extracted	6.0
+GO:0004849: [MF] uridine kinase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0005198: [MF] structural molecule activity|1267021_DSM_H6.fastq_extracted	40.0
+GO:0005215: [MF] transporter activity|48296_DSM_H6.fastq_extracted	10.0
+GO:0005215: [MF] transporter activity|82987_DSM_H6.fastq_extracted	36.0
+GO:0005315: [MF] inorganic phosphate transmembrane transporter activity|33968_DSM_H6.fastq_extracted	24.0
+GO:0005337: [MF] nucleoside transmembrane transporter activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0005355: [MF] glucose transmembrane transporter activity|138074_DSM_H6.fastq_extracted	12.0
+GO:0005385: [MF] zinc ion transmembrane transporter activity|1267021_DSM_H6.fastq_extracted	4.0
+GO:0005451: [MF] monovalent cation:proton antiporter activity|138074_DSM_H6.fastq_extracted	10.0
+GO:0005506: [MF] iron ion binding|1267021_DSM_H6.fastq_extracted	61.0
+GO:0005506: [MF] iron ion binding|138074_DSM_H6.fastq_extracted	59.0
+GO:0005507: [MF] copper ion binding|138074_DSM_H6.fastq_extracted	2.0
+GO:0005509: [MF] calcium ion binding|47885_DSM_H6.fastq_extracted	13.0
+GO:0005524: [MF] ATP binding|1267021_DSM_H6.fastq_extracted	560.0
+GO:0005524: [MF] ATP binding|138074_DSM_H6.fastq_extracted	908.0
+GO:0005524: [MF] ATP binding|1914861_DSM_H6.fastq_extracted	2.0
+GO:0005524: [MF] ATP binding|33968_DSM_H6.fastq_extracted	91.0
+GO:0005524: [MF] ATP binding|47885_DSM_H6.fastq_extracted	41.0
+GO:0005524: [MF] ATP binding|48296_DSM_H6.fastq_extracted	8.0
+GO:0005524: [MF] ATP binding|82987_DSM_H6.fastq_extracted	7.0
+GO:0005525: [MF] GTP binding|1267021_DSM_H6.fastq_extracted	80.0
+GO:0005525: [MF] GTP binding|138074_DSM_H6.fastq_extracted	64.0
+GO:0005542: [MF] folic acid binding|1267021_DSM_H6.fastq_extracted	1.0
+GO:0005576: [CC] extracellular region|1239307_DSM_H6.fastq_extracted	19.0
+GO:0005576: [CC] extracellular region|69218_DSM_H6.fastq_extracted	45.0
+GO:0005623: [CC] cell|1267021_DSM_H6.fastq_extracted	11.0
+GO:0005623: [CC] cell|138074_DSM_H6.fastq_extracted	12.0
+GO:0005694: [CC] chromosome|1267021_DSM_H6.fastq_extracted	76.0
+GO:0005694: [CC] chromosome|138074_DSM_H6.fastq_extracted	36.0
+GO:0005694: [CC] chromosome|33968_DSM_H6.fastq_extracted	22.0
+GO:0005694: [CC] chromosome|47885_DSM_H6.fastq_extracted	1.0
+GO:0005737: [CC] cytoplasm|1267021_DSM_H6.fastq_extracted	599.0
+GO:0005737: [CC] cytoplasm|138074_DSM_H6.fastq_extracted	706.0
+GO:0005737: [CC] cytoplasm|33968_DSM_H6.fastq_extracted	11.0
+GO:0005737: [CC] cytoplasm|47885_DSM_H6.fastq_extracted	58.0
+GO:0005737: [CC] cytoplasm|69218_DSM_H6.fastq_extracted	20.0
+GO:0005737: [CC] cytoplasm|82987_DSM_H6.fastq_extracted	20.0
+GO:0005743: [CC] mitochondrial inner membrane|138074_DSM_H6.fastq_extracted	1.0
+GO:0005829: [CC] cytosol|1267021_DSM_H6.fastq_extracted	4.0
+GO:0005829: [CC] cytosol|138074_DSM_H6.fastq_extracted	8.0
+GO:0005829: [CC] cytosol|47885_DSM_H6.fastq_extracted	1.0
+GO:0005840: [CC] ribosome|138074_DSM_H6.fastq_extracted	1.0
+GO:0005886: [CC] plasma membrane|1267021_DSM_H6.fastq_extracted	108.0
+GO:0005886: [CC] plasma membrane|138074_DSM_H6.fastq_extracted	305.0
+GO:0005886: [CC] plasma membrane|1914861_DSM_H6.fastq_extracted	23.0
+GO:0005886: [CC] plasma membrane|33968_DSM_H6.fastq_extracted	30.0
+GO:0005886: [CC] plasma membrane|47885_DSM_H6.fastq_extracted	1.0
+GO:0005886: [CC] plasma membrane|69218_DSM_H6.fastq_extracted	10.0
+GO:0005886: [CC] plasma membrane|82987_DSM_H6.fastq_extracted	17.0
+GO:0005887: [CC] integral component of plasma membrane|1267021_DSM_H6.fastq_extracted	1.0
+GO:0005887: [CC] integral component of plasma membrane|138074_DSM_H6.fastq_extracted	178.0
+GO:0005887: [CC] integral component of plasma membrane|47885_DSM_H6.fastq_extracted	19.0
+GO:0005887: [CC] integral component of plasma membrane|82987_DSM_H6.fastq_extracted	36.0
+GO:0005971: [CC] ribonucleoside-diphosphate reductase complex|138074_DSM_H6.fastq_extracted	1.0
+GO:0005975: [BP] carbohydrate metabolic process|1239307_DSM_H6.fastq_extracted	19.0
+GO:0005975: [BP] carbohydrate metabolic process|1267021_DSM_H6.fastq_extracted	69.0
+GO:0005975: [BP] carbohydrate metabolic process|138074_DSM_H6.fastq_extracted	92.0
+GO:0005975: [BP] carbohydrate metabolic process|69218_DSM_H6.fastq_extracted	45.0
+GO:0005991: [BP] trehalose metabolic process|82987_DSM_H6.fastq_extracted	2.0
+GO:0006002: [BP] fructose 6-phosphate metabolic process|1267021_DSM_H6.fastq_extracted	18.0
+GO:0006006: [BP] glucose metabolic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0006015: [BP] 5-phosphoribose 1-diphosphate biosynthetic process|1267021_DSM_H6.fastq_extracted	21.0
+GO:0006032: [BP] chitin catabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0006032: [BP] chitin catabolic process|69218_DSM_H6.fastq_extracted	39.0
+GO:0006040: [BP] amino sugar metabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0006040: [BP] amino sugar metabolic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0006044: [BP] N-acetylglucosamine metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0006096: [BP] glycolytic process|138074_DSM_H6.fastq_extracted	40.0
+GO:0006098: [BP] pentose-phosphate shunt|138074_DSM_H6.fastq_extracted	80.0
+GO:0006099: [BP] tricarboxylic acid cycle|47885_DSM_H6.fastq_extracted	21.0
+GO:0006107: [BP] oxaloacetate metabolic process|47885_DSM_H6.fastq_extracted	19.0
+GO:0006164: [BP] purine nucleotide biosynthetic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0006164: [BP] purine nucleotide biosynthetic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0006171: [BP] cAMP biosynthetic process|138074_DSM_H6.fastq_extracted	117.0
+GO:0006177: [BP] GMP biosynthetic process|138074_DSM_H6.fastq_extracted	14.0
+GO:0006183: [BP] GTP biosynthetic process|138074_DSM_H6.fastq_extracted	3.0
+GO:0006189: [BP] 'de novo' IMP biosynthetic process|1267021_DSM_H6.fastq_extracted	65.0
+GO:0006189: [BP] 'de novo' IMP biosynthetic process|138074_DSM_H6.fastq_extracted	50.0
+GO:0006207: [BP] 'de novo' pyrimidine nucleobase biosynthetic process|82987_DSM_H6.fastq_extracted	22.0
+GO:0006226: [BP] dUMP biosynthetic process|138074_DSM_H6.fastq_extracted	47.0
+GO:0006229: [BP] dUTP biosynthetic process|138074_DSM_H6.fastq_extracted	40.0
+GO:0006260: [BP] DNA replication|1267021_DSM_H6.fastq_extracted	54.0
+GO:0006260: [BP] DNA replication|138074_DSM_H6.fastq_extracted	134.0
+GO:0006260: [BP] DNA replication|33968_DSM_H6.fastq_extracted	52.0
+GO:0006261: [BP] DNA-dependent DNA replication|1267021_DSM_H6.fastq_extracted	110.0
+GO:0006265: [BP] DNA topological change|1267021_DSM_H6.fastq_extracted	87.0
+GO:0006265: [BP] DNA topological change|138074_DSM_H6.fastq_extracted	48.0
+GO:0006265: [BP] DNA topological change|33968_DSM_H6.fastq_extracted	22.0
+GO:0006265: [BP] DNA topological change|47885_DSM_H6.fastq_extracted	1.0
+GO:0006281: [BP] DNA repair|1267021_DSM_H6.fastq_extracted	82.0
+GO:0006281: [BP] DNA repair|138074_DSM_H6.fastq_extracted	56.0
+GO:0006281: [BP] DNA repair|33968_DSM_H6.fastq_extracted	18.0
+GO:0006282: [BP] regulation of DNA repair|138074_DSM_H6.fastq_extracted	20.0
+GO:0006289: [BP] nucleotide-excision repair|1267021_DSM_H6.fastq_extracted	15.0
+GO:0006289: [BP] nucleotide-excision repair|138074_DSM_H6.fastq_extracted	80.0
+GO:0006302: [BP] double-strand break repair|138074_DSM_H6.fastq_extracted	1.0
+GO:0006308: [BP] DNA catabolic process|1267021_DSM_H6.fastq_extracted	22.0
+GO:0006310: [BP] DNA recombination|138074_DSM_H6.fastq_extracted	49.0
+GO:0006310: [BP] DNA recombination|33968_DSM_H6.fastq_extracted	18.0
+GO:0006313: [BP] transposition, DNA-mediated|138074_DSM_H6.fastq_extracted	39.0
+GO:0006351: [BP] transcription, DNA-templated|138074_DSM_H6.fastq_extracted	1.0
+GO:0006351: [BP] transcription, DNA-templated|33968_DSM_H6.fastq_extracted	7.0
+GO:0006352: [BP] DNA-templated transcription, initiation|138074_DSM_H6.fastq_extracted	13.0
+GO:0006353: [BP] DNA-templated transcription, termination|138074_DSM_H6.fastq_extracted	24.0
+GO:0006355: [BP] regulation of transcription, DNA-templated|1267021_DSM_H6.fastq_extracted	45.0
+GO:0006355: [BP] regulation of transcription, DNA-templated|138074_DSM_H6.fastq_extracted	42.0
+GO:0006355: [BP] regulation of transcription, DNA-templated|33968_DSM_H6.fastq_extracted	46.0
+GO:0006364: [BP] rRNA processing|1267021_DSM_H6.fastq_extracted	3.0
+GO:0006364: [BP] rRNA processing|138074_DSM_H6.fastq_extracted	15.0
+GO:0006378: [BP] mRNA polyadenylation|138074_DSM_H6.fastq_extracted	19.0
+GO:0006396: [BP] RNA processing|1267021_DSM_H6.fastq_extracted	69.0
+GO:0006400: [BP] tRNA modification|1267021_DSM_H6.fastq_extracted	43.0
+GO:0006400: [BP] tRNA modification|138074_DSM_H6.fastq_extracted	4.0
+GO:0006401: [BP] RNA catabolic process|47885_DSM_H6.fastq_extracted	22.0
+GO:0006402: [BP] mRNA catabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0006412: [BP] translation|138074_DSM_H6.fastq_extracted	26.0
+GO:0006415: [BP] translational termination|1267021_DSM_H6.fastq_extracted	14.0
+GO:0006418: [BP] tRNA aminoacylation for protein translation|1267021_DSM_H6.fastq_extracted	7.0
+GO:0006418: [BP] tRNA aminoacylation for protein translation|138074_DSM_H6.fastq_extracted	1.0
+GO:0006421: [BP] asparaginyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	18.0
+GO:0006424: [BP] glutamyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	19.0
+GO:0006428: [BP] isoleucyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	40.0
+GO:0006429: [BP] leucyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	21.0
+GO:0006436: [BP] tryptophanyl-tRNA aminoacylation|138074_DSM_H6.fastq_extracted	1.0
+GO:0006438: [BP] valyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	38.0
+GO:0006449: [BP] regulation of translational termination|1267021_DSM_H6.fastq_extracted	10.0
+GO:0006457: [BP] protein folding|138074_DSM_H6.fastq_extracted	31.0
+GO:0006508: [BP] proteolysis|1267021_DSM_H6.fastq_extracted	1.0
+GO:0006508: [BP] proteolysis|138074_DSM_H6.fastq_extracted	3.0
+GO:0006515: [BP] misfolded or incompletely synthesized protein catabolic process|1267021_DSM_H6.fastq_extracted	21.0
+GO:0006520: [BP] cellular amino acid metabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0006520: [BP] cellular amino acid metabolic process|82987_DSM_H6.fastq_extracted	22.0
+GO:0006525: [BP] arginine metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0006525: [BP] arginine metabolic process|82987_DSM_H6.fastq_extracted	3.0
+GO:0006526: [BP] arginine biosynthetic process|1267021_DSM_H6.fastq_extracted	17.0
+GO:0006527: [BP] arginine catabolic process|138074_DSM_H6.fastq_extracted	20.0
+GO:0006529: [BP] asparagine biosynthetic process|138074_DSM_H6.fastq_extracted	24.0
+GO:0006534: [BP] cysteine metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0006537: [BP] glutamate biosynthetic process|1267021_DSM_H6.fastq_extracted	28.0
+GO:0006537: [BP] glutamate biosynthetic process|138074_DSM_H6.fastq_extracted	53.0
+GO:0006541: [BP] glutamine metabolic process|138074_DSM_H6.fastq_extracted	29.0
+GO:0006564: [BP] L-serine biosynthetic process|1267021_DSM_H6.fastq_extracted	35.0
+GO:0006564: [BP] L-serine biosynthetic process|138074_DSM_H6.fastq_extracted	20.0
+GO:0006571: [BP] tyrosine biosynthetic process|69218_DSM_H6.fastq_extracted	21.0
+GO:0006605: [BP] protein targeting|1267021_DSM_H6.fastq_extracted	15.0
+GO:0006605: [BP] protein targeting|138074_DSM_H6.fastq_extracted	94.0
+GO:0006633: [BP] fatty acid biosynthetic process|138074_DSM_H6.fastq_extracted	47.0
+GO:0006637: [BP] acyl-CoA metabolic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0006644: [BP] phospholipid metabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0006654: [BP] phosphatidic acid biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0006744: [BP] ubiquinone biosynthetic process|138074_DSM_H6.fastq_extracted	17.0
+GO:0006750: [BP] glutathione biosynthetic process|138074_DSM_H6.fastq_extracted	20.0
+GO:0006751: [BP] glutathione catabolic process|138074_DSM_H6.fastq_extracted	36.0
+GO:0006777: [BP] Mo-molybdopterin cofactor biosynthetic process|138074_DSM_H6.fastq_extracted	23.0
+GO:0006779: [BP] porphyrin-containing compound biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0006782: [BP] protoporphyrinogen IX biosynthetic process|138074_DSM_H6.fastq_extracted	15.0
+GO:0006807: [BP] nitrogen compound metabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0006813: [BP] potassium ion transport|1267021_DSM_H6.fastq_extracted	2.0
+GO:0006813: [BP] potassium ion transport|138074_DSM_H6.fastq_extracted	10.0
+GO:0006813: [BP] potassium ion transport|69218_DSM_H6.fastq_extracted	15.0
+GO:0006826: [BP] iron ion transport|138074_DSM_H6.fastq_extracted	2.0
+GO:0006835: [BP] dicarboxylic acid transport|138074_DSM_H6.fastq_extracted	18.0
+GO:0006857: [BP] oligopeptide transport|138074_DSM_H6.fastq_extracted	12.0
+GO:0006884: [BP] cell volume homeostasis|138074_DSM_H6.fastq_extracted	40.0
+GO:0006886: [BP] intracellular protein transport|1267021_DSM_H6.fastq_extracted	1.0
+GO:0006935: [BP] chemotaxis|1267021_DSM_H6.fastq_extracted	25.0
+GO:0006974: [BP] cellular response to DNA damage stimulus|138074_DSM_H6.fastq_extracted	2.0
+GO:0006979: [BP] response to oxidative stress|1267021_DSM_H6.fastq_extracted	3.0
+GO:0007049: [BP] cell cycle|1267021_DSM_H6.fastq_extracted	52.0
+GO:0007049: [BP] cell cycle|138074_DSM_H6.fastq_extracted	80.0
+GO:0007059: [BP] chromosome segregation|1267021_DSM_H6.fastq_extracted	20.0
+GO:0007059: [BP] chromosome segregation|138074_DSM_H6.fastq_extracted	46.0
+GO:0007059: [BP] chromosome segregation|33968_DSM_H6.fastq_extracted	20.0
+GO:0007155: [BP] cell adhesion|1267021_DSM_H6.fastq_extracted	2.0
+GO:0007155: [BP] cell adhesion|47885_DSM_H6.fastq_extracted	1.0
+GO:0008033: [BP] tRNA processing|1267021_DSM_H6.fastq_extracted	27.0
+GO:0008033: [BP] tRNA processing|138074_DSM_H6.fastq_extracted	20.0
+GO:0008061: [MF] chitin binding|1239307_DSM_H6.fastq_extracted	19.0
+GO:0008061: [MF] chitin binding|69218_DSM_H6.fastq_extracted	39.0
+GO:0008080: [MF] N-acetyltransferase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0008137: [MF] NADH dehydrogenase (ubiquinone) activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0008137: [MF] NADH dehydrogenase (ubiquinone) activity|138074_DSM_H6.fastq_extracted	33.0
+GO:0008137: [MF] NADH dehydrogenase (ubiquinone) activity|82987_DSM_H6.fastq_extracted	16.0
+GO:0008152: [BP] metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0008168: [MF] methyltransferase activity|1267021_DSM_H6.fastq_extracted	14.0
+GO:0008168: [MF] methyltransferase activity|138074_DSM_H6.fastq_extracted	12.0
+GO:0008168: [MF] methyltransferase activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0008173: [MF] RNA methyltransferase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0008233: [MF] peptidase activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0008233: [MF] peptidase activity|138074_DSM_H6.fastq_extracted	28.0
+GO:0008233: [MF] peptidase activity|33968_DSM_H6.fastq_extracted	1.0
+GO:0008233: [MF] peptidase activity|47885_DSM_H6.fastq_extracted	24.0
+GO:0008235: [MF] metalloexopeptidase activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0008235: [MF] metalloexopeptidase activity|138074_DSM_H6.fastq_extracted	34.0
+GO:0008236: [MF] serine-type peptidase activity|1267021_DSM_H6.fastq_extracted	5.0
+GO:0008236: [MF] serine-type peptidase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008237: [MF] metallopeptidase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008237: [MF] metallopeptidase activity|138074_DSM_H6.fastq_extracted	16.0
+GO:0008270: [MF] zinc ion binding|1267021_DSM_H6.fastq_extracted	87.0
+GO:0008270: [MF] zinc ion binding|138074_DSM_H6.fastq_extracted	72.0
+GO:0008295: [BP] spermidine biosynthetic process|138074_DSM_H6.fastq_extracted	20.0
+GO:0008299: [BP] isoprenoid biosynthetic process|47885_DSM_H6.fastq_extracted	15.0
+GO:0008320: [MF] protein transmembrane transporter activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0008324: [MF] cation transmembrane transporter activity|69218_DSM_H6.fastq_extracted	13.0
+GO:0008360: [BP] regulation of cell shape|1267021_DSM_H6.fastq_extracted	15.0
+GO:0008360: [BP] regulation of cell shape|138074_DSM_H6.fastq_extracted	71.0
+GO:0008360: [BP] regulation of cell shape|47885_DSM_H6.fastq_extracted	20.0
+GO:0008408: [MF] 3'-5' exonuclease activity|1267021_DSM_H6.fastq_extracted	79.0
+GO:0008408: [MF] 3'-5' exonuclease activity|138074_DSM_H6.fastq_extracted	86.0
+GO:0008408: [MF] 3'-5' exonuclease activity|33968_DSM_H6.fastq_extracted	11.0
+GO:0008409: [MF] 5'-3' exonuclease activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008413: [MF] 8-oxo-7,8-dihydroguanosine triphosphate pyrophosphatase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0008446: [MF] GDP-mannose 4,6-dehydratase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008448: [MF] N-acetylglucosamine-6-phosphate deacetylase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008452: [MF] RNA ligase activity|1267021_DSM_H6.fastq_extracted	46.0
+GO:0008460: [MF] dTDP-glucose 4,6-dehydratase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0008483: [MF] transaminase activity|1267021_DSM_H6.fastq_extracted	41.0
+GO:0008483: [MF] transaminase activity|138074_DSM_H6.fastq_extracted	25.0
+GO:0008484: [MF] sulfuric ester hydrolase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0008531: [MF] riboflavin kinase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008551: [MF] cadmium-exporting ATPase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008565: [MF] protein transporter activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008650: [MF] rRNA (uridine-2'-O-)-methyltransferase activity|1267021_DSM_H6.fastq_extracted	14.0
+GO:0008652: [BP] cellular amino acid biosynthetic process|138074_DSM_H6.fastq_extracted	7.0
+GO:0008654: [BP] phospholipid biosynthetic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0008658: [MF] penicillin binding|138074_DSM_H6.fastq_extracted	37.0
+GO:0008658: [MF] penicillin binding|33968_DSM_H6.fastq_extracted	1.0
+GO:0008658: [MF] penicillin binding|47885_DSM_H6.fastq_extracted	20.0
+GO:0008659: [MF] (3R)-hydroxymyristoyl-[acyl-carrier-protein] dehydratase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0008661: [MF] 1-deoxy-D-xylulose-5-phosphate synthase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0008662: [MF] 1-phosphofructokinase activity|138074_DSM_H6.fastq_extracted	45.0
+GO:0008693: [MF] 3-hydroxydecanoyl-[acyl-carrier-protein] dehydratase activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0008706: [MF] 6-phospho-beta-glucosidase activity|1267021_DSM_H6.fastq_extracted	25.0
+GO:0008716: [MF] D-alanine-D-alanine ligase activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0008718: [MF] D-amino-acid dehydrogenase activity|82987_DSM_H6.fastq_extracted	1.0
+GO:0008746: [MF] NAD(P)+ transhydrogenase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008750: [MF] NAD(P)+ transhydrogenase (AB-specific) activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0008757: [MF] S-adenosylmethionine-dependent methyltransferase activity|138074_DSM_H6.fastq_extracted	15.0
+GO:0008760: [MF] UDP-N-acetylglucosamine 1-carboxyvinyltransferase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0008792: [MF] arginine decarboxylase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0008828: [MF] dATP pyrophosphohydrolase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008829: [MF] dCTP deaminase activity|138074_DSM_H6.fastq_extracted	42.0
+GO:0008837: [MF] diaminopimelate epimerase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008840: [MF] 4-hydroxy-tetrahydrodipicolinate synthase|138074_DSM_H6.fastq_extracted	1.0
+GO:0008849: [MF] enterochelin esterase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008854: [MF] exodeoxyribonuclease V activity|82987_DSM_H6.fastq_extracted	4.0
+GO:0008855: [MF] exodeoxyribonuclease VII activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0008863: [MF] formate dehydrogenase (NAD+) activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008870: [MF] galactoside O-acetyltransferase activity|82987_DSM_H6.fastq_extracted	3.0
+GO:0008881: [MF] glutamate racemase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008899: [MF] homoserine O-succinyltransferase activity|1267021_DSM_H6.fastq_extracted	24.0
+GO:0008902: [MF] hydroxymethylpyrimidine kinase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0008932: [MF] lytic endotransglycosylase activity|138074_DSM_H6.fastq_extracted	18.0
+GO:0008933: [MF] lytic transglycosylase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0008934: [MF] inositol monophosphate 1-phosphatase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0008948: [MF] oxaloacetate decarboxylase activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0008955: [MF] peptidoglycan glycosyltransferase activity|138074_DSM_H6.fastq_extracted	54.0
+GO:0008955: [MF] peptidoglycan glycosyltransferase activity|33968_DSM_H6.fastq_extracted	1.0
+GO:0008955: [MF] peptidoglycan glycosyltransferase activity|47885_DSM_H6.fastq_extracted	19.0
+GO:0008963: [MF] phospho-N-acetylmuramoyl-pentapeptide-transferase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0008964: [MF] phosphoenolpyruvate carboxylase activity|47885_DSM_H6.fastq_extracted	21.0
+GO:0008965: [MF] phosphoenolpyruvate-protein phosphotransferase activity|82987_DSM_H6.fastq_extracted	19.0
+GO:0008967: [MF] phosphoglycolate phosphatase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0008972: [MF] phosphomethylpyrimidine kinase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0008973: [MF] phosphopentomutase activity|1267021_DSM_H6.fastq_extracted	21.0
+GO:0008973: [MF] phosphopentomutase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0008977: [MF] prephenate dehydrogenase activity|69218_DSM_H6.fastq_extracted	19.0
+GO:0008982: [MF] protein-N(PI)-phosphohistidine-sugar phosphotransferase activity|1267021_DSM_H6.fastq_extracted	18.0
+GO:0008982: [MF] protein-N(PI)-phosphohistidine-sugar phosphotransferase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0008998: [MF] ribonucleoside-triphosphate reductase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0009002: [MF] serine-type D-Ala-D-Ala carboxypeptidase activity|47885_DSM_H6.fastq_extracted	19.0
+GO:0009007: [MF] site-specific DNA-methyltransferase (adenine-specific) activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0009015: [MF] N-succinylarginine dihydrolase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0009015: [MF] N-succinylarginine dihydrolase activity|82987_DSM_H6.fastq_extracted	19.0
+GO:0009016: [MF] succinyldiaminopimelate transaminase activity|1267021_DSM_H6.fastq_extracted	10.0
+GO:0009024: [MF] tagatose-6-phosphate kinase activity|138074_DSM_H6.fastq_extracted	9.0
+GO:0009052: [BP] pentose-phosphate shunt, non-oxidative branch|138074_DSM_H6.fastq_extracted	2.0
+GO:0009052: [BP] pentose-phosphate shunt, non-oxidative branch|33968_DSM_H6.fastq_extracted	78.0
+GO:0009055: [MF] electron carrier activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0009056: [BP] catabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009058: [BP] biosynthetic process|1267021_DSM_H6.fastq_extracted	26.0
+GO:0009058: [BP] biosynthetic process|138074_DSM_H6.fastq_extracted	4.0
+GO:0009060: [BP] aerobic respiration|138074_DSM_H6.fastq_extracted	2.0
+GO:0009063: [BP] cellular amino acid catabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009073: [BP] aromatic amino acid family biosynthetic process|33968_DSM_H6.fastq_extracted	11.0
+GO:0009081: [BP] branched-chain amino acid metabolic process|1267021_DSM_H6.fastq_extracted	2.0
+GO:0009085: [BP] lysine biosynthetic process|1267021_DSM_H6.fastq_extracted	2.0
+GO:0009086: [BP] methionine biosynthetic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0009088: [BP] threonine biosynthetic process|138074_DSM_H6.fastq_extracted	51.0
+GO:0009089: [BP] lysine biosynthetic process via diaminopimelate|1267021_DSM_H6.fastq_extracted	7.0
+GO:0009089: [BP] lysine biosynthetic process via diaminopimelate|138074_DSM_H6.fastq_extracted	52.0
+GO:0009090: [BP] homoserine biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009094: [BP] L-phenylalanine biosynthetic process|69218_DSM_H6.fastq_extracted	1.0
+GO:0009097: [BP] isoleucine biosynthetic process|1267021_DSM_H6.fastq_extracted	3.0
+GO:0009097: [BP] isoleucine biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009097: [BP] isoleucine biosynthetic process|82987_DSM_H6.fastq_extracted	17.0
+GO:0009098: [BP] leucine biosynthetic process|1267021_DSM_H6.fastq_extracted	22.0
+GO:0009098: [BP] leucine biosynthetic process|138074_DSM_H6.fastq_extracted	13.0
+GO:0009099: [BP] valine biosynthetic process|1267021_DSM_H6.fastq_extracted	3.0
+GO:0009099: [BP] valine biosynthetic process|82987_DSM_H6.fastq_extracted	17.0
+GO:0009103: [BP] lipopolysaccharide biosynthetic process|1267021_DSM_H6.fastq_extracted	3.0
+GO:0009103: [BP] lipopolysaccharide biosynthetic process|138074_DSM_H6.fastq_extracted	25.0
+GO:0009107: [BP] lipoate biosynthetic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0009117: [BP] nucleotide metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009220: [BP] pyrimidine ribonucleotide biosynthetic process|82987_DSM_H6.fastq_extracted	1.0
+GO:0009228: [BP] thiamine biosynthetic process|1267021_DSM_H6.fastq_extracted	22.0
+GO:0009228: [BP] thiamine biosynthetic process|138074_DSM_H6.fastq_extracted	19.0
+GO:0009236: [BP] cobalamin biosynthetic process|138074_DSM_H6.fastq_extracted	18.0
+GO:0009243: [BP] O antigen biosynthetic process|138074_DSM_H6.fastq_extracted	14.0
+GO:0009245: [BP] lipid A biosynthetic process|1267021_DSM_H6.fastq_extracted	3.0
+GO:0009245: [BP] lipid A biosynthetic process|138074_DSM_H6.fastq_extracted	23.0
+GO:0009246: [BP] enterobacterial common antigen biosynthetic process|138074_DSM_H6.fastq_extracted	33.0
+GO:0009249: [BP] protein lipoylation|138074_DSM_H6.fastq_extracted	63.0
+GO:0009252: [BP] peptidoglycan biosynthetic process|1267021_DSM_H6.fastq_extracted	19.0
+GO:0009252: [BP] peptidoglycan biosynthetic process|138074_DSM_H6.fastq_extracted	81.0
+GO:0009252: [BP] peptidoglycan biosynthetic process|47885_DSM_H6.fastq_extracted	20.0
+GO:0009253: [BP] peptidoglycan catabolic process|138074_DSM_H6.fastq_extracted	17.0
+GO:0009254: [BP] peptidoglycan turnover|1267021_DSM_H6.fastq_extracted	16.0
+GO:0009254: [BP] peptidoglycan turnover|138074_DSM_H6.fastq_extracted	21.0
+GO:0009263: [BP] deoxyribonucleotide biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0009264: [BP] deoxyribonucleotide catabolic process|1267021_DSM_H6.fastq_extracted	21.0
+GO:0009274: [CC] peptidoglycan-based cell wall|138074_DSM_H6.fastq_extracted	17.0
+GO:0009276: [CC] Gram-negative-bacterium-type cell wall|138074_DSM_H6.fastq_extracted	37.0
+GO:0009279: [CC] cell outer membrane|1267021_DSM_H6.fastq_extracted	2.0
+GO:0009279: [CC] cell outer membrane|138074_DSM_H6.fastq_extracted	67.0
+GO:0009279: [CC] cell outer membrane|47885_DSM_H6.fastq_extracted	20.0
+GO:0009288: [CC] bacterial-type flagellum|1267021_DSM_H6.fastq_extracted	4.0
+GO:0009294: [BP] DNA mediated transformation|1914861_DSM_H6.fastq_extracted	21.0
+GO:0009295: [CC] nucleoid|1267021_DSM_H6.fastq_extracted	22.0
+GO:0009295: [CC] nucleoid|138074_DSM_H6.fastq_extracted	15.0
+GO:0009306: [BP] protein secretion|1267021_DSM_H6.fastq_extracted	23.0
+GO:0009306: [BP] protein secretion|138074_DSM_H6.fastq_extracted	67.0
+GO:0009318: [CC] exodeoxyribonuclease VII complex|1267021_DSM_H6.fastq_extracted	22.0
+GO:0009330: [CC] DNA topoisomerase complex (ATP-hydrolyzing)|138074_DSM_H6.fastq_extracted	2.0
+GO:0009360: [CC] DNA polymerase III complex|1267021_DSM_H6.fastq_extracted	19.0
+GO:0009360: [CC] DNA polymerase III complex|138074_DSM_H6.fastq_extracted	42.0
+GO:0009378: [MF] four-way junction helicase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0009379: [CC] Holliday junction helicase complex|138074_DSM_H6.fastq_extracted	1.0
+GO:0009380: [CC] excinuclease repair complex|1267021_DSM_H6.fastq_extracted	15.0
+GO:0009380: [CC] excinuclease repair complex|138074_DSM_H6.fastq_extracted	80.0
+GO:0009381: [MF] excinuclease ABC activity|1267021_DSM_H6.fastq_extracted	13.0
+GO:0009381: [MF] excinuclease ABC activity|138074_DSM_H6.fastq_extracted	68.0
+GO:0009401: [BP] phosphoenolpyruvate-dependent sugar phosphotransferase system|1267021_DSM_H6.fastq_extracted	45.0
+GO:0009401: [BP] phosphoenolpyruvate-dependent sugar phosphotransferase system|138074_DSM_H6.fastq_extracted	23.0
+GO:0009401: [BP] phosphoenolpyruvate-dependent sugar phosphotransferase system|82987_DSM_H6.fastq_extracted	19.0
+GO:0009424: [CC] bacterial-type flagellum hook|1267021_DSM_H6.fastq_extracted	24.0
+GO:0009425: [CC] bacterial-type flagellum basal body|1267021_DSM_H6.fastq_extracted	21.0
+GO:0009431: [CC] bacterial-type flagellum basal body, MS ring|1267021_DSM_H6.fastq_extracted	23.0
+GO:0009432: [BP] SOS response|1267021_DSM_H6.fastq_extracted	31.0
+GO:0009432: [BP] SOS response|138074_DSM_H6.fastq_extracted	77.0
+GO:0009432: [BP] SOS response|33968_DSM_H6.fastq_extracted	17.0
+GO:0009446: [BP] putrescine biosynthetic process|138074_DSM_H6.fastq_extracted	12.0
+GO:0009898: [CC] cytoplasmic side of plasma membrane|1267021_DSM_H6.fastq_extracted	12.0
+GO:0009898: [CC] cytoplasmic side of plasma membrane|138074_DSM_H6.fastq_extracted	12.0
+GO:0009982: [MF] pseudouridine synthase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0010181: [MF] FMN binding|1267021_DSM_H6.fastq_extracted	1.0
+GO:0010181: [MF] FMN binding|138074_DSM_H6.fastq_extracted	73.0
+GO:0010181: [MF] FMN binding|47885_DSM_H6.fastq_extracted	15.0
+GO:0010212: [BP] response to ionizing radiation|138074_DSM_H6.fastq_extracted	2.0
+GO:0010795: [BP] regulation of ubiquinone biosynthetic process|138074_DSM_H6.fastq_extracted	17.0
+GO:0010974: [BP] negative regulation of barrier septum assembly|138074_DSM_H6.fastq_extracted	1.0
+GO:0015031: [BP] protein transport|1267021_DSM_H6.fastq_extracted	3.0
+GO:0015031: [BP] protein transport|138074_DSM_H6.fastq_extracted	33.0
+GO:0015074: [BP] DNA integration|138074_DSM_H6.fastq_extracted	104.0
+GO:0015079: [MF] potassium ion transmembrane transporter activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0015091: [MF] ferric iron transmembrane transporter activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0015095: [MF] magnesium ion transmembrane transporter activity|1914861_DSM_H6.fastq_extracted	39.0
+GO:0015098: [MF] molybdate ion transmembrane transporter activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0015209: [MF] cytosine transmembrane transporter activity|47885_DSM_H6.fastq_extracted	19.0
+GO:0015293: [MF] symporter activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0015293: [MF] symporter activity|138074_DSM_H6.fastq_extracted	24.0
+GO:0015299: [MF] solute:proton antiporter activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0015299: [MF] solute:proton antiporter activity|138074_DSM_H6.fastq_extracted	25.0
+GO:0015333: [MF] peptide:proton symporter activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0015386: [MF] potassium:proton antiporter activity|138074_DSM_H6.fastq_extracted	40.0
+GO:0015412: [MF] molybdate transmembrane-transporting ATPase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0015415: [MF] phosphate ion transmembrane-transporting ATPase activity|33968_DSM_H6.fastq_extracted	24.0
+GO:0015417: [MF] polyamine-transporting ATPase activity|138074_DSM_H6.fastq_extracted	8.0
+GO:0015419: [MF] sulfate transmembrane-transporting ATPase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0015426: [MF] polar-amino acid-transporting ATPase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0015450: [MF] P-P-bond-hydrolysis-driven protein transmembrane transporter activity|1267021_DSM_H6.fastq_extracted	16.0
+GO:0015450: [MF] P-P-bond-hydrolysis-driven protein transmembrane transporter activity|138074_DSM_H6.fastq_extracted	44.0
+GO:0015503: [MF] glutathione-regulated potassium exporter activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0015577: [MF] galactitol transmembrane transporter activity|1267021_DSM_H6.fastq_extracted	29.0
+GO:0015594: [MF] putrescine-importing ATPase activity|138074_DSM_H6.fastq_extracted	36.0
+GO:0015595: [MF] spermidine-importing ATPase activity|138074_DSM_H6.fastq_extracted	36.0
+GO:0015833: [BP] peptide transport|1267021_DSM_H6.fastq_extracted	14.0
+GO:0015833: [BP] peptide transport|1914861_DSM_H6.fastq_extracted	2.0
+GO:0015833: [BP] peptide transport|82987_DSM_H6.fastq_extracted	1.0
+GO:0015891: [BP] siderophore transport|138074_DSM_H6.fastq_extracted	58.0
+GO:0015930: [MF] glutamate synthase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0015930: [MF] glutamate synthase activity|138074_DSM_H6.fastq_extracted	7.0
+GO:0015937: [BP] coenzyme A biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0015941: [BP] pantothenate catabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0015944: [BP] formate oxidation|1267021_DSM_H6.fastq_extracted	16.0
+GO:0015976: [BP] carbon utilization|1267021_DSM_H6.fastq_extracted	22.0
+GO:0015977: [BP] carbon fixation|47885_DSM_H6.fastq_extracted	21.0
+GO:0016020: [CC] membrane|1267021_DSM_H6.fastq_extracted	9.0
+GO:0016020: [CC] membrane|138074_DSM_H6.fastq_extracted	39.0
+GO:0016020: [CC] membrane|1914861_DSM_H6.fastq_extracted	14.0
+GO:0016020: [CC] membrane|82987_DSM_H6.fastq_extracted	2.0
+GO:0016021: [CC] integral component of membrane|1239307_DSM_H6.fastq_extracted	1.0
+GO:0016021: [CC] integral component of membrane|1267021_DSM_H6.fastq_extracted	278.0
+GO:0016021: [CC] integral component of membrane|138074_DSM_H6.fastq_extracted	576.0
+GO:0016021: [CC] integral component of membrane|1914861_DSM_H6.fastq_extracted	27.0
+GO:0016021: [CC] integral component of membrane|33968_DSM_H6.fastq_extracted	12.0
+GO:0016021: [CC] integral component of membrane|47885_DSM_H6.fastq_extracted	129.0
+GO:0016021: [CC] integral component of membrane|48296_DSM_H6.fastq_extracted	20.0
+GO:0016021: [CC] integral component of membrane|69218_DSM_H6.fastq_extracted	12.0
+GO:0016021: [CC] integral component of membrane|82987_DSM_H6.fastq_extracted	31.0
+GO:0016040: [MF] glutamate synthase (NADH) activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016041: [MF] glutamate synthase (ferredoxin) activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0016114: [BP] terpenoid biosynthetic process|1267021_DSM_H6.fastq_extracted	23.0
+GO:0016114: [BP] terpenoid biosynthetic process|138074_DSM_H6.fastq_extracted	17.0
+GO:0016149: [MF] translation release factor activity, codon specific|1267021_DSM_H6.fastq_extracted	10.0
+GO:0016226: [BP] iron-sulfur cluster assembly|1267021_DSM_H6.fastq_extracted	24.0
+GO:0016226: [BP] iron-sulfur cluster assembly|138074_DSM_H6.fastq_extracted	66.0
+GO:0016301: [MF] kinase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0016301: [MF] kinase activity|138074_DSM_H6.fastq_extracted	67.0
+GO:0016301: [MF] kinase activity|82987_DSM_H6.fastq_extracted	19.0
+GO:0016310: [BP] phosphorylation|1267021_DSM_H6.fastq_extracted	20.0
+GO:0016310: [BP] phosphorylation|82987_DSM_H6.fastq_extracted	1.0
+GO:0016410: [MF] N-acyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016410: [MF] N-acyltransferase activity|82987_DSM_H6.fastq_extracted	1.0
+GO:0016416: [MF] O-palmitoyltransferase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0016437: [MF] tRNA cytidylyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016491: [MF] oxidoreductase activity|1267021_DSM_H6.fastq_extracted	11.0
+GO:0016491: [MF] oxidoreductase activity|138074_DSM_H6.fastq_extracted	105.0
+GO:0016491: [MF] oxidoreductase activity|47885_DSM_H6.fastq_extracted	19.0
+GO:0016491: [MF] oxidoreductase activity|48296_DSM_H6.fastq_extracted	2.0
+GO:0016491: [MF] oxidoreductase activity|69218_DSM_H6.fastq_extracted	10.0
+GO:0016491: [MF] oxidoreductase activity|82987_DSM_H6.fastq_extracted	16.0
+GO:0016597: [MF] amino acid binding|138074_DSM_H6.fastq_extracted	1.0
+GO:0016597: [MF] amino acid binding|82987_DSM_H6.fastq_extracted	22.0
+GO:0016616: [MF] oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor|138074_DSM_H6.fastq_extracted	2.0
+GO:0016639: [MF] oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor|1267021_DSM_H6.fastq_extracted	12.0
+GO:0016645: [MF] oxidoreductase activity, acting on the CH-NH group of donors|138074_DSM_H6.fastq_extracted	15.0
+GO:0016705: [MF] oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen|47885_DSM_H6.fastq_extracted	4.0
+GO:0016740: [MF] transferase activity|1267021_DSM_H6.fastq_extracted	29.0
+GO:0016740: [MF] transferase activity|138074_DSM_H6.fastq_extracted	100.0
+GO:0016740: [MF] transferase activity|33968_DSM_H6.fastq_extracted	5.0
+GO:0016740: [MF] transferase activity|47885_DSM_H6.fastq_extracted	2.0
+GO:0016740: [MF] transferase activity|82987_DSM_H6.fastq_extracted	12.0
+GO:0016746: [MF] transferase activity, transferring acyl groups|138074_DSM_H6.fastq_extracted	5.0
+GO:0016747: [MF] transferase activity, transferring acyl groups other than amino-acyl groups|138074_DSM_H6.fastq_extracted	23.0
+GO:0016757: [MF] transferase activity, transferring glycosyl groups|1267021_DSM_H6.fastq_extracted	3.0
+GO:0016757: [MF] transferase activity, transferring glycosyl groups|138074_DSM_H6.fastq_extracted	31.0
+GO:0016765: [MF] transferase activity, transferring alkyl or aryl (other than methyl) groups|138074_DSM_H6.fastq_extracted	1.0
+GO:0016772: [MF] transferase activity, transferring phosphorus-containing groups|82987_DSM_H6.fastq_extracted	1.0
+GO:0016773: [MF] phosphotransferase activity, alcohol group as acceptor|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016773: [MF] phosphotransferase activity, alcohol group as acceptor|138074_DSM_H6.fastq_extracted	23.0
+GO:0016779: [MF] nucleotidyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016779: [MF] nucleotidyltransferase activity|138074_DSM_H6.fastq_extracted	4.0
+GO:0016780: [MF] phosphotransferase activity, for other substituted phosphate groups|138074_DSM_H6.fastq_extracted	2.0
+GO:0016783: [MF] sulfurtransferase activity|1267021_DSM_H6.fastq_extracted	35.0
+GO:0016783: [MF] sulfurtransferase activity|138074_DSM_H6.fastq_extracted	12.0
+GO:0016787: [MF] hydrolase activity|1267021_DSM_H6.fastq_extracted	23.0
+GO:0016787: [MF] hydrolase activity|138074_DSM_H6.fastq_extracted	60.0
+GO:0016787: [MF] hydrolase activity|47885_DSM_H6.fastq_extracted	2.0
+GO:0016787: [MF] hydrolase activity|82987_DSM_H6.fastq_extracted	1.0
+GO:0016788: [MF] hydrolase activity, acting on ester bonds|138074_DSM_H6.fastq_extracted	4.0
+GO:0016795: [MF] phosphoric triester hydrolase activity|138074_DSM_H6.fastq_extracted	34.0
+GO:0016829: [MF] lyase activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0016829: [MF] lyase activity|138074_DSM_H6.fastq_extracted	36.0
+GO:0016832: [MF] aldehyde-lyase activity|33968_DSM_H6.fastq_extracted	11.0
+GO:0016837: [MF] carbon-oxygen lyase activity, acting on polysaccharides|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016853: [MF] isomerase activity|1267021_DSM_H6.fastq_extracted	7.0
+GO:0016853: [MF] isomerase activity|138074_DSM_H6.fastq_extracted	9.0
+GO:0016857: [MF] racemase and epimerase activity, acting on carbohydrates and derivatives|138074_DSM_H6.fastq_extracted	3.0
+GO:0016874: [MF] ligase activity|1267021_DSM_H6.fastq_extracted	6.0
+GO:0016874: [MF] ligase activity|138074_DSM_H6.fastq_extracted	25.0
+GO:0016881: [MF] acid-amino acid ligase activity|1267021_DSM_H6.fastq_extracted	19.0
+GO:0016887: [MF] ATPase activity|1267021_DSM_H6.fastq_extracted	39.0
+GO:0016887: [MF] ATPase activity|138074_DSM_H6.fastq_extracted	107.0
+GO:0016887: [MF] ATPase activity|1914861_DSM_H6.fastq_extracted	2.0
+GO:0016887: [MF] ATPase activity|48296_DSM_H6.fastq_extracted	7.0
+GO:0016887: [MF] ATPase activity|82987_DSM_H6.fastq_extracted	3.0
+GO:0016987: [MF] sigma factor activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0016992: [MF] lipoate synthase activity|138074_DSM_H6.fastq_extracted	42.0
+GO:0016998: [BP] cell wall macromolecule catabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0016998: [BP] cell wall macromolecule catabolic process|138074_DSM_H6.fastq_extracted	17.0
+GO:0017038: [BP] protein import|1267021_DSM_H6.fastq_extracted	19.0
+GO:0017038: [BP] protein import|138074_DSM_H6.fastq_extracted	48.0
+GO:0017057: [MF] 6-phosphogluconolactonase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0017108: [MF] 5'-flap endonuclease activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0017111: [MF] nucleoside-triphosphatase activity|82987_DSM_H6.fastq_extracted	2.0
+GO:0017150: [MF] tRNA dihydrouridine synthase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0018298: [BP] protein-chromophore linkage|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019107: [MF] myristoyltransferase activity|138074_DSM_H6.fastq_extracted	22.0
+GO:0019154: [MF] glycolate dehydrogenase activity|138074_DSM_H6.fastq_extracted	5.0
+GO:0019177: [MF] dihydroneopterin triphosphate pyrophosphohydrolase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0019277: [BP] UDP-N-acetylgalactosamine biosynthetic process|138074_DSM_H6.fastq_extracted	16.0
+GO:0019281: [BP] L-methionine biosynthetic process from homoserine via O-succinyl-L-homoserine and cystathionine|1267021_DSM_H6.fastq_extracted	24.0
+GO:0019288: [BP] isopentenyl diphosphate biosynthetic process, methylerythritol 4-phosphate pathway|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019288: [BP] isopentenyl diphosphate biosynthetic process, methylerythritol 4-phosphate pathway|138074_DSM_H6.fastq_extracted	21.0
+GO:0019290: [BP] siderophore biosynthetic process|47885_DSM_H6.fastq_extracted	1.0
+GO:0019299: [BP] rhamnose metabolic process|47885_DSM_H6.fastq_extracted	2.0
+GO:0019323: [BP] pentose catabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0019344: [BP] cysteine biosynthetic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019521: [BP] D-gluconate metabolic process|138074_DSM_H6.fastq_extracted	13.0
+GO:0019538: [BP] protein metabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019544: [BP] arginine catabolic process to glutamate|138074_DSM_H6.fastq_extracted	21.0
+GO:0019544: [BP] arginine catabolic process to glutamate|82987_DSM_H6.fastq_extracted	16.0
+GO:0019545: [BP] arginine catabolic process to succinate|138074_DSM_H6.fastq_extracted	21.0
+GO:0019545: [BP] arginine catabolic process to succinate|82987_DSM_H6.fastq_extracted	16.0
+GO:0019646: [BP] aerobic electron transport chain|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019673: [BP] GDP-mannose metabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0019676: [BP] ammonia assimilation cycle|138074_DSM_H6.fastq_extracted	1.0
+GO:0019808: [MF] polyamine binding|138074_DSM_H6.fastq_extracted	2.0
+GO:0019829: [MF] cation-transporting ATPase activity|138074_DSM_H6.fastq_extracted	13.0
+GO:0019835: [BP] cytolysis|138074_DSM_H6.fastq_extracted	16.0
+GO:0019867: [CC] outer membrane|1267021_DSM_H6.fastq_extracted	1.0
+GO:0019867: [CC] outer membrane|138074_DSM_H6.fastq_extracted	2.0
+GO:0019867: [CC] outer membrane|82987_DSM_H6.fastq_extracted	1.0
+GO:0019897: [CC] extrinsic component of plasma membrane|138074_DSM_H6.fastq_extracted	30.0
+GO:0019897: [CC] extrinsic component of plasma membrane|33968_DSM_H6.fastq_extracted	20.0
+GO:0020037: [MF] heme binding|1267021_DSM_H6.fastq_extracted	3.0
+GO:0022857: [MF] transmembrane transporter activity|1267021_DSM_H6.fastq_extracted	34.0
+GO:0022857: [MF] transmembrane transporter activity|138074_DSM_H6.fastq_extracted	46.0
+GO:0022857: [MF] transmembrane transporter activity|33968_DSM_H6.fastq_extracted	6.0
+GO:0022857: [MF] transmembrane transporter activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0022857: [MF] transmembrane transporter activity|82987_DSM_H6.fastq_extracted	26.0
+GO:0030001: [BP] metal ion transport|138074_DSM_H6.fastq_extracted	13.0
+GO:0030145: [MF] manganese ion binding|1267021_DSM_H6.fastq_extracted	42.0
+GO:0030145: [MF] manganese ion binding|138074_DSM_H6.fastq_extracted	35.0
+GO:0030163: [BP] protein catabolic process|1267021_DSM_H6.fastq_extracted	4.0
+GO:0030163: [BP] protein catabolic process|138074_DSM_H6.fastq_extracted	32.0
+GO:0030170: [MF] pyridoxal phosphate binding|1267021_DSM_H6.fastq_extracted	64.0
+GO:0030170: [MF] pyridoxal phosphate binding|138074_DSM_H6.fastq_extracted	23.0
+GO:0030246: [MF] carbohydrate binding|1239307_DSM_H6.fastq_extracted	19.0
+GO:0030246: [MF] carbohydrate binding|69218_DSM_H6.fastq_extracted	45.0
+GO:0030247: [MF] polysaccharide binding|138074_DSM_H6.fastq_extracted	16.0
+GO:0030261: [BP] chromosome condensation|1267021_DSM_H6.fastq_extracted	20.0
+GO:0030261: [BP] chromosome condensation|138074_DSM_H6.fastq_extracted	15.0
+GO:0030366: [MF] molybdopterin synthase activity|138074_DSM_H6.fastq_extracted	7.0
+GO:0030955: [MF] potassium ion binding|138074_DSM_H6.fastq_extracted	23.0
+GO:0030964: [CC] NADH dehydrogenase complex|138074_DSM_H6.fastq_extracted	4.0
+GO:0030976: [MF] thiamine pyrophosphate binding|1267021_DSM_H6.fastq_extracted	22.0
+GO:0030976: [MF] thiamine pyrophosphate binding|82987_DSM_H6.fastq_extracted	18.0
+GO:0031071: [MF] cysteine desulfurase activity|1267021_DSM_H6.fastq_extracted	5.0
+GO:0031071: [MF] cysteine desulfurase activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0031119: [BP] tRNA pseudouridine synthesis|138074_DSM_H6.fastq_extracted	62.0
+GO:0031132: [MF] serine 3-dehydrogenase activity|47885_DSM_H6.fastq_extracted	1.0
+GO:0031167: [BP] rRNA methylation|138074_DSM_H6.fastq_extracted	1.0
+GO:0031177: [MF] phosphopantetheine binding|1267021_DSM_H6.fastq_extracted	3.0
+GO:0031177: [MF] phosphopantetheine binding|138074_DSM_H6.fastq_extracted	7.0
+GO:0031564: [BP] transcription antitermination|138074_DSM_H6.fastq_extracted	24.0
+GO:0032153: [CC] cell division site|1267021_DSM_H6.fastq_extracted	12.0
+GO:0032153: [CC] cell division site|138074_DSM_H6.fastq_extracted	12.0
+GO:0032196: [BP] transposition|138074_DSM_H6.fastq_extracted	13.0
+GO:0033281: [CC] TAT protein transport complex|138074_DSM_H6.fastq_extracted	22.0
+GO:0033388: [BP] putrescine biosynthetic process from arginine|138074_DSM_H6.fastq_extracted	1.0
+GO:0033567: [BP] DNA replication, Okazaki fragment processing|1267021_DSM_H6.fastq_extracted	2.0
+GO:0033819: [MF] lipoyl(octanoyl) transferase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0033984: [MF] indole-3-glycerol-phosphate lyase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0034017: [MF] trans-2-decenoyl-acyl-carrier-protein isomerase activity|138074_DSM_H6.fastq_extracted	16.0
+GO:0034028: [MF] 5-(carboxyamino)imidazole ribonucleotide synthase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0034227: [BP] tRNA thio-modification|138074_DSM_H6.fastq_extracted	12.0
+GO:0034605: [BP] cellular response to heat|1267021_DSM_H6.fastq_extracted	21.0
+GO:0034775: [BP] glutathione transmembrane transport|1267021_DSM_H6.fastq_extracted	11.0
+GO:0036104: [BP] Kdo2-lipid A biosynthetic process|138074_DSM_H6.fastq_extracted	22.0
+GO:0036374: [MF] glutathione hydrolase activity|138074_DSM_H6.fastq_extracted	36.0
+GO:0036380: [MF] UDP-N-acetylglucosamine-undecaprenyl-phosphate N-acetylglucosaminephosphotransferase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0038023: [MF] signaling receptor activity|138074_DSM_H6.fastq_extracted	58.0
+GO:0042158: [BP] lipoprotein biosynthetic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0042158: [BP] lipoprotein biosynthetic process|82987_DSM_H6.fastq_extracted	1.0
+GO:0042245: [BP] RNA repair|1267021_DSM_H6.fastq_extracted	1.0
+GO:0042254: [BP] ribosome biogenesis|1267021_DSM_H6.fastq_extracted	34.0
+GO:0042274: [BP] ribosomal small subunit biogenesis|138074_DSM_H6.fastq_extracted	22.0
+GO:0042286: [MF] glutamate-1-semialdehyde 2,1-aminomutase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0042493: [BP] response to drug|138074_DSM_H6.fastq_extracted	1.0
+GO:0042597: [CC] periplasmic space|1267021_DSM_H6.fastq_extracted	22.0
+GO:0042597: [CC] periplasmic space|138074_DSM_H6.fastq_extracted	4.0
+GO:0042626: [MF] ATPase activity, coupled to transmembrane movement of substances|1267021_DSM_H6.fastq_extracted	16.0
+GO:0042626: [MF] ATPase activity, coupled to transmembrane movement of substances|138074_DSM_H6.fastq_extracted	4.0
+GO:0042742: [BP] defense response to bacterium|138074_DSM_H6.fastq_extracted	16.0
+GO:0042744: [BP] hydrogen peroxide catabolic process|1267021_DSM_H6.fastq_extracted	2.0
+GO:0042773: [BP] ATP synthesis coupled electron transport|1267021_DSM_H6.fastq_extracted	1.0
+GO:0042773: [BP] ATP synthesis coupled electron transport|82987_DSM_H6.fastq_extracted	16.0
+GO:0042802: [MF] identical protein binding|138074_DSM_H6.fastq_extracted	2.0
+GO:0042834: [MF] peptidoglycan binding|1267021_DSM_H6.fastq_extracted	1.0
+GO:0042834: [MF] peptidoglycan binding|138074_DSM_H6.fastq_extracted	2.0
+GO:0042888: [MF] molybdenum ion transmembrane transporter activity|138074_DSM_H6.fastq_extracted	20.0
+GO:0042937: [MF] tripeptide transporter activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0042954: [MF] lipoprotein transporter activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0043093: [BP] FtsZ-dependent cytokinesis|1267021_DSM_H6.fastq_extracted	12.0
+GO:0043093: [BP] FtsZ-dependent cytokinesis|138074_DSM_H6.fastq_extracted	12.0
+GO:0043093: [BP] FtsZ-dependent cytokinesis|47885_DSM_H6.fastq_extracted	19.0
+GO:0043094: [BP] cellular metabolic compound salvage|1267021_DSM_H6.fastq_extracted	21.0
+GO:0043094: [BP] cellular metabolic compound salvage|138074_DSM_H6.fastq_extracted	1.0
+GO:0043140: [MF] ATP-dependent 3'-5' DNA helicase activity|33968_DSM_H6.fastq_extracted	18.0
+GO:0043142: [MF] single-stranded DNA-dependent ATPase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0043171: [BP] peptide catabolic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0043190: [CC] ATP-binding cassette (ABC) transporter complex|1267021_DSM_H6.fastq_extracted	22.0
+GO:0043190: [CC] ATP-binding cassette (ABC) transporter complex|138074_DSM_H6.fastq_extracted	55.0
+GO:0043190: [CC] ATP-binding cassette (ABC) transporter complex|82987_DSM_H6.fastq_extracted	26.0
+GO:0043273: [MF] CTPase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0043565: [MF] sequence-specific DNA binding|1267021_DSM_H6.fastq_extracted	31.0
+GO:0043565: [MF] sequence-specific DNA binding|138074_DSM_H6.fastq_extracted	91.0
+GO:0043565: [MF] sequence-specific DNA binding|1914861_DSM_H6.fastq_extracted	1.0
+GO:0043565: [MF] sequence-specific DNA binding|47885_DSM_H6.fastq_extracted	22.0
+GO:0043565: [MF] sequence-specific DNA binding|48296_DSM_H6.fastq_extracted	19.0
+GO:0043750: [MF] phosphatidylinositol alpha-mannosyltransferase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0043758: [MF] acetate-CoA ligase (ADP-forming) activity|138074_DSM_H6.fastq_extracted	4.0
+GO:0043952: [BP] protein transport by the Sec complex|1267021_DSM_H6.fastq_extracted	15.0
+GO:0043952: [BP] protein transport by the Sec complex|138074_DSM_H6.fastq_extracted	44.0
+GO:0043953: [BP] protein transport by the Tat complex|138074_DSM_H6.fastq_extracted	22.0
+GO:0044038: [BP] cell wall macromolecule biosynthetic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0044205: [BP] 'de novo' UMP biosynthetic process|82987_DSM_H6.fastq_extracted	17.0
+GO:0044206: [BP] UMP salvage|138074_DSM_H6.fastq_extracted	2.0
+GO:0044211: [BP] CTP salvage|138074_DSM_H6.fastq_extracted	2.0
+GO:0044212: [MF] transcription regulatory region DNA binding|1267021_DSM_H6.fastq_extracted	21.0
+GO:0044238: [BP] primary metabolic process|1267021_DSM_H6.fastq_extracted	10.0
+GO:0044262: [BP] cellular carbohydrate metabolic process|138074_DSM_H6.fastq_extracted	2.0
+GO:0044571: [BP] [2Fe-2S] cluster assembly|1267021_DSM_H6.fastq_extracted	2.0
+GO:0044659: [BP] cytolysis by virus of host cell|138074_DSM_H6.fastq_extracted	17.0
+GO:0044780: [BP] bacterial-type flagellum assembly|1267021_DSM_H6.fastq_extracted	21.0
+GO:0045272: [CC] plasma membrane respiratory chain complex I|138074_DSM_H6.fastq_extracted	2.0
+GO:0045303: [MF] diaminobutyrate-2-oxoglutarate transaminase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0045333: [BP] cellular respiration|1267021_DSM_H6.fastq_extracted	16.0
+GO:0045333: [BP] cellular respiration|138074_DSM_H6.fastq_extracted	2.0
+GO:0045454: [BP] cell redox homeostasis|1267021_DSM_H6.fastq_extracted	11.0
+GO:0045892: [BP] negative regulation of transcription, DNA-templated|138074_DSM_H6.fastq_extracted	32.0
+GO:0045892: [BP] negative regulation of transcription, DNA-templated|82987_DSM_H6.fastq_extracted	2.0
+GO:0045903: [BP] positive regulation of translational fidelity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0046080: [BP] dUTP metabolic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0046417: [BP] chorismate metabolic process|69218_DSM_H6.fastq_extracted	21.0
+GO:0046656: [BP] folic acid biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0046677: [BP] response to antibiotic|138074_DSM_H6.fastq_extracted	17.0
+GO:0046838: [BP] phosphorylated carbohydrate dephosphorylation|138074_DSM_H6.fastq_extracted	1.0
+GO:0046854: [BP] phosphatidylinositol phosphorylation|138074_DSM_H6.fastq_extracted	21.0
+GO:0046855: [BP] inositol phosphate dephosphorylation|138074_DSM_H6.fastq_extracted	21.0
+GO:0046872: [MF] metal ion binding|1267021_DSM_H6.fastq_extracted	101.0
+GO:0046872: [MF] metal ion binding|138074_DSM_H6.fastq_extracted	401.0
+GO:0046872: [MF] metal ion binding|1914861_DSM_H6.fastq_extracted	23.0
+GO:0046872: [MF] metal ion binding|47885_DSM_H6.fastq_extracted	1.0
+GO:0046872: [MF] metal ion binding|48296_DSM_H6.fastq_extracted	7.0
+GO:0046872: [MF] metal ion binding|82987_DSM_H6.fastq_extracted	19.0
+GO:0046873: [MF] metal ion transmembrane transporter activity|1267021_DSM_H6.fastq_extracted	10.0
+GO:0046917: [MF] triphosphoribosyl-dephospho-CoA synthase activity|1267021_DSM_H6.fastq_extracted	20.0
+GO:0046983: [MF] protein dimerization activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0047451: [MF] 3-hydroxyoctanoyl-[acyl-carrier-protein] dehydratase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0047617: [MF] acyl-CoA hydrolase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0048037: [MF] cofactor binding|138074_DSM_H6.fastq_extracted	58.0
+GO:0048038: [MF] quinone binding|138074_DSM_H6.fastq_extracted	17.0
+GO:0048038: [MF] quinone binding|82987_DSM_H6.fastq_extracted	15.0
+GO:0048250: [BP] mitochondrial iron ion transport|138074_DSM_H6.fastq_extracted	1.0
+GO:0050066: [MF] lysine 2,3-aminomutase activity|138074_DSM_H6.fastq_extracted	6.0
+GO:0050379: [MF] UDP-glucuronate 5'-epimerase activity|138074_DSM_H6.fastq_extracted	2.0
+GO:0050515: [MF] 4-(cytidine 5'-diphospho)-2-C-methyl-D-erythritol kinase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0050660: [MF] flavin adenine dinucleotide binding|1267021_DSM_H6.fastq_extracted	19.0
+GO:0050660: [MF] flavin adenine dinucleotide binding|138074_DSM_H6.fastq_extracted	90.0
+GO:0050660: [MF] flavin adenine dinucleotide binding|69218_DSM_H6.fastq_extracted	8.0
+GO:0050660: [MF] flavin adenine dinucleotide binding|82987_DSM_H6.fastq_extracted	17.0
+GO:0050661: [MF] NADP binding|1267021_DSM_H6.fastq_extracted	18.0
+GO:0050661: [MF] NADP binding|138074_DSM_H6.fastq_extracted	72.0
+GO:0050662: [MF] coenzyme binding|138074_DSM_H6.fastq_extracted	68.0
+GO:0050992: [BP] dimethylallyl diphosphate biosynthetic process|138074_DSM_H6.fastq_extracted	21.0
+GO:0051087: [MF] chaperone binding|1267021_DSM_H6.fastq_extracted	1.0
+GO:0051087: [MF] chaperone binding|138074_DSM_H6.fastq_extracted	4.0
+GO:0051191: [BP] prosthetic group biosynthetic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0051287: [MF] NAD binding|1267021_DSM_H6.fastq_extracted	35.0
+GO:0051287: [MF] NAD binding|138074_DSM_H6.fastq_extracted	93.0
+GO:0051301: [BP] cell division|1267021_DSM_H6.fastq_extracted	78.0
+GO:0051301: [BP] cell division|138074_DSM_H6.fastq_extracted	154.0
+GO:0051301: [BP] cell division|33968_DSM_H6.fastq_extracted	1.0
+GO:0051391: [BP] tRNA acetylation|1267021_DSM_H6.fastq_extracted	22.0
+GO:0051391: [BP] tRNA acetylation|138074_DSM_H6.fastq_extracted	25.0
+GO:0051392: [MF] tRNA N-acetyltransferase activity|1267021_DSM_H6.fastq_extracted	22.0
+GO:0051392: [MF] tRNA N-acetyltransferase activity|138074_DSM_H6.fastq_extracted	25.0
+GO:0051536: [MF] iron-sulfur cluster binding|1267021_DSM_H6.fastq_extracted	59.0
+GO:0051536: [MF] iron-sulfur cluster binding|138074_DSM_H6.fastq_extracted	45.0
+GO:0051536: [MF] iron-sulfur cluster binding|48296_DSM_H6.fastq_extracted	7.0
+GO:0051536: [MF] iron-sulfur cluster binding|69218_DSM_H6.fastq_extracted	5.0
+GO:0051537: [MF] 2 iron, 2 sulfur cluster binding|1267021_DSM_H6.fastq_extracted	2.0
+GO:0051537: [MF] 2 iron, 2 sulfur cluster binding|138074_DSM_H6.fastq_extracted	1.0
+GO:0051538: [MF] 3 iron, 4 sulfur cluster binding|138074_DSM_H6.fastq_extracted	1.0
+GO:0051539: [MF] 4 iron, 4 sulfur cluster binding|1267021_DSM_H6.fastq_extracted	70.0
+GO:0051539: [MF] 4 iron, 4 sulfur cluster binding|138074_DSM_H6.fastq_extracted	147.0
+GO:0051745: [MF] 4-hydroxy-3-methylbut-2-en-1-yl diphosphate reductase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0051920: [MF] peroxiredoxin activity|138074_DSM_H6.fastq_extracted	10.0
+GO:0052381: [MF] tRNA dimethylallyltransferase activity|1267021_DSM_H6.fastq_extracted	20.0
+GO:0052381: [MF] tRNA dimethylallyltransferase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0052591: [MF] sn-glycerol-3-phosphate:ubiquinone-8 oxidoreductase activity|69218_DSM_H6.fastq_extracted	1.0
+GO:0052654: [MF] L-leucine transaminase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0052655: [MF] L-valine transaminase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0052656: [MF] L-isoleucine transaminase activity|1267021_DSM_H6.fastq_extracted	3.0
+GO:0052832: [MF] inositol monophosphate 3-phosphatase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0052833: [MF] inositol monophosphate 4-phosphatase activity|138074_DSM_H6.fastq_extracted	19.0
+GO:0052865: [BP] 1-deoxy-D-xylulose 5-phosphate biosynthetic process|1267021_DSM_H6.fastq_extracted	22.0
+GO:0052913: [MF] 16S rRNA (guanine(966)-N(2))-methyltransferase activity|138074_DSM_H6.fastq_extracted	21.0
+GO:0052927: [MF] CTP:tRNA cytidylyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0052928: [MF] CTP:3'-cytidine-tRNA cytidylyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0052929: [MF] ATP:3'-cytidine-cytidine-tRNA adenylyltransferase activity|1267021_DSM_H6.fastq_extracted	1.0
+GO:0055072: [BP] iron ion homeostasis|138074_DSM_H6.fastq_extracted	1.0
+GO:0055085: [BP] transmembrane transport|1267021_DSM_H6.fastq_extracted	18.0
+GO:0055085: [BP] transmembrane transport|138074_DSM_H6.fastq_extracted	33.0
+GO:0055085: [BP] transmembrane transport|33968_DSM_H6.fastq_extracted	1.0
+GO:0055085: [BP] transmembrane transport|47885_DSM_H6.fastq_extracted	2.0
+GO:0055085: [BP] transmembrane transport|48296_DSM_H6.fastq_extracted	20.0
+GO:0055085: [BP] transmembrane transport|82987_DSM_H6.fastq_extracted	36.0
+GO:0055114: [BP] oxidation-reduction process|1267021_DSM_H6.fastq_extracted	9.0
+GO:0055114: [BP] oxidation-reduction process|138074_DSM_H6.fastq_extracted	17.0
+GO:0055114: [BP] oxidation-reduction process|69218_DSM_H6.fastq_extracted	3.0
+GO:0055129: [BP] L-proline biosynthetic process|1267021_DSM_H6.fastq_extracted	13.0
+GO:0061475: [BP] cytosolic valyl-tRNA aminoacylation|1267021_DSM_H6.fastq_extracted	2.0
+GO:0065002: [BP] intracellular protein transmembrane transport|1267021_DSM_H6.fastq_extracted	15.0
+GO:0065002: [BP] intracellular protein transmembrane transport|138074_DSM_H6.fastq_extracted	82.0
+GO:0070008: [MF] serine-type exopeptidase activity|138074_DSM_H6.fastq_extracted	23.0
+GO:0070041: [MF] rRNA (uridine-C5-)-methyltransferase activity|1267021_DSM_H6.fastq_extracted	24.0
+GO:0070069: [CC] cytochrome complex|1267021_DSM_H6.fastq_extracted	1.0
+GO:0070402: [MF] NADPH binding|47885_DSM_H6.fastq_extracted	13.0
+GO:0070403: [MF] NAD+ binding|69218_DSM_H6.fastq_extracted	1.0
+GO:0070814: [BP] hydrogen sulfide biosynthetic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0070981: [BP] L-asparagine biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0071555: [BP] cell wall organization|1267021_DSM_H6.fastq_extracted	20.0
+GO:0071555: [BP] cell wall organization|138074_DSM_H6.fastq_extracted	79.0
+GO:0071555: [BP] cell wall organization|47885_DSM_H6.fastq_extracted	20.0
+GO:0071705: [BP] nitrogen compound transport|1267021_DSM_H6.fastq_extracted	3.0
+GO:0071705: [BP] nitrogen compound transport|82987_DSM_H6.fastq_extracted	23.0
+GO:0071916: [MF] dipeptide transmembrane transporter activity|138074_DSM_H6.fastq_extracted	11.0
+GO:0071949: [MF] FAD binding|138074_DSM_H6.fastq_extracted	44.0
+GO:0071949: [MF] FAD binding|69218_DSM_H6.fastq_extracted	13.0
+GO:0071973: [BP] bacterial-type flagellum-dependent cell motility|1267021_DSM_H6.fastq_extracted	72.0
+GO:0080130: [MF] L-phenylalanine:2-oxoglutarate aminotransferase activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0090529: [BP] cell septum assembly|1267021_DSM_H6.fastq_extracted	1.0
+GO:0090529: [BP] cell septum assembly|138074_DSM_H6.fastq_extracted	1.0
+GO:0097054: [BP] L-glutamate biosynthetic process|138074_DSM_H6.fastq_extracted	1.0
+GO:0097175: [BP] 1,6-anhydro-N-acetyl-beta-muramic acid catabolic process|1267021_DSM_H6.fastq_extracted	1.0
+GO:0097175: [BP] 1,6-anhydro-N-acetyl-beta-muramic acid catabolic process|138074_DSM_H6.fastq_extracted	19.0
+GO:0097428: [BP] protein maturation by iron-sulfur cluster transfer|1267021_DSM_H6.fastq_extracted	16.0
+GO:0098796: [CC] membrane protein complex|138074_DSM_H6.fastq_extracted	1.0
+GO:0099620: [MF] UDP-4-amino-4-deoxy-L-arabinose aminotransferase|1267021_DSM_H6.fastq_extracted	1.0
+GO:0102009: [MF] proline dipeptidase activity|138074_DSM_H6.fastq_extracted	38.0
+GO:0102025: NO_NAME|138074_DSM_H6.fastq_extracted	2.0
+GO:0102148: NO_NAME|138074_DSM_H6.fastq_extracted	16.0
+GO:0102555: NO_NAME|138074_DSM_H6.fastq_extracted	23.0
+GO:0102710: NO_NAME|138074_DSM_H6.fastq_extracted	3.0
+GO:0102953: NO_NAME|138074_DSM_H6.fastq_extracted	22.0
+GO:0103011: [MF] mannosylfructose-phosphate synthase activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0103047: NO_NAME|1267021_DSM_H6.fastq_extracted	25.0
+GO:0103068: NO_NAME|138074_DSM_H6.fastq_extracted	22.0
+GO:0103111: [MF] D-glucosamine PTS permease activity|1267021_DSM_H6.fastq_extracted	2.0
+GO:0103111: [MF] D-glucosamine PTS permease activity|138074_DSM_H6.fastq_extracted	1.0
+GO:0106029: NO_NAME|138074_DSM_H6.fastq_extracted	65.0
+GO:1902600: [BP] hydrogen ion transmembrane transport|1267021_DSM_H6.fastq_extracted	2.0
+GO:1904680: [MF] peptide transmembrane transporter activity|138074_DSM_H6.fastq_extracted	11.0
+GO:1904680: [MF] peptide transmembrane transporter activity|1914861_DSM_H6.fastq_extracted	2.0
+GO:1904680: [MF] peptide transmembrane transporter activity|82987_DSM_H6.fastq_extracted	1.0
+GO:1990077: [CC] primosome complex|138074_DSM_H6.fastq_extracted	19.0
+GO:1990397: [BP] queuosine salvage|1239307_DSM_H6.fastq_extracted	1.0
