@@ -14,7 +14,7 @@ CPM= count per million (normalised aligned reads against genome)
 
 
 ```{r}
-setwd("~/Documents/GitHub/honeyDSM-seq/Varroa 2")
+setwd("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Varroa 2")
 
 library(readxl) # import xlsx file
 library(ggplot2)
