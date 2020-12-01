@@ -1,0 +1,1021 @@
+"GO_description"	"Species"	"Frequency"
+"1"	"3-oxoacyl-[acyl-carrier-protein] synthase activity"	"Enterobacter sp. SA187"	0
+"2"	"3'-5' exonuclease activity"	"Enterobacter sp. SA187"	0
+"3"	"3'-tRNA processing endoribonuclease activity"	"Enterobacter sp. SA187"	0
+"4"	"4 iron, 4 sulfur cluster binding"	"Enterobacter sp. SA187"	8.18719309365295
+"5"	"acetyltransferase activity"	"Enterobacter sp. SA187"	0
+"6"	"acid phosphatase activity"	"Enterobacter sp. SA187"	0
+"7"	"alcohol dehydrogenase (NAD) activity"	"Enterobacter sp. SA187"	0
+"8"	"aldose 1-epimerase activity"	"Enterobacter sp. SA187"	0
+"9"	"amino acid-transporting ATPase activity"	"Enterobacter sp. SA187"	0
+"10"	"aminoacyl-tRNA editing activity"	"Enterobacter sp. SA187"	0
+"11"	"aminopeptidase activity"	"Enterobacter sp. SA187"	0
+"12"	"antiporter activity"	"Enterobacter sp. SA187"	0
+"13"	"arginine biosynthetic process via ornithine"	"Enterobacter sp. SA187"	0
+"14"	"argininosuccinate lyase activity"	"Enterobacter sp. SA187"	0
+"15"	"aromatic amino acid family biosynthetic process"	"Enterobacter sp. SA187"	0
+"16"	"arsenite transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"17"	"ATP binding"	"Enterobacter sp. SA187"	69.2297984442809
+"18"	"ATP phosphoribosyltransferase activity"	"Enterobacter sp. SA187"	0
+"19"	"ATP-binding cassette (ABC) transporter complex"	"Enterobacter sp. SA187"	7.66822873378975
+"20"	"ATP-dependent DNA helicase activity"	"Enterobacter sp. SA187"	7.38305639942306
+"21"	"ATPase activity"	"Enterobacter sp. SA187"	12.1185526922552
+"22"	"ATPase activity, coupled to transmembrane movement of substances"	"Enterobacter sp. SA187"	0
+"23"	"bacterial-type flagellum-dependent cell motility"	"Enterobacter sp. SA187"	6.14589688945563
+"24"	"barrier septum assembly"	"Enterobacter sp. SA187"	0
+"25"	"beta-ketoacyl-acyl-carrier-protein synthase III activity"	"Enterobacter sp. SA187"	0
+"26"	"biosynthetic process"	"Enterobacter sp. SA187"	5.43248136740257
+"27"	"biotin biosynthetic process"	"Enterobacter sp. SA187"	0
+"28"	"carbohydrate binding"	"Enterobacter sp. SA187"	6.59697189051659
+"29"	"carbohydrate metabolic process"	"Enterobacter sp. SA187"	22.6467060274093
+"30"	"carbohydrate transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"31"	"carboxypeptidase activity"	"Enterobacter sp. SA187"	0
+"32"	"catalytic activity"	"Enterobacter sp. SA187"	11.1904060035264
+"33"	"cation transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"34"	"cell adhesion"	"Enterobacter sp. SA187"	0
+"35"	"cell cycle"	"Enterobacter sp. SA187"	0
+"36"	"cell division"	"Enterobacter sp. SA187"	5.61990413331323
+"37"	"cell morphogenesis"	"Enterobacter sp. SA187"	0
+"38"	"cell outer membrane"	"Enterobacter sp. SA187"	10.0825242937563
+"39"	"cell wall organization"	"Enterobacter sp. SA187"	5.89216720135884
+"40"	"cellular response to starvation"	"Enterobacter sp. SA187"	0
+"41"	"cellulose biosynthetic process"	"Enterobacter sp. SA187"	6.76612501591445
+"42"	"chemotaxis"	"Enterobacter sp. SA187"	7.6634421227167
+"43"	"chromosome"	"Enterobacter sp. SA187"	0
+"44"	"chromosome segregation"	"Enterobacter sp. SA187"	0
+"45"	"coenzyme binding"	"Enterobacter sp. SA187"	0
+"46"	"conjugation"	"Enterobacter sp. SA187"	0
+"47"	"copper ion binding"	"Enterobacter sp. SA187"	0
+"48"	"cytochrome o ubiquinol oxidase activity"	"Enterobacter sp. SA187"	0
+"49"	"cytochrome-c oxidase activity"	"Enterobacter sp. SA187"	0
+"50"	"cytoplasm"	"Enterobacter sp. SA187"	55.068545265177
+"51"	"D-gluconate metabolic process"	"Enterobacter sp. SA187"	0
+"52"	"damaged DNA binding"	"Enterobacter sp. SA187"	0
+"53"	"DNA binding"	"Enterobacter sp. SA187"	50.6083380608828
+"54"	"DNA helicase activity"	"Enterobacter sp. SA187"	0
+"55"	"DNA integration"	"Enterobacter sp. SA187"	0
+"56"	"DNA ligase (NAD+) activity"	"Enterobacter sp. SA187"	0
+"57"	"DNA recombination"	"Enterobacter sp. SA187"	0
+"58"	"DNA repair"	"Enterobacter sp. SA187"	10.6818453853421
+"59"	"DNA replication"	"Enterobacter sp. SA187"	7.44677221149565
+"60"	"DNA topoisomerase type II (ATP-hydrolyzing) activity"	"Enterobacter sp. SA187"	0
+"61"	"DNA topological change"	"Enterobacter sp. SA187"	0
+"62"	"DNA unwinding involved in DNA replication"	"Enterobacter sp. SA187"	0
+"63"	"DNA-dependent DNA replication"	"Enterobacter sp. SA187"	0
+"64"	"DNA-directed DNA polymerase activity"	"Enterobacter sp. SA187"	0
+"65"	"DNA-directed RNA polymerase activity"	"Enterobacter sp. SA187"	0
+"66"	"double-strand break repair via homologous recombination"	"Enterobacter sp. SA187"	6.71430281364362
+"67"	"drug transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"68"	"electron carrier activity"	"Enterobacter sp. SA187"	6.05947415070458
+"69"	"endoribonuclease activity"	"Enterobacter sp. SA187"	0
+"70"	"exodeoxyribonuclease V activity"	"Enterobacter sp. SA187"	9.82729775451476
+"71"	"fatty acid biosynthetic process"	"Enterobacter sp. SA187"	0
+"72"	"flavin adenine dinucleotide binding"	"Enterobacter sp. SA187"	6.11770470188932
+"73"	"FtsZ-dependent cytokinesis"	"Enterobacter sp. SA187"	0
+"74"	"galactose binding"	"Enterobacter sp. SA187"	0
+"75"	"galactose metabolic process"	"Enterobacter sp. SA187"	0
+"76"	"galactose transport"	"Enterobacter sp. SA187"	0
+"77"	"glutamate-ammonia ligase activity"	"Enterobacter sp. SA187"	0
+"78"	"glutamine biosynthetic process"	"Enterobacter sp. SA187"	0
+"79"	"glutamine metabolic process"	"Enterobacter sp. SA187"	0
+"80"	"glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity"	"Enterobacter sp. SA187"	0
+"81"	"glycolytic process"	"Enterobacter sp. SA187"	0
+"82"	"Gram-negative-bacterium-type cell wall"	"Enterobacter sp. SA187"	0
+"83"	"GTP binding"	"Enterobacter sp. SA187"	6.25866563972087
+"84"	"GTPase activity"	"Enterobacter sp. SA187"	0
+"85"	"helicase activity"	"Enterobacter sp. SA187"	0
+"86"	"histidine biosynthetic process"	"Enterobacter sp. SA187"	0
+"87"	"hydrolase activity"	"Enterobacter sp. SA187"	14.1728044470201
+"88"	"hydrolase activity, hydrolyzing O-glycosyl compounds"	"Enterobacter sp. SA187"	11.361451589223
+"89"	"imidazoleglycerol-phosphate synthase activity"	"Enterobacter sp. SA187"	0
+"90"	"inorganic phosphate transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"91"	"integral component of membrane"	"Enterobacter sp. SA187"	139.621410716091
+"92"	"integral component of plasma membrane"	"Enterobacter sp. SA187"	11.7596957145157
+"93"	"iron ion binding"	"Enterobacter sp. SA187"	6.5193311556036
+"94"	"isoleucine biosynthetic process"	"Enterobacter sp. SA187"	5.98183341579159
+"95"	"isomerase activity"	"Enterobacter sp. SA187"	5.85975518281625
+"96"	"kinase activity"	"Enterobacter sp. SA187"	11.9125572451709
+"97"	"lipid A biosynthetic process"	"Enterobacter sp. SA187"	0
+"98"	"lipoteichoic acid biosynthetic process"	"Enterobacter sp. SA187"	0
+"99"	"lyase activity"	"Enterobacter sp. SA187"	0
+"100"	"magnesium ion binding"	"Enterobacter sp. SA187"	10.1121207639741
+"101"	"membrane"	"Enterobacter sp. SA187"	16.56242201756
+"102"	"menaquinone biosynthetic process"	"Enterobacter sp. SA187"	0
+"103"	"metal ion binding"	"Enterobacter sp. SA187"	27.6568783444358
+"104"	"metal ion transport"	"Enterobacter sp. SA187"	0
+"105"	"metalloendopeptidase activity"	"Enterobacter sp. SA187"	0
+"106"	"methionine biosynthetic process"	"Enterobacter sp. SA187"	0
+"107"	"mismatch repair"	"Enterobacter sp. SA187"	0
+"108"	"mismatched DNA binding"	"Enterobacter sp. SA187"	0
+"109"	"Mo-molybdopterin cofactor biosynthetic process"	"Enterobacter sp. SA187"	0
+"110"	"NAD binding"	"Enterobacter sp. SA187"	5.67663783335324
+"111"	"NADH dehydrogenase (ubiquinone) activity"	"Enterobacter sp. SA187"	0
+"112"	"NADP binding"	"Enterobacter sp. SA187"	6.40190766398332
+"113"	"negative regulation of transcription, DNA-templated"	"Enterobacter sp. SA187"	0
+"114"	"negative regulation of translational elongation"	"Enterobacter sp. SA187"	0
+"115"	"nickel cation transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"116"	"nitrogen compound transport"	"Enterobacter sp. SA187"	0
+"117"	"novo' IMP biosynthetic process"	"Enterobacter sp. SA187"	0
+"118"	"novo' pyrimidine nucleobase biosynthetic process"	"Enterobacter sp. SA187"	0
+"119"	"novo' UMP biosynthetic process"	"Enterobacter sp. SA187"	0
+"120"	"nucleic acid binding"	"Enterobacter sp. SA187"	5.85975518281625
+"121"	"nucleotide binding"	"Enterobacter sp. SA187"	0
+"122"	"outer membrane-bounded periplasmic space"	"Enterobacter sp. SA187"	0
+"123"	"oxidoreductase activity"	"Enterobacter sp. SA187"	11.8155526107763
+"124"	"oxidoreductase activity, acting on CH-OH group of donors"	"Enterobacter sp. SA187"	0
+"125"	"penicillin binding"	"Enterobacter sp. SA187"	0
+"126"	"pentose-phosphate shunt"	"Enterobacter sp. SA187"	0
+"127"	"pentose-phosphate shunt, non-oxidative branch"	"Enterobacter sp. SA187"	0
+"128"	"peptidase activity"	"Enterobacter sp. SA187"	7.751967793934
+"129"	"peptidoglycan biosynthetic process"	"Enterobacter sp. SA187"	6.17408907702194
+"130"	"peptidoglycan glycosyltransferase activity"	"Enterobacter sp. SA187"	0
+"131"	"peptidoglycan metabolic process"	"Enterobacter sp. SA187"	0
+"132"	"periplasmic space"	"Enterobacter sp. SA187"	7.41454532993959
+"133"	"phosphate ion binding"	"Enterobacter sp. SA187"	0
+"134"	"phosphate ion transmembrane transport"	"Enterobacter sp. SA187"	0
+"135"	"phosphate ion transport"	"Enterobacter sp. SA187"	0
+"136"	"phosphoenolpyruvate-dependent sugar phosphotransferase system"	"Enterobacter sp. SA187"	20.2333335554688
+"137"	"phosphogluconate dehydrogenase (decarboxylating) activity"	"Enterobacter sp. SA187"	0
+"138"	"phosphoglycerate mutase activity"	"Enterobacter sp. SA187"	0
+"139"	"phosphorelay sensor kinase activity"	"Enterobacter sp. SA187"	7.88186564149659
+"140"	"phosphorelay signal transduction system"	"Enterobacter sp. SA187"	5.13097813706846
+"141"	"plasma membrane"	"Enterobacter sp. SA187"	51.0012750792523
+"142"	"plasmid maintenance"	"Enterobacter sp. SA187"	0
+"143"	"positive regulation of proteolysis"	"Enterobacter sp. SA187"	0
+"144"	"potassium ion transport"	"Enterobacter sp. SA187"	0
+"145"	"protein dimerization activity"	"Enterobacter sp. SA187"	0
+"146"	"protein folding"	"Enterobacter sp. SA187"	0
+"147"	"protein secretion by the type II secretion system"	"Enterobacter sp. SA187"	5.04640157436953
+"148"	"protein transporter activity"	"Enterobacter sp. SA187"	6.25866563972087
+"149"	"protein-N(PI)-phosphohistidine-sugar phosphotransferase activity"	"Enterobacter sp. SA187"	13.239126213157
+"150"	"pyridoxal phosphate binding"	"Enterobacter sp. SA187"	9.03378924017506
+"151"	"quinone binding"	"Enterobacter sp. SA187"	0
+"152"	"quinoprotein glucose dehydrogenase activity"	"Enterobacter sp. SA187"	0
+"153"	"regulation of cell shape"	"Enterobacter sp. SA187"	5.32832345003263
+"154"	"regulation of gene expression"	"Enterobacter sp. SA187"	0
+"155"	"regulation of transcription, DNA-templated"	"Enterobacter sp. SA187"	16.3415392583846
+"156"	"respiratory chain"	"Enterobacter sp. SA187"	0
+"157"	"response to arsenic-containing substance"	"Enterobacter sp. SA187"	0
+"158"	"ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor"	"Enterobacter sp. SA187"	0
+"159"	"ribose-5-phosphate isomerase activity"	"Enterobacter sp. SA187"	0
+"160"	"ribosome"	"Enterobacter sp. SA187"	0
+"161"	"RNA binding"	"Enterobacter sp. SA187"	5.44109220029787
+"162"	"RNA methyltransferase activity"	"Enterobacter sp. SA187"	0
+"163"	"RNA processing"	"Enterobacter sp. SA187"	0
+"164"	"rRNA binding"	"Enterobacter sp. SA187"	0
+"165"	"rRNA processing"	"Enterobacter sp. SA187"	0
+"166"	"sequence-specific DNA binding"	"Enterobacter sp. SA187"	12.9684062805027
+"167"	"serine-type D-Ala-D-Ala carboxypeptidase activity"	"Enterobacter sp. SA187"	0
+"168"	"serine-type endopeptidase activity"	"Enterobacter sp. SA187"	0
+"169"	"siderophore transport"	"Enterobacter sp. SA187"	5.43248136740257
+"170"	"signal transduction"	"Enterobacter sp. SA187"	9.11248493283211
+"171"	"signaling receptor activity"	"Enterobacter sp. SA187"	5.43248136740257
+"172"	"single-stranded DNA binding"	"Enterobacter sp. SA187"	0
+"173"	"sorbitol-6-phosphate 2-dehydrogenase activity"	"Enterobacter sp. SA187"	0
+"174"	"SOS response"	"Enterobacter sp. SA187"	0
+"175"	"structural constituent of ribosome"	"Enterobacter sp. SA187"	0
+"176"	"sugar:proton symporter activity"	"Enterobacter sp. SA187"	5.58240246303682
+"177"	"thiamine biosynthetic process"	"Enterobacter sp. SA187"	0
+"178"	"thiamine pyrophosphate binding"	"Enterobacter sp. SA187"	0
+"179"	"thiamine transmembrane transport"	"Enterobacter sp. SA187"	0
+"180"	"thiamine transport"	"Enterobacter sp. SA187"	0
+"181"	"thiamine-transporting ATPase activity"	"Enterobacter sp. SA187"	0
+"182"	"transaminase activity"	"Enterobacter sp. SA187"	0
+"183"	"transcription factor activity, sequence-specific DNA binding"	"Enterobacter sp. SA187"	21.8259284135293
+"184"	"transcription factor binding"	"Enterobacter sp. SA187"	0
+"185"	"transcription, DNA-templated"	"Enterobacter sp. SA187"	0
+"186"	"transferase activity"	"Enterobacter sp. SA187"	14.8101153865297
+"187"	"translation"	"Enterobacter sp. SA187"	0
+"188"	"translation elongation factor activity"	"Enterobacter sp. SA187"	0
+"189"	"transmembrane signaling receptor activity"	"Enterobacter sp. SA187"	7.22180847408383
+"190"	"transmembrane transport"	"Enterobacter sp. SA187"	26.446809780044
+"191"	"transmembrane transporter activity"	"Enterobacter sp. SA187"	13.2568683747977
+"192"	"transporter activity"	"Enterobacter sp. SA187"	6.77534193013129
+"193"	"transposase activity"	"Enterobacter sp. SA187"	0
+"194"	"transposition, DNA-mediated"	"Enterobacter sp. SA187"	0
+"195"	"tricarboxylic acid cycle"	"Enterobacter sp. SA187"	0
+"196"	"tRNA binding"	"Enterobacter sp. SA187"	0
+"197"	"type II protein secretion system complex"	"Enterobacter sp. SA187"	5.04640157436953
+"198"	"UDP-glucose 4-epimerase activity"	"Enterobacter sp. SA187"	0
+"199"	"UDP-glucose metabolic process"	"Enterobacter sp. SA187"	7.92200470613317
+"200"	"unfolded protein binding"	"Enterobacter sp. SA187"	0
+"201"	"uracil transmembrane transporter activity"	"Enterobacter sp. SA187"	0
+"202"	"valine-tRNA ligase activity"	"Enterobacter sp. SA187"	0
+"203"	"valyl-tRNA aminoacylation"	"Enterobacter sp. SA187"	0
+"204"	"zinc ion binding"	"Enterobacter sp. SA187"	11.6243981915367
+"205"	"3-oxoacyl-[acyl-carrier-protein] synthase activity"	"Klebsiella oxytoca"	0
+"206"	"3'-5' exonuclease activity"	"Klebsiella oxytoca"	0
+"207"	"3'-tRNA processing endoribonuclease activity"	"Klebsiella oxytoca"	0
+"208"	"4 iron, 4 sulfur cluster binding"	"Klebsiella oxytoca"	0
+"209"	"acetyltransferase activity"	"Klebsiella oxytoca"	0
+"210"	"acid phosphatase activity"	"Klebsiella oxytoca"	0
+"211"	"alcohol dehydrogenase (NAD) activity"	"Klebsiella oxytoca"	0
+"212"	"aldose 1-epimerase activity"	"Klebsiella oxytoca"	0
+"213"	"amino acid-transporting ATPase activity"	"Klebsiella oxytoca"	0
+"214"	"aminoacyl-tRNA editing activity"	"Klebsiella oxytoca"	0
+"215"	"aminopeptidase activity"	"Klebsiella oxytoca"	0
+"216"	"antiporter activity"	"Klebsiella oxytoca"	0
+"217"	"arginine biosynthetic process via ornithine"	"Klebsiella oxytoca"	0
+"218"	"argininosuccinate lyase activity"	"Klebsiella oxytoca"	0
+"219"	"aromatic amino acid family biosynthetic process"	"Klebsiella oxytoca"	0
+"220"	"arsenite transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"221"	"ATP binding"	"Klebsiella oxytoca"	8.36235895881069
+"222"	"ATP phosphoribosyltransferase activity"	"Klebsiella oxytoca"	0
+"223"	"ATP-binding cassette (ABC) transporter complex"	"Klebsiella oxytoca"	0
+"224"	"ATP-dependent DNA helicase activity"	"Klebsiella oxytoca"	0
+"225"	"ATPase activity"	"Klebsiella oxytoca"	0
+"226"	"ATPase activity, coupled to transmembrane movement of substances"	"Klebsiella oxytoca"	0
+"227"	"bacterial-type flagellum-dependent cell motility"	"Klebsiella oxytoca"	0
+"228"	"barrier septum assembly"	"Klebsiella oxytoca"	0
+"229"	"beta-ketoacyl-acyl-carrier-protein synthase III activity"	"Klebsiella oxytoca"	0
+"230"	"biosynthetic process"	"Klebsiella oxytoca"	0
+"231"	"biotin biosynthetic process"	"Klebsiella oxytoca"	0
+"232"	"carbohydrate binding"	"Klebsiella oxytoca"	0
+"233"	"carbohydrate metabolic process"	"Klebsiella oxytoca"	0
+"234"	"carbohydrate transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"235"	"carboxypeptidase activity"	"Klebsiella oxytoca"	0
+"236"	"catalytic activity"	"Klebsiella oxytoca"	0
+"237"	"cation transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"238"	"cell adhesion"	"Klebsiella oxytoca"	0
+"239"	"cell cycle"	"Klebsiella oxytoca"	0
+"240"	"cell division"	"Klebsiella oxytoca"	0
+"241"	"cell morphogenesis"	"Klebsiella oxytoca"	0
+"242"	"cell outer membrane"	"Klebsiella oxytoca"	0
+"243"	"cell wall organization"	"Klebsiella oxytoca"	0
+"244"	"cellular response to starvation"	"Klebsiella oxytoca"	0
+"245"	"cellulose biosynthetic process"	"Klebsiella oxytoca"	0
+"246"	"chemotaxis"	"Klebsiella oxytoca"	0
+"247"	"chromosome"	"Klebsiella oxytoca"	0
+"248"	"chromosome segregation"	"Klebsiella oxytoca"	0
+"249"	"coenzyme binding"	"Klebsiella oxytoca"	0
+"250"	"conjugation"	"Klebsiella oxytoca"	0
+"251"	"copper ion binding"	"Klebsiella oxytoca"	0
+"252"	"cytochrome o ubiquinol oxidase activity"	"Klebsiella oxytoca"	0
+"253"	"cytochrome-c oxidase activity"	"Klebsiella oxytoca"	0
+"254"	"cytoplasm"	"Klebsiella oxytoca"	0
+"255"	"D-gluconate metabolic process"	"Klebsiella oxytoca"	0
+"256"	"damaged DNA binding"	"Klebsiella oxytoca"	0
+"257"	"DNA binding"	"Klebsiella oxytoca"	0
+"258"	"DNA helicase activity"	"Klebsiella oxytoca"	0
+"259"	"DNA integration"	"Klebsiella oxytoca"	0
+"260"	"DNA ligase (NAD+) activity"	"Klebsiella oxytoca"	0
+"261"	"DNA recombination"	"Klebsiella oxytoca"	0
+"262"	"DNA repair"	"Klebsiella oxytoca"	0
+"263"	"DNA replication"	"Klebsiella oxytoca"	0
+"264"	"DNA topoisomerase type II (ATP-hydrolyzing) activity"	"Klebsiella oxytoca"	0
+"265"	"DNA topological change"	"Klebsiella oxytoca"	0
+"266"	"DNA unwinding involved in DNA replication"	"Klebsiella oxytoca"	0
+"267"	"DNA-dependent DNA replication"	"Klebsiella oxytoca"	0
+"268"	"DNA-directed DNA polymerase activity"	"Klebsiella oxytoca"	0
+"269"	"DNA-directed RNA polymerase activity"	"Klebsiella oxytoca"	0
+"270"	"double-strand break repair via homologous recombination"	"Klebsiella oxytoca"	0
+"271"	"drug transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"272"	"electron carrier activity"	"Klebsiella oxytoca"	0
+"273"	"endoribonuclease activity"	"Klebsiella oxytoca"	0
+"274"	"exodeoxyribonuclease V activity"	"Klebsiella oxytoca"	0
+"275"	"fatty acid biosynthetic process"	"Klebsiella oxytoca"	0
+"276"	"flavin adenine dinucleotide binding"	"Klebsiella oxytoca"	0
+"277"	"FtsZ-dependent cytokinesis"	"Klebsiella oxytoca"	0
+"278"	"galactose binding"	"Klebsiella oxytoca"	0
+"279"	"galactose metabolic process"	"Klebsiella oxytoca"	0
+"280"	"galactose transport"	"Klebsiella oxytoca"	0
+"281"	"glutamate-ammonia ligase activity"	"Klebsiella oxytoca"	0
+"282"	"glutamine biosynthetic process"	"Klebsiella oxytoca"	0
+"283"	"glutamine metabolic process"	"Klebsiella oxytoca"	0
+"284"	"glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity"	"Klebsiella oxytoca"	0
+"285"	"glycolytic process"	"Klebsiella oxytoca"	0
+"286"	"Gram-negative-bacterium-type cell wall"	"Klebsiella oxytoca"	0
+"287"	"GTP binding"	"Klebsiella oxytoca"	0
+"288"	"GTPase activity"	"Klebsiella oxytoca"	0
+"289"	"helicase activity"	"Klebsiella oxytoca"	0
+"290"	"histidine biosynthetic process"	"Klebsiella oxytoca"	0
+"291"	"hydrolase activity"	"Klebsiella oxytoca"	0
+"292"	"hydrolase activity, hydrolyzing O-glycosyl compounds"	"Klebsiella oxytoca"	0
+"293"	"imidazoleglycerol-phosphate synthase activity"	"Klebsiella oxytoca"	0
+"294"	"inorganic phosphate transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"295"	"integral component of membrane"	"Klebsiella oxytoca"	5.16676550101075
+"296"	"integral component of plasma membrane"	"Klebsiella oxytoca"	0
+"297"	"iron ion binding"	"Klebsiella oxytoca"	0
+"298"	"isoleucine biosynthetic process"	"Klebsiella oxytoca"	0
+"299"	"isomerase activity"	"Klebsiella oxytoca"	0
+"300"	"kinase activity"	"Klebsiella oxytoca"	0
+"301"	"lipid A biosynthetic process"	"Klebsiella oxytoca"	0
+"302"	"lipoteichoic acid biosynthetic process"	"Klebsiella oxytoca"	0
+"303"	"lyase activity"	"Klebsiella oxytoca"	0
+"304"	"magnesium ion binding"	"Klebsiella oxytoca"	0
+"305"	"membrane"	"Klebsiella oxytoca"	0
+"306"	"menaquinone biosynthetic process"	"Klebsiella oxytoca"	0
+"307"	"metal ion binding"	"Klebsiella oxytoca"	0
+"308"	"metal ion transport"	"Klebsiella oxytoca"	0
+"309"	"metalloendopeptidase activity"	"Klebsiella oxytoca"	0
+"310"	"methionine biosynthetic process"	"Klebsiella oxytoca"	0
+"311"	"mismatch repair"	"Klebsiella oxytoca"	0
+"312"	"mismatched DNA binding"	"Klebsiella oxytoca"	0
+"313"	"Mo-molybdopterin cofactor biosynthetic process"	"Klebsiella oxytoca"	0
+"314"	"NAD binding"	"Klebsiella oxytoca"	0
+"315"	"NADH dehydrogenase (ubiquinone) activity"	"Klebsiella oxytoca"	0
+"316"	"NADP binding"	"Klebsiella oxytoca"	0
+"317"	"negative regulation of transcription, DNA-templated"	"Klebsiella oxytoca"	0
+"318"	"negative regulation of translational elongation"	"Klebsiella oxytoca"	0
+"319"	"nickel cation transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"320"	"nitrogen compound transport"	"Klebsiella oxytoca"	0
+"321"	"novo' IMP biosynthetic process"	"Klebsiella oxytoca"	0
+"322"	"novo' pyrimidine nucleobase biosynthetic process"	"Klebsiella oxytoca"	0
+"323"	"novo' UMP biosynthetic process"	"Klebsiella oxytoca"	0
+"324"	"nucleic acid binding"	"Klebsiella oxytoca"	0
+"325"	"nucleotide binding"	"Klebsiella oxytoca"	0
+"326"	"outer membrane-bounded periplasmic space"	"Klebsiella oxytoca"	0
+"327"	"oxidoreductase activity"	"Klebsiella oxytoca"	0
+"328"	"oxidoreductase activity, acting on CH-OH group of donors"	"Klebsiella oxytoca"	0
+"329"	"penicillin binding"	"Klebsiella oxytoca"	0
+"330"	"pentose-phosphate shunt"	"Klebsiella oxytoca"	0
+"331"	"pentose-phosphate shunt, non-oxidative branch"	"Klebsiella oxytoca"	0
+"332"	"peptidase activity"	"Klebsiella oxytoca"	0
+"333"	"peptidoglycan biosynthetic process"	"Klebsiella oxytoca"	0
+"334"	"peptidoglycan glycosyltransferase activity"	"Klebsiella oxytoca"	0
+"335"	"peptidoglycan metabolic process"	"Klebsiella oxytoca"	0
+"336"	"periplasmic space"	"Klebsiella oxytoca"	0
+"337"	"phosphate ion binding"	"Klebsiella oxytoca"	0
+"338"	"phosphate ion transmembrane transport"	"Klebsiella oxytoca"	0
+"339"	"phosphate ion transport"	"Klebsiella oxytoca"	0
+"340"	"phosphoenolpyruvate-dependent sugar phosphotransferase system"	"Klebsiella oxytoca"	0
+"341"	"phosphogluconate dehydrogenase (decarboxylating) activity"	"Klebsiella oxytoca"	0
+"342"	"phosphoglycerate mutase activity"	"Klebsiella oxytoca"	0
+"343"	"phosphorelay sensor kinase activity"	"Klebsiella oxytoca"	0
+"344"	"phosphorelay signal transduction system"	"Klebsiella oxytoca"	0
+"345"	"plasma membrane"	"Klebsiella oxytoca"	0
+"346"	"plasmid maintenance"	"Klebsiella oxytoca"	0
+"347"	"positive regulation of proteolysis"	"Klebsiella oxytoca"	0
+"348"	"potassium ion transport"	"Klebsiella oxytoca"	0
+"349"	"protein dimerization activity"	"Klebsiella oxytoca"	0
+"350"	"protein folding"	"Klebsiella oxytoca"	0
+"351"	"protein secretion by the type II secretion system"	"Klebsiella oxytoca"	0
+"352"	"protein transporter activity"	"Klebsiella oxytoca"	0
+"353"	"protein-N(PI)-phosphohistidine-sugar phosphotransferase activity"	"Klebsiella oxytoca"	0
+"354"	"pyridoxal phosphate binding"	"Klebsiella oxytoca"	0
+"355"	"quinone binding"	"Klebsiella oxytoca"	0
+"356"	"quinoprotein glucose dehydrogenase activity"	"Klebsiella oxytoca"	0
+"357"	"regulation of cell shape"	"Klebsiella oxytoca"	0
+"358"	"regulation of gene expression"	"Klebsiella oxytoca"	0
+"359"	"regulation of transcription, DNA-templated"	"Klebsiella oxytoca"	0
+"360"	"respiratory chain"	"Klebsiella oxytoca"	0
+"361"	"response to arsenic-containing substance"	"Klebsiella oxytoca"	0
+"362"	"ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor"	"Klebsiella oxytoca"	0
+"363"	"ribose-5-phosphate isomerase activity"	"Klebsiella oxytoca"	0
+"364"	"ribosome"	"Klebsiella oxytoca"	0
+"365"	"RNA binding"	"Klebsiella oxytoca"	0
+"366"	"RNA methyltransferase activity"	"Klebsiella oxytoca"	0
+"367"	"RNA processing"	"Klebsiella oxytoca"	0
+"368"	"rRNA binding"	"Klebsiella oxytoca"	0
+"369"	"rRNA processing"	"Klebsiella oxytoca"	0
+"370"	"sequence-specific DNA binding"	"Klebsiella oxytoca"	0
+"371"	"serine-type D-Ala-D-Ala carboxypeptidase activity"	"Klebsiella oxytoca"	0
+"372"	"serine-type endopeptidase activity"	"Klebsiella oxytoca"	0
+"373"	"siderophore transport"	"Klebsiella oxytoca"	0
+"374"	"signal transduction"	"Klebsiella oxytoca"	0
+"375"	"signaling receptor activity"	"Klebsiella oxytoca"	0
+"376"	"single-stranded DNA binding"	"Klebsiella oxytoca"	0
+"377"	"sorbitol-6-phosphate 2-dehydrogenase activity"	"Klebsiella oxytoca"	0
+"378"	"SOS response"	"Klebsiella oxytoca"	0
+"379"	"structural constituent of ribosome"	"Klebsiella oxytoca"	0
+"380"	"sugar:proton symporter activity"	"Klebsiella oxytoca"	0
+"381"	"thiamine biosynthetic process"	"Klebsiella oxytoca"	0
+"382"	"thiamine pyrophosphate binding"	"Klebsiella oxytoca"	0
+"383"	"thiamine transmembrane transport"	"Klebsiella oxytoca"	0
+"384"	"thiamine transport"	"Klebsiella oxytoca"	0
+"385"	"thiamine-transporting ATPase activity"	"Klebsiella oxytoca"	0
+"386"	"transaminase activity"	"Klebsiella oxytoca"	0
+"387"	"transcription factor activity, sequence-specific DNA binding"	"Klebsiella oxytoca"	0
+"388"	"transcription factor binding"	"Klebsiella oxytoca"	0
+"389"	"transcription, DNA-templated"	"Klebsiella oxytoca"	0
+"390"	"transferase activity"	"Klebsiella oxytoca"	0
+"391"	"translation"	"Klebsiella oxytoca"	0
+"392"	"translation elongation factor activity"	"Klebsiella oxytoca"	0
+"393"	"transmembrane signaling receptor activity"	"Klebsiella oxytoca"	0
+"394"	"transmembrane transport"	"Klebsiella oxytoca"	0
+"395"	"transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"396"	"transporter activity"	"Klebsiella oxytoca"	0
+"397"	"transposase activity"	"Klebsiella oxytoca"	0
+"398"	"transposition, DNA-mediated"	"Klebsiella oxytoca"	0
+"399"	"tricarboxylic acid cycle"	"Klebsiella oxytoca"	0
+"400"	"tRNA binding"	"Klebsiella oxytoca"	0
+"401"	"type II protein secretion system complex"	"Klebsiella oxytoca"	0
+"402"	"UDP-glucose 4-epimerase activity"	"Klebsiella oxytoca"	0
+"403"	"UDP-glucose metabolic process"	"Klebsiella oxytoca"	0
+"404"	"unfolded protein binding"	"Klebsiella oxytoca"	0
+"405"	"uracil transmembrane transporter activity"	"Klebsiella oxytoca"	0
+"406"	"valine-tRNA ligase activity"	"Klebsiella oxytoca"	0
+"407"	"valyl-tRNA aminoacylation"	"Klebsiella oxytoca"	0
+"408"	"zinc ion binding"	"Klebsiella oxytoca"	0
+"409"	"3-oxoacyl-[acyl-carrier-protein] synthase activity"	"Leuconostoc pseudomesenteroides"	5.49352048389024
+"410"	"3'-5' exonuclease activity"	"Leuconostoc pseudomesenteroides"	6.20688972169667
+"411"	"3'-tRNA processing endoribonuclease activity"	"Leuconostoc pseudomesenteroides"	5.06624666847655
+"412"	"4 iron, 4 sulfur cluster binding"	"Leuconostoc pseudomesenteroides"	0
+"413"	"acetyltransferase activity"	"Leuconostoc pseudomesenteroides"	5.67663783335324
+"414"	"acid phosphatase activity"	"Leuconostoc pseudomesenteroides"	0
+"415"	"alcohol dehydrogenase (NAD) activity"	"Leuconostoc pseudomesenteroides"	0
+"416"	"aldose 1-epimerase activity"	"Leuconostoc pseudomesenteroides"	0
+"417"	"amino acid-transporting ATPase activity"	"Leuconostoc pseudomesenteroides"	6.34806811471761
+"418"	"aminoacyl-tRNA editing activity"	"Leuconostoc pseudomesenteroides"	7.10153013291399
+"419"	"aminopeptidase activity"	"Leuconostoc pseudomesenteroides"	0
+"420"	"antiporter activity"	"Leuconostoc pseudomesenteroides"	0
+"421"	"arginine biosynthetic process via ornithine"	"Leuconostoc pseudomesenteroides"	0
+"422"	"argininosuccinate lyase activity"	"Leuconostoc pseudomesenteroides"	0
+"423"	"aromatic amino acid family biosynthetic process"	"Leuconostoc pseudomesenteroides"	6.77534193013129
+"424"	"arsenite transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"425"	"ATP binding"	"Leuconostoc pseudomesenteroides"	184.261509311274
+"426"	"ATP phosphoribosyltransferase activity"	"Leuconostoc pseudomesenteroides"	0
+"427"	"ATP-binding cassette (ABC) transporter complex"	"Leuconostoc pseudomesenteroides"	10.745653765908
+"428"	"ATP-dependent DNA helicase activity"	"Leuconostoc pseudomesenteroides"	9.40002393910107
+"429"	"ATPase activity"	"Leuconostoc pseudomesenteroides"	25.9235400037332
+"430"	"ATPase activity, coupled to transmembrane movement of substances"	"Leuconostoc pseudomesenteroides"	7.94211353967621
+"431"	"bacterial-type flagellum-dependent cell motility"	"Leuconostoc pseudomesenteroides"	0
+"432"	"barrier septum assembly"	"Leuconostoc pseudomesenteroides"	0
+"433"	"beta-ketoacyl-acyl-carrier-protein synthase III activity"	"Leuconostoc pseudomesenteroides"	5.06624666847655
+"434"	"biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"435"	"biotin biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"436"	"carbohydrate binding"	"Leuconostoc pseudomesenteroides"	0
+"437"	"carbohydrate metabolic process"	"Leuconostoc pseudomesenteroides"	16.4540442692137
+"438"	"carbohydrate transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"439"	"carboxypeptidase activity"	"Leuconostoc pseudomesenteroides"	0
+"440"	"catalytic activity"	"Leuconostoc pseudomesenteroides"	10.3156106864161
+"441"	"cation transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"442"	"cell adhesion"	"Leuconostoc pseudomesenteroides"	0
+"443"	"cell cycle"	"Leuconostoc pseudomesenteroides"	11.6325208467847
+"444"	"cell division"	"Leuconostoc pseudomesenteroides"	17.4868763541844
+"445"	"cell morphogenesis"	"Leuconostoc pseudomesenteroides"	11.4143147831942
+"446"	"cell outer membrane"	"Leuconostoc pseudomesenteroides"	0
+"447"	"cell wall organization"	"Leuconostoc pseudomesenteroides"	18.6169305287391
+"448"	"cellular response to starvation"	"Leuconostoc pseudomesenteroides"	0
+"449"	"cellulose biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"450"	"chemotaxis"	"Leuconostoc pseudomesenteroides"	0
+"451"	"chromosome"	"Leuconostoc pseudomesenteroides"	9.06993291204663
+"452"	"chromosome segregation"	"Leuconostoc pseudomesenteroides"	5.19249844818154
+"453"	"coenzyme binding"	"Leuconostoc pseudomesenteroides"	0
+"454"	"conjugation"	"Leuconostoc pseudomesenteroides"	0
+"455"	"copper ion binding"	"Leuconostoc pseudomesenteroides"	0
+"456"	"cytochrome o ubiquinol oxidase activity"	"Leuconostoc pseudomesenteroides"	0
+"457"	"cytochrome-c oxidase activity"	"Leuconostoc pseudomesenteroides"	0
+"458"	"cytoplasm"	"Leuconostoc pseudomesenteroides"	152.292241925713
+"459"	"D-gluconate metabolic process"	"Leuconostoc pseudomesenteroides"	9.52210217207641
+"460"	"damaged DNA binding"	"Leuconostoc pseudomesenteroides"	6.9584592795943
+"461"	"DNA binding"	"Leuconostoc pseudomesenteroides"	61.3942164768987
+"462"	"DNA helicase activity"	"Leuconostoc pseudomesenteroides"	0
+"463"	"DNA integration"	"Leuconostoc pseudomesenteroides"	0
+"464"	"DNA ligase (NAD+) activity"	"Leuconostoc pseudomesenteroides"	0
+"465"	"DNA recombination"	"Leuconostoc pseudomesenteroides"	9.94937598749009
+"466"	"DNA repair"	"Leuconostoc pseudomesenteroides"	13.6541894120643
+"467"	"DNA replication"	"Leuconostoc pseudomesenteroides"	16.3285374235702
+"468"	"DNA topoisomerase type II (ATP-hydrolyzing) activity"	"Leuconostoc pseudomesenteroides"	6.03088635398425
+"469"	"DNA topological change"	"Leuconostoc pseudomesenteroides"	9.50212520825138
+"470"	"DNA unwinding involved in DNA replication"	"Leuconostoc pseudomesenteroides"	6.40910723120528
+"471"	"DNA-dependent DNA replication"	"Leuconostoc pseudomesenteroides"	7.85740510725928
+"472"	"DNA-directed DNA polymerase activity"	"Leuconostoc pseudomesenteroides"	7.29162959440957
+"473"	"DNA-directed RNA polymerase activity"	"Leuconostoc pseudomesenteroides"	9.27794570612573
+"474"	"double-strand break repair via homologous recombination"	"Leuconostoc pseudomesenteroides"	0
+"475"	"drug transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"476"	"electron carrier activity"	"Leuconostoc pseudomesenteroides"	0
+"477"	"endoribonuclease activity"	"Leuconostoc pseudomesenteroides"	5.00520755198888
+"478"	"exodeoxyribonuclease V activity"	"Leuconostoc pseudomesenteroides"	0
+"479"	"fatty acid biosynthetic process"	"Leuconostoc pseudomesenteroides"	9.5759417213421
+"480"	"flavin adenine dinucleotide binding"	"Leuconostoc pseudomesenteroides"	5.31040313442723
+"481"	"FtsZ-dependent cytokinesis"	"Leuconostoc pseudomesenteroides"	0
+"482"	"galactose binding"	"Leuconostoc pseudomesenteroides"	0
+"483"	"galactose metabolic process"	"Leuconostoc pseudomesenteroides"	0
+"484"	"galactose transport"	"Leuconostoc pseudomesenteroides"	0
+"485"	"glutamate-ammonia ligase activity"	"Leuconostoc pseudomesenteroides"	0
+"486"	"glutamine biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"487"	"glutamine metabolic process"	"Leuconostoc pseudomesenteroides"	0
+"488"	"glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity"	"Leuconostoc pseudomesenteroides"	6.1649507652546
+"489"	"glycolytic process"	"Leuconostoc pseudomesenteroides"	0
+"490"	"Gram-negative-bacterium-type cell wall"	"Leuconostoc pseudomesenteroides"	0
+"491"	"GTP binding"	"Leuconostoc pseudomesenteroides"	13.5079606685343
+"492"	"GTPase activity"	"Leuconostoc pseudomesenteroides"	11.1787691501387
+"493"	"helicase activity"	"Leuconostoc pseudomesenteroides"	6.1649507652546
+"494"	"histidine biosynthetic process"	"Leuconostoc pseudomesenteroides"	6.82931334911501
+"495"	"hydrolase activity"	"Leuconostoc pseudomesenteroides"	17.5145873471253
+"496"	"hydrolase activity, hydrolyzing O-glycosyl compounds"	"Leuconostoc pseudomesenteroides"	0
+"497"	"imidazoleglycerol-phosphate synthase activity"	"Leuconostoc pseudomesenteroides"	0
+"498"	"inorganic phosphate transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"499"	"integral component of membrane"	"Leuconostoc pseudomesenteroides"	166.999564376299
+"500"	"integral component of plasma membrane"	"Leuconostoc pseudomesenteroides"	8.60651542476137
+"501"	"iron ion binding"	"Leuconostoc pseudomesenteroides"	0
+"502"	"isoleucine biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"503"	"isomerase activity"	"Leuconostoc pseudomesenteroides"	0
+"504"	"kinase activity"	"Leuconostoc pseudomesenteroides"	11.5355624966367
+"505"	"lipid A biosynthetic process"	"Leuconostoc pseudomesenteroides"	5.43248136740257
+"506"	"lipoteichoic acid biosynthetic process"	"Leuconostoc pseudomesenteroides"	5.12728578496422
+"507"	"lyase activity"	"Leuconostoc pseudomesenteroides"	5.85975518281625
+"508"	"magnesium ion binding"	"Leuconostoc pseudomesenteroides"	29.2433678942432
+"509"	"membrane"	"Leuconostoc pseudomesenteroides"	0
+"510"	"menaquinone biosynthetic process"	"Leuconostoc pseudomesenteroides"	5.3714422509149
+"511"	"metal ion binding"	"Leuconostoc pseudomesenteroides"	51.1091183657046
+"512"	"metal ion transport"	"Leuconostoc pseudomesenteroides"	0
+"513"	"metalloendopeptidase activity"	"Leuconostoc pseudomesenteroides"	10.0460312969773
+"514"	"methionine biosynthetic process"	"Leuconostoc pseudomesenteroides"	5.04640157436953
+"515"	"mismatch repair"	"Leuconostoc pseudomesenteroides"	5.80759063865991
+"516"	"mismatched DNA binding"	"Leuconostoc pseudomesenteroides"	5.72301407596098
+"517"	"Mo-molybdopterin cofactor biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"518"	"NAD binding"	"Leuconostoc pseudomesenteroides"	8.77791033536539
+"519"	"NADH dehydrogenase (ubiquinone) activity"	"Leuconostoc pseudomesenteroides"	0
+"520"	"NADP binding"	"Leuconostoc pseudomesenteroides"	9.03796278690472
+"521"	"negative regulation of transcription, DNA-templated"	"Leuconostoc pseudomesenteroides"	0
+"522"	"negative regulation of translational elongation"	"Leuconostoc pseudomesenteroides"	0
+"523"	"nickel cation transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"524"	"nitrogen compound transport"	"Leuconostoc pseudomesenteroides"	0
+"525"	"novo' IMP biosynthetic process"	"Leuconostoc pseudomesenteroides"	8.36266898249334
+"526"	"novo' pyrimidine nucleobase biosynthetic process"	"Leuconostoc pseudomesenteroides"	6.59222458066828
+"527"	"novo' UMP biosynthetic process"	"Leuconostoc pseudomesenteroides"	7.62988956095866
+"528"	"nucleic acid binding"	"Leuconostoc pseudomesenteroides"	16.6782630725641
+"529"	"nucleotide binding"	"Leuconostoc pseudomesenteroides"	13.0841547670136
+"530"	"outer membrane-bounded periplasmic space"	"Leuconostoc pseudomesenteroides"	0
+"531"	"oxidoreductase activity"	"Leuconostoc pseudomesenteroides"	18.2827585234483
+"532"	"oxidoreductase activity, acting on CH-OH group of donors"	"Leuconostoc pseudomesenteroides"	0
+"533"	"penicillin binding"	"Leuconostoc pseudomesenteroides"	5.67663783335324
+"534"	"pentose-phosphate shunt"	"Leuconostoc pseudomesenteroides"	8.42339807529836
+"535"	"pentose-phosphate shunt, non-oxidative branch"	"Leuconostoc pseudomesenteroides"	7.751967793934
+"536"	"peptidase activity"	"Leuconostoc pseudomesenteroides"	7.99612425988468
+"537"	"peptidoglycan biosynthetic process"	"Leuconostoc pseudomesenteroides"	17.4571873154734
+"538"	"peptidoglycan glycosyltransferase activity"	"Leuconostoc pseudomesenteroides"	0
+"539"	"peptidoglycan metabolic process"	"Leuconostoc pseudomesenteroides"	0
+"540"	"periplasmic space"	"Leuconostoc pseudomesenteroides"	0
+"541"	"phosphate ion binding"	"Leuconostoc pseudomesenteroides"	0
+"542"	"phosphate ion transmembrane transport"	"Leuconostoc pseudomesenteroides"	0
+"543"	"phosphate ion transport"	"Leuconostoc pseudomesenteroides"	0
+"544"	"phosphoenolpyruvate-dependent sugar phosphotransferase system"	"Leuconostoc pseudomesenteroides"	18.7305830658057
+"545"	"phosphogluconate dehydrogenase (decarboxylating) activity"	"Leuconostoc pseudomesenteroides"	8.60651542476137
+"546"	"phosphoglycerate mutase activity"	"Leuconostoc pseudomesenteroides"	0
+"547"	"phosphorelay sensor kinase activity"	"Leuconostoc pseudomesenteroides"	0
+"548"	"phosphorelay signal transduction system"	"Leuconostoc pseudomesenteroides"	7.1608156418428
+"549"	"plasma membrane"	"Leuconostoc pseudomesenteroides"	45.8929575846157
+"550"	"plasmid maintenance"	"Leuconostoc pseudomesenteroides"	0
+"551"	"positive regulation of proteolysis"	"Leuconostoc pseudomesenteroides"	0
+"552"	"potassium ion transport"	"Leuconostoc pseudomesenteroides"	0
+"553"	"protein dimerization activity"	"Leuconostoc pseudomesenteroides"	0
+"554"	"protein folding"	"Leuconostoc pseudomesenteroides"	7.50781132798332
+"555"	"protein secretion by the type II secretion system"	"Leuconostoc pseudomesenteroides"	0
+"556"	"protein transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"557"	"protein-N(PI)-phosphohistidine-sugar phosphotransferase activity"	"Leuconostoc pseudomesenteroides"	11.1444716543194
+"558"	"pyridoxal phosphate binding"	"Leuconostoc pseudomesenteroides"	9.79967933006711
+"559"	"quinone binding"	"Leuconostoc pseudomesenteroides"	0
+"560"	"quinoprotein glucose dehydrogenase activity"	"Leuconostoc pseudomesenteroides"	0
+"561"	"regulation of cell shape"	"Leuconostoc pseudomesenteroides"	20.5701822563446
+"562"	"regulation of gene expression"	"Leuconostoc pseudomesenteroides"	0
+"563"	"regulation of transcription, DNA-templated"	"Leuconostoc pseudomesenteroides"	9.84846852882376
+"564"	"respiratory chain"	"Leuconostoc pseudomesenteroides"	0
+"565"	"response to arsenic-containing substance"	"Leuconostoc pseudomesenteroides"	0
+"566"	"ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor"	"Leuconostoc pseudomesenteroides"	5.55455960037791
+"567"	"ribose-5-phosphate isomerase activity"	"Leuconostoc pseudomesenteroides"	7.751967793934
+"568"	"ribosome"	"Leuconostoc pseudomesenteroides"	15.0766617724543
+"569"	"RNA binding"	"Leuconostoc pseudomesenteroides"	17.4550843830072
+"570"	"RNA methyltransferase activity"	"Leuconostoc pseudomesenteroides"	7.14157662905731
+"571"	"RNA processing"	"Leuconostoc pseudomesenteroides"	7.20261574554498
+"572"	"rRNA binding"	"Leuconostoc pseudomesenteroides"	6.51520389312059
+"573"	"rRNA processing"	"Leuconostoc pseudomesenteroides"	6.34806811471761
+"574"	"sequence-specific DNA binding"	"Leuconostoc pseudomesenteroides"	0
+"575"	"serine-type D-Ala-D-Ala carboxypeptidase activity"	"Leuconostoc pseudomesenteroides"	0
+"576"	"serine-type endopeptidase activity"	"Leuconostoc pseudomesenteroides"	0
+"577"	"siderophore transport"	"Leuconostoc pseudomesenteroides"	0
+"578"	"signal transduction"	"Leuconostoc pseudomesenteroides"	0
+"579"	"signaling receptor activity"	"Leuconostoc pseudomesenteroides"	0
+"580"	"single-stranded DNA binding"	"Leuconostoc pseudomesenteroides"	5.24936401793956
+"581"	"sorbitol-6-phosphate 2-dehydrogenase activity"	"Leuconostoc pseudomesenteroides"	0
+"582"	"SOS response"	"Leuconostoc pseudomesenteroides"	10.5597671523668
+"583"	"structural constituent of ribosome"	"Leuconostoc pseudomesenteroides"	10.2622593147977
+"584"	"sugar:proton symporter activity"	"Leuconostoc pseudomesenteroides"	0
+"585"	"thiamine biosynthetic process"	"Leuconostoc pseudomesenteroides"	0
+"586"	"thiamine pyrophosphate binding"	"Leuconostoc pseudomesenteroides"	5.46928438786418
+"587"	"thiamine transmembrane transport"	"Leuconostoc pseudomesenteroides"	0
+"588"	"thiamine transport"	"Leuconostoc pseudomesenteroides"	0
+"589"	"thiamine-transporting ATPase activity"	"Leuconostoc pseudomesenteroides"	0
+"590"	"transaminase activity"	"Leuconostoc pseudomesenteroides"	0
+"591"	"transcription factor activity, sequence-specific DNA binding"	"Leuconostoc pseudomesenteroides"	12.063572599774
+"592"	"transcription factor binding"	"Leuconostoc pseudomesenteroides"	0
+"593"	"transcription, DNA-templated"	"Leuconostoc pseudomesenteroides"	9.15586747315039
+"594"	"transferase activity"	"Leuconostoc pseudomesenteroides"	21.1541881084823
+"595"	"translation"	"Leuconostoc pseudomesenteroides"	15.2426570076418
+"596"	"translation elongation factor activity"	"Leuconostoc pseudomesenteroides"	0
+"597"	"transmembrane signaling receptor activity"	"Leuconostoc pseudomesenteroides"	0
+"598"	"transmembrane transport"	"Leuconostoc pseudomesenteroides"	23.9205366881203
+"599"	"transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	26.6363817626676
+"600"	"transporter activity"	"Leuconostoc pseudomesenteroides"	0
+"601"	"transposase activity"	"Leuconostoc pseudomesenteroides"	0
+"602"	"transposition, DNA-mediated"	"Leuconostoc pseudomesenteroides"	0
+"603"	"tricarboxylic acid cycle"	"Leuconostoc pseudomesenteroides"	5.92079429930392
+"604"	"tRNA binding"	"Leuconostoc pseudomesenteroides"	11.1274351255152
+"605"	"type II protein secretion system complex"	"Leuconostoc pseudomesenteroides"	0
+"606"	"UDP-glucose 4-epimerase activity"	"Leuconostoc pseudomesenteroides"	0
+"607"	"UDP-glucose metabolic process"	"Leuconostoc pseudomesenteroides"	0
+"608"	"unfolded protein binding"	"Leuconostoc pseudomesenteroides"	8.72859365773671
+"609"	"uracil transmembrane transporter activity"	"Leuconostoc pseudomesenteroides"	6.22598988174227
+"610"	"valine-tRNA ligase activity"	"Leuconostoc pseudomesenteroides"	6.10391164876693
+"611"	"valyl-tRNA aminoacylation"	"Leuconostoc pseudomesenteroides"	6.10391164876693
+"612"	"zinc ion binding"	"Leuconostoc pseudomesenteroides"	26.6588642511348
+"613"	"3-oxoacyl-[acyl-carrier-protein] synthase activity"	"Sodalis glossinidius"	0
+"614"	"3'-5' exonuclease activity"	"Sodalis glossinidius"	0
+"615"	"3'-tRNA processing endoribonuclease activity"	"Sodalis glossinidius"	0
+"616"	"4 iron, 4 sulfur cluster binding"	"Sodalis glossinidius"	0
+"617"	"acetyltransferase activity"	"Sodalis glossinidius"	0
+"618"	"acid phosphatase activity"	"Sodalis glossinidius"	0
+"619"	"alcohol dehydrogenase (NAD) activity"	"Sodalis glossinidius"	0
+"620"	"aldose 1-epimerase activity"	"Sodalis glossinidius"	0
+"621"	"amino acid-transporting ATPase activity"	"Sodalis glossinidius"	0
+"622"	"aminoacyl-tRNA editing activity"	"Sodalis glossinidius"	0
+"623"	"aminopeptidase activity"	"Sodalis glossinidius"	0
+"624"	"antiporter activity"	"Sodalis glossinidius"	0
+"625"	"arginine biosynthetic process via ornithine"	"Sodalis glossinidius"	0
+"626"	"argininosuccinate lyase activity"	"Sodalis glossinidius"	0
+"627"	"aromatic amino acid family biosynthetic process"	"Sodalis glossinidius"	0
+"628"	"arsenite transmembrane transporter activity"	"Sodalis glossinidius"	0
+"629"	"ATP binding"	"Sodalis glossinidius"	10.0714542204654
+"630"	"ATP phosphoribosyltransferase activity"	"Sodalis glossinidius"	0
+"631"	"ATP-binding cassette (ABC) transporter complex"	"Sodalis glossinidius"	0
+"632"	"ATP-dependent DNA helicase activity"	"Sodalis glossinidius"	0
+"633"	"ATPase activity"	"Sodalis glossinidius"	0
+"634"	"ATPase activity, coupled to transmembrane movement of substances"	"Sodalis glossinidius"	0
+"635"	"bacterial-type flagellum-dependent cell motility"	"Sodalis glossinidius"	0
+"636"	"barrier septum assembly"	"Sodalis glossinidius"	0
+"637"	"beta-ketoacyl-acyl-carrier-protein synthase III activity"	"Sodalis glossinidius"	0
+"638"	"biosynthetic process"	"Sodalis glossinidius"	0
+"639"	"biotin biosynthetic process"	"Sodalis glossinidius"	0
+"640"	"carbohydrate binding"	"Sodalis glossinidius"	0
+"641"	"carbohydrate metabolic process"	"Sodalis glossinidius"	0
+"642"	"carbohydrate transmembrane transporter activity"	"Sodalis glossinidius"	0
+"643"	"carboxypeptidase activity"	"Sodalis glossinidius"	0
+"644"	"catalytic activity"	"Sodalis glossinidius"	0
+"645"	"cation transmembrane transporter activity"	"Sodalis glossinidius"	0
+"646"	"cell adhesion"	"Sodalis glossinidius"	0
+"647"	"cell cycle"	"Sodalis glossinidius"	0
+"648"	"cell division"	"Sodalis glossinidius"	0
+"649"	"cell morphogenesis"	"Sodalis glossinidius"	0
+"650"	"cell outer membrane"	"Sodalis glossinidius"	0
+"651"	"cell wall organization"	"Sodalis glossinidius"	0
+"652"	"cellular response to starvation"	"Sodalis glossinidius"	0
+"653"	"cellulose biosynthetic process"	"Sodalis glossinidius"	0
+"654"	"chemotaxis"	"Sodalis glossinidius"	0
+"655"	"chromosome"	"Sodalis glossinidius"	0
+"656"	"chromosome segregation"	"Sodalis glossinidius"	0
+"657"	"coenzyme binding"	"Sodalis glossinidius"	0
+"658"	"conjugation"	"Sodalis glossinidius"	10.0714542204654
+"659"	"copper ion binding"	"Sodalis glossinidius"	0
+"660"	"cytochrome o ubiquinol oxidase activity"	"Sodalis glossinidius"	0
+"661"	"cytochrome-c oxidase activity"	"Sodalis glossinidius"	0
+"662"	"cytoplasm"	"Sodalis glossinidius"	0
+"663"	"D-gluconate metabolic process"	"Sodalis glossinidius"	0
+"664"	"damaged DNA binding"	"Sodalis glossinidius"	0
+"665"	"DNA binding"	"Sodalis glossinidius"	60.1545977265358
+"666"	"DNA helicase activity"	"Sodalis glossinidius"	10.0714542204654
+"667"	"DNA integration"	"Sodalis glossinidius"	188.409203462234
+"668"	"DNA ligase (NAD+) activity"	"Sodalis glossinidius"	0
+"669"	"DNA recombination"	"Sodalis glossinidius"	0
+"670"	"DNA repair"	"Sodalis glossinidius"	0
+"671"	"DNA replication"	"Sodalis glossinidius"	0
+"672"	"DNA topoisomerase type II (ATP-hydrolyzing) activity"	"Sodalis glossinidius"	0
+"673"	"DNA topological change"	"Sodalis glossinidius"	0
+"674"	"DNA unwinding involved in DNA replication"	"Sodalis glossinidius"	0
+"675"	"DNA-dependent DNA replication"	"Sodalis glossinidius"	0
+"676"	"DNA-directed DNA polymerase activity"	"Sodalis glossinidius"	0
+"677"	"DNA-directed RNA polymerase activity"	"Sodalis glossinidius"	0
+"678"	"double-strand break repair via homologous recombination"	"Sodalis glossinidius"	0
+"679"	"drug transmembrane transporter activity"	"Sodalis glossinidius"	0
+"680"	"electron carrier activity"	"Sodalis glossinidius"	0
+"681"	"endoribonuclease activity"	"Sodalis glossinidius"	0
+"682"	"exodeoxyribonuclease V activity"	"Sodalis glossinidius"	0
+"683"	"fatty acid biosynthetic process"	"Sodalis glossinidius"	0
+"684"	"flavin adenine dinucleotide binding"	"Sodalis glossinidius"	0
+"685"	"FtsZ-dependent cytokinesis"	"Sodalis glossinidius"	0
+"686"	"galactose binding"	"Sodalis glossinidius"	0
+"687"	"galactose metabolic process"	"Sodalis glossinidius"	0
+"688"	"galactose transport"	"Sodalis glossinidius"	0
+"689"	"glutamate-ammonia ligase activity"	"Sodalis glossinidius"	0
+"690"	"glutamine biosynthetic process"	"Sodalis glossinidius"	0
+"691"	"glutamine metabolic process"	"Sodalis glossinidius"	0
+"692"	"glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity"	"Sodalis glossinidius"	0
+"693"	"glycolytic process"	"Sodalis glossinidius"	0
+"694"	"Gram-negative-bacterium-type cell wall"	"Sodalis glossinidius"	0
+"695"	"GTP binding"	"Sodalis glossinidius"	0
+"696"	"GTPase activity"	"Sodalis glossinidius"	0
+"697"	"helicase activity"	"Sodalis glossinidius"	0
+"698"	"histidine biosynthetic process"	"Sodalis glossinidius"	0
+"699"	"hydrolase activity"	"Sodalis glossinidius"	0
+"700"	"hydrolase activity, hydrolyzing O-glycosyl compounds"	"Sodalis glossinidius"	0
+"701"	"imidazoleglycerol-phosphate synthase activity"	"Sodalis glossinidius"	0
+"702"	"inorganic phosphate transmembrane transporter activity"	"Sodalis glossinidius"	0
+"703"	"integral component of membrane"	"Sodalis glossinidius"	0
+"704"	"integral component of plasma membrane"	"Sodalis glossinidius"	0
+"705"	"iron ion binding"	"Sodalis glossinidius"	0
+"706"	"isoleucine biosynthetic process"	"Sodalis glossinidius"	0
+"707"	"isomerase activity"	"Sodalis glossinidius"	0
+"708"	"kinase activity"	"Sodalis glossinidius"	0
+"709"	"lipid A biosynthetic process"	"Sodalis glossinidius"	0
+"710"	"lipoteichoic acid biosynthetic process"	"Sodalis glossinidius"	0
+"711"	"lyase activity"	"Sodalis glossinidius"	0
+"712"	"magnesium ion binding"	"Sodalis glossinidius"	0
+"713"	"membrane"	"Sodalis glossinidius"	0
+"714"	"menaquinone biosynthetic process"	"Sodalis glossinidius"	0
+"715"	"metal ion binding"	"Sodalis glossinidius"	0
+"716"	"metal ion transport"	"Sodalis glossinidius"	0
+"717"	"metalloendopeptidase activity"	"Sodalis glossinidius"	0
+"718"	"methionine biosynthetic process"	"Sodalis glossinidius"	0
+"719"	"mismatch repair"	"Sodalis glossinidius"	0
+"720"	"mismatched DNA binding"	"Sodalis glossinidius"	0
+"721"	"Mo-molybdopterin cofactor biosynthetic process"	"Sodalis glossinidius"	0
+"722"	"NAD binding"	"Sodalis glossinidius"	0
+"723"	"NADH dehydrogenase (ubiquinone) activity"	"Sodalis glossinidius"	0
+"724"	"NADP binding"	"Sodalis glossinidius"	0
+"725"	"negative regulation of transcription, DNA-templated"	"Sodalis glossinidius"	0
+"726"	"negative regulation of translational elongation"	"Sodalis glossinidius"	0
+"727"	"nickel cation transmembrane transporter activity"	"Sodalis glossinidius"	0
+"728"	"nitrogen compound transport"	"Sodalis glossinidius"	0
+"729"	"novo' IMP biosynthetic process"	"Sodalis glossinidius"	0
+"730"	"novo' pyrimidine nucleobase biosynthetic process"	"Sodalis glossinidius"	0
+"731"	"novo' UMP biosynthetic process"	"Sodalis glossinidius"	0
+"732"	"nucleic acid binding"	"Sodalis glossinidius"	141.163284613871
+"733"	"nucleotide binding"	"Sodalis glossinidius"	0
+"734"	"outer membrane-bounded periplasmic space"	"Sodalis glossinidius"	0
+"735"	"oxidoreductase activity"	"Sodalis glossinidius"	0
+"736"	"oxidoreductase activity, acting on CH-OH group of donors"	"Sodalis glossinidius"	0
+"737"	"penicillin binding"	"Sodalis glossinidius"	0
+"738"	"pentose-phosphate shunt"	"Sodalis glossinidius"	0
+"739"	"pentose-phosphate shunt, non-oxidative branch"	"Sodalis glossinidius"	0
+"740"	"peptidase activity"	"Sodalis glossinidius"	0
+"741"	"peptidoglycan biosynthetic process"	"Sodalis glossinidius"	0
+"742"	"peptidoglycan glycosyltransferase activity"	"Sodalis glossinidius"	0
+"743"	"peptidoglycan metabolic process"	"Sodalis glossinidius"	0
+"744"	"periplasmic space"	"Sodalis glossinidius"	0
+"745"	"phosphate ion binding"	"Sodalis glossinidius"	0
+"746"	"phosphate ion transmembrane transport"	"Sodalis glossinidius"	0
+"747"	"phosphate ion transport"	"Sodalis glossinidius"	0
+"748"	"phosphoenolpyruvate-dependent sugar phosphotransferase system"	"Sodalis glossinidius"	0
+"749"	"phosphogluconate dehydrogenase (decarboxylating) activity"	"Sodalis glossinidius"	0
+"750"	"phosphoglycerate mutase activity"	"Sodalis glossinidius"	0
+"751"	"phosphorelay sensor kinase activity"	"Sodalis glossinidius"	0
+"752"	"phosphorelay signal transduction system"	"Sodalis glossinidius"	0
+"753"	"plasma membrane"	"Sodalis glossinidius"	0
+"754"	"plasmid maintenance"	"Sodalis glossinidius"	14.1527349147019
+"755"	"positive regulation of proteolysis"	"Sodalis glossinidius"	0
+"756"	"potassium ion transport"	"Sodalis glossinidius"	0
+"757"	"protein dimerization activity"	"Sodalis glossinidius"	5.55455960037791
+"758"	"protein folding"	"Sodalis glossinidius"	0
+"759"	"protein secretion by the type II secretion system"	"Sodalis glossinidius"	0
+"760"	"protein transporter activity"	"Sodalis glossinidius"	0
+"761"	"protein-N(PI)-phosphohistidine-sugar phosphotransferase activity"	"Sodalis glossinidius"	0
+"762"	"pyridoxal phosphate binding"	"Sodalis glossinidius"	0
+"763"	"quinone binding"	"Sodalis glossinidius"	0
+"764"	"quinoprotein glucose dehydrogenase activity"	"Sodalis glossinidius"	0
+"765"	"regulation of cell shape"	"Sodalis glossinidius"	0
+"766"	"regulation of gene expression"	"Sodalis glossinidius"	0
+"767"	"regulation of transcription, DNA-templated"	"Sodalis glossinidius"	5.58227059331881
+"768"	"respiratory chain"	"Sodalis glossinidius"	0
+"769"	"response to arsenic-containing substance"	"Sodalis glossinidius"	0
+"770"	"ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor"	"Sodalis glossinidius"	0
+"771"	"ribose-5-phosphate isomerase activity"	"Sodalis glossinidius"	0
+"772"	"ribosome"	"Sodalis glossinidius"	0
+"773"	"RNA binding"	"Sodalis glossinidius"	0
+"774"	"RNA methyltransferase activity"	"Sodalis glossinidius"	0
+"775"	"RNA processing"	"Sodalis glossinidius"	0
+"776"	"rRNA binding"	"Sodalis glossinidius"	0
+"777"	"rRNA processing"	"Sodalis glossinidius"	0
+"778"	"sequence-specific DNA binding"	"Sodalis glossinidius"	11.9045201753943
+"779"	"serine-type D-Ala-D-Ala carboxypeptidase activity"	"Sodalis glossinidius"	0
+"780"	"serine-type endopeptidase activity"	"Sodalis glossinidius"	0
+"781"	"siderophore transport"	"Sodalis glossinidius"	0
+"782"	"signal transduction"	"Sodalis glossinidius"	0
+"783"	"signaling receptor activity"	"Sodalis glossinidius"	0
+"784"	"single-stranded DNA binding"	"Sodalis glossinidius"	0
+"785"	"sorbitol-6-phosphate 2-dehydrogenase activity"	"Sodalis glossinidius"	0
+"786"	"SOS response"	"Sodalis glossinidius"	0
+"787"	"structural constituent of ribosome"	"Sodalis glossinidius"	0
+"788"	"sugar:proton symporter activity"	"Sodalis glossinidius"	0
+"789"	"thiamine biosynthetic process"	"Sodalis glossinidius"	0
+"790"	"thiamine pyrophosphate binding"	"Sodalis glossinidius"	0
+"791"	"thiamine transmembrane transport"	"Sodalis glossinidius"	0
+"792"	"thiamine transport"	"Sodalis glossinidius"	0
+"793"	"thiamine-transporting ATPase activity"	"Sodalis glossinidius"	0
+"794"	"transaminase activity"	"Sodalis glossinidius"	0
+"795"	"transcription factor activity, sequence-specific DNA binding"	"Sodalis glossinidius"	0
+"796"	"transcription factor binding"	"Sodalis glossinidius"	0
+"797"	"transcription, DNA-templated"	"Sodalis glossinidius"	0
+"798"	"transferase activity"	"Sodalis glossinidius"	0
+"799"	"translation"	"Sodalis glossinidius"	0
+"800"	"translation elongation factor activity"	"Sodalis glossinidius"	0
+"801"	"transmembrane signaling receptor activity"	"Sodalis glossinidius"	0
+"802"	"transmembrane transport"	"Sodalis glossinidius"	0
+"803"	"transmembrane transporter activity"	"Sodalis glossinidius"	0
+"804"	"transporter activity"	"Sodalis glossinidius"	0
+"805"	"transposase activity"	"Sodalis glossinidius"	57.1750541325916
+"806"	"transposition, DNA-mediated"	"Sodalis glossinidius"	57.1750541325916
+"807"	"tricarboxylic acid cycle"	"Sodalis glossinidius"	0
+"808"	"tRNA binding"	"Sodalis glossinidius"	0
+"809"	"type II protein secretion system complex"	"Sodalis glossinidius"	0
+"810"	"UDP-glucose 4-epimerase activity"	"Sodalis glossinidius"	0
+"811"	"UDP-glucose metabolic process"	"Sodalis glossinidius"	0
+"812"	"unfolded protein binding"	"Sodalis glossinidius"	0
+"813"	"uracil transmembrane transporter activity"	"Sodalis glossinidius"	0
+"814"	"valine-tRNA ligase activity"	"Sodalis glossinidius"	0
+"815"	"valyl-tRNA aminoacylation"	"Sodalis glossinidius"	0
+"816"	"zinc ion binding"	"Sodalis glossinidius"	0
+"817"	"3-oxoacyl-[acyl-carrier-protein] synthase activity"	"Sodalis praecaptivus"	0
+"818"	"3'-5' exonuclease activity"	"Sodalis praecaptivus"	0
+"819"	"3'-tRNA processing endoribonuclease activity"	"Sodalis praecaptivus"	0
+"820"	"4 iron, 4 sulfur cluster binding"	"Sodalis praecaptivus"	15.8934046923445
+"821"	"acetyltransferase activity"	"Sodalis praecaptivus"	0
+"822"	"acid phosphatase activity"	"Sodalis praecaptivus"	10.2901484617032
+"823"	"alcohol dehydrogenase (NAD) activity"	"Sodalis praecaptivus"	7.62988956095866
+"824"	"aldose 1-epimerase activity"	"Sodalis praecaptivus"	7.48265214393121
+"825"	"amino acid-transporting ATPase activity"	"Sodalis praecaptivus"	0
+"826"	"aminoacyl-tRNA editing activity"	"Sodalis praecaptivus"	0
+"827"	"aminopeptidase activity"	"Sodalis praecaptivus"	10.3636549511113
+"828"	"antiporter activity"	"Sodalis praecaptivus"	5.49352048389024
+"829"	"arginine biosynthetic process via ornithine"	"Sodalis praecaptivus"	6.59222458066828
+"830"	"argininosuccinate lyase activity"	"Sodalis praecaptivus"	6.59222458066828
+"831"	"aromatic amino acid family biosynthetic process"	"Sodalis praecaptivus"	0
+"832"	"arsenite transmembrane transporter activity"	"Sodalis praecaptivus"	10.4612726498493
+"833"	"ATP binding"	"Sodalis praecaptivus"	92.4803947191597
+"834"	"ATP phosphoribosyltransferase activity"	"Sodalis praecaptivus"	7.38573309500798
+"835"	"ATP-binding cassette (ABC) transporter complex"	"Sodalis praecaptivus"	53.3368286623152
+"836"	"ATP-dependent DNA helicase activity"	"Sodalis praecaptivus"	0
+"837"	"ATPase activity"	"Sodalis praecaptivus"	24.8673879277406
+"838"	"ATPase activity, coupled to transmembrane movement of substances"	"Sodalis praecaptivus"	5.61559871686558
+"839"	"bacterial-type flagellum-dependent cell motility"	"Sodalis praecaptivus"	0
+"840"	"barrier septum assembly"	"Sodalis praecaptivus"	6.39492555195074
+"841"	"beta-ketoacyl-acyl-carrier-protein synthase III activity"	"Sodalis praecaptivus"	0
+"842"	"biosynthetic process"	"Sodalis praecaptivus"	23.8867203869262
+"843"	"biotin biosynthetic process"	"Sodalis praecaptivus"	9.21690658963806
+"844"	"carbohydrate binding"	"Sodalis praecaptivus"	7.69409355067853
+"845"	"carbohydrate metabolic process"	"Sodalis praecaptivus"	15.249026055331
+"846"	"carbohydrate transmembrane transporter activity"	"Sodalis praecaptivus"	8.85067189071205
+"847"	"carboxypeptidase activity"	"Sodalis praecaptivus"	8.22443102449334
+"848"	"catalytic activity"	"Sodalis praecaptivus"	15.5553621809848
+"849"	"cation transmembrane transporter activity"	"Sodalis praecaptivus"	11.344012468243
+"850"	"cell adhesion"	"Sodalis praecaptivus"	5.43248136740257
+"851"	"cell cycle"	"Sodalis praecaptivus"	0
+"852"	"cell division"	"Sodalis praecaptivus"	0
+"853"	"cell morphogenesis"	"Sodalis praecaptivus"	0
+"854"	"cell outer membrane"	"Sodalis praecaptivus"	8.85067189071205
+"855"	"cell wall organization"	"Sodalis praecaptivus"	29.7720373459705
+"856"	"cellular response to starvation"	"Sodalis praecaptivus"	10.7219844499787
+"857"	"cellulose biosynthetic process"	"Sodalis praecaptivus"	0
+"858"	"chemotaxis"	"Sodalis praecaptivus"	0
+"859"	"chromosome"	"Sodalis praecaptivus"	0
+"860"	"chromosome segregation"	"Sodalis praecaptivus"	0
+"861"	"coenzyme binding"	"Sodalis praecaptivus"	7.28192450254545
+"862"	"conjugation"	"Sodalis praecaptivus"	0
+"863"	"copper ion binding"	"Sodalis praecaptivus"	9.01706273505359
+"864"	"cytochrome o ubiquinol oxidase activity"	"Sodalis praecaptivus"	7.83325459670457
+"865"	"cytochrome-c oxidase activity"	"Sodalis praecaptivus"	12.0744645191002
+"866"	"cytoplasm"	"Sodalis praecaptivus"	86.2013958076846
+"867"	"D-gluconate metabolic process"	"Sodalis praecaptivus"	0
+"868"	"damaged DNA binding"	"Sodalis praecaptivus"	0
+"869"	"DNA binding"	"Sodalis praecaptivus"	94.1632295547716
+"870"	"DNA helicase activity"	"Sodalis praecaptivus"	0
+"871"	"DNA integration"	"Sodalis praecaptivus"	0
+"872"	"DNA ligase (NAD+) activity"	"Sodalis praecaptivus"	5.18832490145189
+"873"	"DNA recombination"	"Sodalis praecaptivus"	0
+"874"	"DNA repair"	"Sodalis praecaptivus"	8.12470341026721
+"875"	"DNA replication"	"Sodalis praecaptivus"	22.8630196307011
+"876"	"DNA topoisomerase type II (ATP-hydrolyzing) activity"	"Sodalis praecaptivus"	0
+"877"	"DNA topological change"	"Sodalis praecaptivus"	0
+"878"	"DNA unwinding involved in DNA replication"	"Sodalis praecaptivus"	0
+"879"	"DNA-dependent DNA replication"	"Sodalis praecaptivus"	0
+"880"	"DNA-directed DNA polymerase activity"	"Sodalis praecaptivus"	16.6476116446023
+"881"	"DNA-directed RNA polymerase activity"	"Sodalis praecaptivus"	0
+"882"	"double-strand break repair via homologous recombination"	"Sodalis praecaptivus"	0
+"883"	"drug transmembrane transporter activity"	"Sodalis praecaptivus"	5.55455960037791
+"884"	"electron carrier activity"	"Sodalis praecaptivus"	0
+"885"	"endoribonuclease activity"	"Sodalis praecaptivus"	0
+"886"	"exodeoxyribonuclease V activity"	"Sodalis praecaptivus"	0
+"887"	"fatty acid biosynthetic process"	"Sodalis praecaptivus"	0
+"888"	"flavin adenine dinucleotide binding"	"Sodalis praecaptivus"	0
+"889"	"FtsZ-dependent cytokinesis"	"Sodalis praecaptivus"	8.00627124514946
+"890"	"galactose binding"	"Sodalis praecaptivus"	8.72859365773671
+"891"	"galactose metabolic process"	"Sodalis praecaptivus"	18.1288883192957
+"892"	"galactose transport"	"Sodalis praecaptivus"	8.72859365773671
+"893"	"glutamate-ammonia ligase activity"	"Sodalis praecaptivus"	13.0212301732491
+"894"	"glutamine biosynthetic process"	"Sodalis praecaptivus"	13.0071340794659
+"895"	"glutamine metabolic process"	"Sodalis praecaptivus"	12.8151884419182
+"896"	"glutaminyl-tRNA synthase (glutamine-hydrolyzing) activity"	"Sodalis praecaptivus"	0
+"897"	"glycolytic process"	"Sodalis praecaptivus"	12.3435627139136
+"898"	"Gram-negative-bacterium-type cell wall"	"Sodalis praecaptivus"	6.75690111867574
+"899"	"GTP binding"	"Sodalis praecaptivus"	22.3822162897042
+"900"	"GTPase activity"	"Sodalis praecaptivus"	17.3377927611049
+"901"	"helicase activity"	"Sodalis praecaptivus"	11.5376261278782
+"902"	"histidine biosynthetic process"	"Sodalis praecaptivus"	24.4308046296169
+"903"	"hydrolase activity"	"Sodalis praecaptivus"	13.7709998393413
+"904"	"hydrolase activity, hydrolyzing O-glycosyl compounds"	"Sodalis praecaptivus"	7.20292576922763
+"905"	"imidazoleglycerol-phosphate synthase activity"	"Sodalis praecaptivus"	11.5945379818828
+"906"	"inorganic phosphate transmembrane transporter activity"	"Sodalis praecaptivus"	12.2319807911104
+"907"	"integral component of membrane"	"Sodalis praecaptivus"	341.181550079128
+"908"	"integral component of plasma membrane"	"Sodalis praecaptivus"	12.5923739212193
+"909"	"iron ion binding"	"Sodalis praecaptivus"	7.44176814523321
+"910"	"isoleucine biosynthetic process"	"Sodalis praecaptivus"	6.77534193013129
+"911"	"isomerase activity"	"Sodalis praecaptivus"	0
+"912"	"kinase activity"	"Sodalis praecaptivus"	9.76863229295125
+"913"	"lipid A biosynthetic process"	"Sodalis praecaptivus"	0
+"914"	"lipoteichoic acid biosynthetic process"	"Sodalis praecaptivus"	0
+"915"	"lyase activity"	"Sodalis praecaptivus"	11.8178799814538
+"916"	"magnesium ion binding"	"Sodalis praecaptivus"	14.1478164339108
+"917"	"membrane"	"Sodalis praecaptivus"	21.9037403193851
+"918"	"menaquinone biosynthetic process"	"Sodalis praecaptivus"	0
+"919"	"metal ion binding"	"Sodalis praecaptivus"	58.1331003321989
+"920"	"metal ion transport"	"Sodalis praecaptivus"	6.53118546418061
+"921"	"metalloendopeptidase activity"	"Sodalis praecaptivus"	0
+"922"	"methionine biosynthetic process"	"Sodalis praecaptivus"	0
+"923"	"mismatch repair"	"Sodalis praecaptivus"	0
+"924"	"mismatched DNA binding"	"Sodalis praecaptivus"	0
+"925"	"Mo-molybdopterin cofactor biosynthetic process"	"Sodalis praecaptivus"	5.18832490145189
+"926"	"NAD binding"	"Sodalis praecaptivus"	8.27396515731139
+"927"	"NADH dehydrogenase (ubiquinone) activity"	"Sodalis praecaptivus"	6.89742016310663
+"928"	"NADP binding"	"Sodalis praecaptivus"	0
+"929"	"negative regulation of transcription, DNA-templated"	"Sodalis praecaptivus"	5.06624666847655
+"930"	"negative regulation of translational elongation"	"Sodalis praecaptivus"	12.5888597230797
+"931"	"nickel cation transmembrane transporter activity"	"Sodalis praecaptivus"	5.66465165505823
+"932"	"nitrogen compound transport"	"Sodalis praecaptivus"	10.0104151039778
+"933"	"novo' IMP biosynthetic process"	"Sodalis praecaptivus"	0
+"934"	"novo' pyrimidine nucleobase biosynthetic process"	"Sodalis praecaptivus"	0
+"935"	"novo' UMP biosynthetic process"	"Sodalis praecaptivus"	0
+"936"	"nucleic acid binding"	"Sodalis praecaptivus"	0
+"937"	"nucleotide binding"	"Sodalis praecaptivus"	21.7855256094567
+"938"	"outer membrane-bounded periplasmic space"	"Sodalis praecaptivus"	28.7148303122339
+"939"	"oxidoreductase activity"	"Sodalis praecaptivus"	44.4458928202704
+"940"	"oxidoreductase activity, acting on CH-OH group of donors"	"Sodalis praecaptivus"	6.89742016310663
+"941"	"penicillin binding"	"Sodalis praecaptivus"	8.39617526000474
+"942"	"pentose-phosphate shunt"	"Sodalis praecaptivus"	0
+"943"	"pentose-phosphate shunt, non-oxidative branch"	"Sodalis praecaptivus"	0
+"944"	"peptidase activity"	"Sodalis praecaptivus"	5.86397501379253
+"945"	"peptidoglycan biosynthetic process"	"Sodalis praecaptivus"	14.4855096203631
+"946"	"peptidoglycan glycosyltransferase activity"	"Sodalis praecaptivus"	8.23154500624393
+"947"	"peptidoglycan metabolic process"	"Sodalis praecaptivus"	5.92079429930392
+"948"	"periplasmic space"	"Sodalis praecaptivus"	6.03826407517084
+"949"	"phosphate ion binding"	"Sodalis praecaptivus"	6.77534193013129
+"950"	"phosphate ion transmembrane transport"	"Sodalis praecaptivus"	8.78963277422438
+"951"	"phosphate ion transport"	"Sodalis praecaptivus"	10.9032163221648
+"952"	"phosphoenolpyruvate-dependent sugar phosphotransferase system"	"Sodalis praecaptivus"	38.0385784978487
+"953"	"phosphogluconate dehydrogenase (decarboxylating) activity"	"Sodalis praecaptivus"	0
+"954"	"phosphoglycerate mutase activity"	"Sodalis praecaptivus"	5.50480801237046
+"955"	"phosphorelay sensor kinase activity"	"Sodalis praecaptivus"	22.208059098044
+"956"	"phosphorelay signal transduction system"	"Sodalis praecaptivus"	30.2392720720562
+"957"	"plasma membrane"	"Sodalis praecaptivus"	83.7026162535123
+"958"	"plasmid maintenance"	"Sodalis praecaptivus"	0
+"959"	"positive regulation of proteolysis"	"Sodalis praecaptivus"	11.3789693126525
+"960"	"potassium ion transport"	"Sodalis praecaptivus"	10.1794826439043
+"961"	"protein dimerization activity"	"Sodalis praecaptivus"	0
+"962"	"protein folding"	"Sodalis praecaptivus"	0
+"963"	"protein secretion by the type II secretion system"	"Sodalis praecaptivus"	0
+"964"	"protein transporter activity"	"Sodalis praecaptivus"	0
+"965"	"protein-N(PI)-phosphohistidine-sugar phosphotransferase activity"	"Sodalis praecaptivus"	14.9181831111933
+"966"	"pyridoxal phosphate binding"	"Sodalis praecaptivus"	30.9651086827831
+"967"	"quinone binding"	"Sodalis praecaptivus"	17.4215781054958
+"968"	"quinoprotein glucose dehydrogenase activity"	"Sodalis praecaptivus"	8.91175729144635
+"969"	"regulation of cell shape"	"Sodalis praecaptivus"	13.3157975757972
+"970"	"regulation of gene expression"	"Sodalis praecaptivus"	11.3789693126525
+"971"	"regulation of transcription, DNA-templated"	"Sodalis praecaptivus"	26.0333220347308
+"972"	"respiratory chain"	"Sodalis praecaptivus"	9.46076001492796
+"973"	"response to arsenic-containing substance"	"Sodalis praecaptivus"	7.74915922863105
+"974"	"ribonucleoside-diphosphate reductase activity, thioredoxin disulfide as acceptor"	"Sodalis praecaptivus"	0
+"975"	"ribose-5-phosphate isomerase activity"	"Sodalis praecaptivus"	0
+"976"	"ribosome"	"Sodalis praecaptivus"	0
+"977"	"RNA binding"	"Sodalis praecaptivus"	5.91333099264594
+"978"	"RNA methyltransferase activity"	"Sodalis praecaptivus"	0
+"979"	"RNA processing"	"Sodalis praecaptivus"	0
+"980"	"rRNA binding"	"Sodalis praecaptivus"	0
+"981"	"rRNA processing"	"Sodalis praecaptivus"	0
+"982"	"sequence-specific DNA binding"	"Sodalis praecaptivus"	12.0083287678568
+"983"	"serine-type D-Ala-D-Ala carboxypeptidase activity"	"Sodalis praecaptivus"	12.0030609621584
+"984"	"serine-type endopeptidase activity"	"Sodalis praecaptivus"	7.08053751256964
+"985"	"siderophore transport"	"Sodalis praecaptivus"	0
+"986"	"signal transduction"	"Sodalis praecaptivus"	0
+"987"	"signaling receptor activity"	"Sodalis praecaptivus"	0
+"988"	"single-stranded DNA binding"	"Sodalis praecaptivus"	0
+"989"	"sorbitol-6-phosphate 2-dehydrogenase activity"	"Sodalis praecaptivus"	8.9146121409959
+"990"	"SOS response"	"Sodalis praecaptivus"	0
+"991"	"structural constituent of ribosome"	"Sodalis praecaptivus"	0
+"992"	"sugar:proton symporter activity"	"Sodalis praecaptivus"	0
+"993"	"thiamine biosynthetic process"	"Sodalis praecaptivus"	6.22598988174227
+"994"	"thiamine pyrophosphate binding"	"Sodalis praecaptivus"	0
+"995"	"thiamine transmembrane transport"	"Sodalis praecaptivus"	6.83682294001962
+"996"	"thiamine transport"	"Sodalis praecaptivus"	12.2860377955655
+"997"	"thiamine-transporting ATPase activity"	"Sodalis praecaptivus"	6.82272684623646
+"998"	"transaminase activity"	"Sodalis praecaptivus"	14.1603763753245
+"999"	"transcription factor activity, sequence-specific DNA binding"	"Sodalis praecaptivus"	33.7716356282823
+"1000"	"transcription factor binding"	"Sodalis praecaptivus"	10.1935324534408
+"1001"	"transcription, DNA-templated"	"Sodalis praecaptivus"	0
+"1002"	"transferase activity"	"Sodalis praecaptivus"	19.3869085798895
+"1003"	"translation"	"Sodalis praecaptivus"	0
+"1004"	"translation elongation factor activity"	"Sodalis praecaptivus"	18.6431516535572
+"1005"	"transmembrane signaling receptor activity"	"Sodalis praecaptivus"	0
+"1006"	"transmembrane transport"	"Sodalis praecaptivus"	92.1834536616874
+"1007"	"transmembrane transporter activity"	"Sodalis praecaptivus"	58.6419709740658
+"1008"	"transporter activity"	"Sodalis praecaptivus"	25.0236317868174
+"1009"	"transposase activity"	"Sodalis praecaptivus"	0
+"1010"	"transposition, DNA-mediated"	"Sodalis praecaptivus"	0
+"1011"	"tricarboxylic acid cycle"	"Sodalis praecaptivus"	0
+"1012"	"tRNA binding"	"Sodalis praecaptivus"	0
+"1013"	"type II protein secretion system complex"	"Sodalis praecaptivus"	0
+"1014"	"UDP-glucose 4-epimerase activity"	"Sodalis praecaptivus"	11.4987201749503
+"1015"	"UDP-glucose metabolic process"	"Sodalis praecaptivus"	0
+"1016"	"unfolded protein binding"	"Sodalis praecaptivus"	0
+"1017"	"uracil transmembrane transporter activity"	"Sodalis praecaptivus"	0
+"1018"	"valine-tRNA ligase activity"	"Sodalis praecaptivus"	0
+"1019"	"valyl-tRNA aminoacylation"	"Sodalis praecaptivus"	0
+"1020"	"zinc ion binding"	"Sodalis praecaptivus"	37.4449671053619
