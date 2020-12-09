@@ -13,7 +13,7 @@ The aim of this analysis is to understand the type and distribution of the nonpl
 3. We also need to look specifically the species with the seasonal variation and make functional enrichment (table with p values)
 
 ```{r}
-setwd("~/Desktop/Non Plants")
+setwd("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Non Plants")
 library(readxl) 
 library(RColorBrewer)
 library(ggplot2)
@@ -287,28 +287,28 @@ Func_all_m <- Func_all %>%
 summary(Func_all_m)
 
 #cube root transformation
-#Func_all_m$Frequency<-sign(Func_all_m$Frequency) * abs(Func_all_m$Frequency)^(1/3)
-#plotNormalHistogram(Func_all_m$Frequency)
+Func_all_m$Frequency<-sign(Func_all_m$Frequency) * abs(Func_all_m$Frequency)^(1/3)
+plotNormalHistogram(Func_all_m$Frequency)
 
 #####CHOOSE#######
 
 ###### ANOVA
 c<-Func_all_m %>% 
-  nest(data = c(Species, Method,Frequency)) %>% #nesting doesn't work, I can't fix it
+  nest(data = c(Species, Method,Frequency)) %>% 
   mutate(model = map(data, ~anova(lm(Frequency ~ Species, .))), 
          tidy = map(model, broom::tidy)) %>% 
         select(GO_description, tidy) %>% 
         unnest(tidy)
 
 ###### NON PARAMETRIC
-c<-Func_all_m %>% 
-  nest(data = c(Species, Method,Frequency)) %>% #nesting doesn't work, I can't fix it
-  mutate(model = map(data, ~kruskal.test(Frequency ~ Species, .)), 
-         tidy = map(model, broom::tidy)) %>% 
-        select(GO_description, tidy) %>% 
-        unnest(tidy)
+#c<-Func_all_m %>% 
+  #nest(data = c(Species, Method,Frequency)) %>% #nesting doesn't work, I can't fix it
+  #mutate(model = map(data, ~kruskal.test(Frequency ~ Species, .)), 
+         #tidy = map(model, broom::tidy)) %>% 
+        #select(GO_description, tidy) %>% 
+        #unnest(tidy)
 
-#####CHOOSE#######
+
 
 c$significance<-ifelse(c$p.value<0.005,"significant","not sign.")  
 
@@ -360,8 +360,18 @@ write.table(GO_sign, "GO_significant.txt", sep="\t")
 
 ```
 
-Results: Except that the nest function doesn't seems to work with a lot of data (NEED TO BE FIX), I managed to extract a p-value for each GO across the 5 species found specifically in automn.
+Results: I managed to extract a p-value for each GO across the 5 species found specifically in automn.
 Levene's Test for Homogeneity of Variance appear to be significant to make a ANOVA despite the many zero (true) across the data. Data transformation to root cube seems to work ok-ish to make the data more normal. I am not very convinced either. BUt this is the only way to get some significant p-values, non parametric test only give non-significant (probably because of the nesting issue)
-ONCE we fix the nesting issue, The GO appear to be significant will somehow require some level organisation (visulisation with ruban?, enrichment within highter level?... need to ask for advise to Pavlopoulos and Martin).
+The GO appear to be significant will somehow require some level organisation (visulisation with ruban?, enrichment within highter level?... need to ask for advise to Pavlopoulos and Martin).
 
 
+
+Visualisation of the 30 most significant one 
+```{r}
+
+top30sign<-GO_sign %>% 
+  slice_min(p.value, n = 30)
+
+
+
+```
