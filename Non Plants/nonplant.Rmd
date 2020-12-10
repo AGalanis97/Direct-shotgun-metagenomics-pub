@@ -33,7 +33,7 @@ myPalette <- brewer.pal(6, "Dark2")
 1.
 ```{r}
 #All non plant species 
-nonplants<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Normalised_reads/normalised_methodseason_species.csv", header = TRUE)
+nonplants<-read.csv("./Normalised_reads/normalised_methodseason_species.csv", header = TRUE)
 nonplants<-nonplants[!grepl("Viridiplantae", nonplants$Kingdom),]
 
 #filter species with less that 100 reads and export for manual and NCBI-based classification
@@ -46,9 +46,9 @@ NCBI<-read_excel("NCBI.xlsx")
 NCBI<-NCBI[!grepl("Apis mellifera filamentous virus", NCBI$Species),]
 
 #Differential non plant species across seasons (from Cluster analysis)
-SeasonalDifCl1<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_1.csv", header = TRUE)
-SeasonalDifCl3<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_3.csv", header = TRUE)
-SeasonalDifCl4<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_4.csv", header = TRUE)
+SeasonalDifCl1<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_1.csv", header = TRUE)
+SeasonalDifCl3<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_3.csv", header = TRUE)
+SeasonalDifCl4<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_4.csv", header = TRUE)
 SeasonalDifAll<-rbind(SeasonalDifCl1,SeasonalDifCl3,SeasonalDifCl4)
 SeasonalDifAll<-SeasonalDifAll[!grepl("Viridiplantae", SeasonalDifAll$Kingdom),]
 SeasonalDifAll<-SeasonalDifAll[,-(2:11)]
@@ -364,4 +364,85 @@ Results: Except that the nest function doesn't seems to work with a lot of data 
 Levene's Test for Homogeneity of Variance appear to be significant to make a ANOVA despite the many zero (true) across the data. Data transformation to root cube seems to work ok-ish to make the data more normal. I am not very convinced either. BUt this is the only way to get some significant p-values, non parametric test only give non-significant (probably because of the nesting issue)
 ONCE we fix the nesting issue, The GO appear to be significant will somehow require some level organisation (visulisation with ruban?, enrichment within highter level?... need to ask for advise to Pavlopoulos and Martin).
 
+
+p value plots
+
+```{r}
+# Export the columns 
+GO_sign_columns <- GO_sign[,2:6]
+
+# Rename the columns
+colnames(GO_sign_columns) <- c("Enterobacter sp. SA187","Klebsiella oxytoca","Leuconostoc pseudomesenteroides","Sodalis glossinidius","Sodalis praecaptivus")
+
+# Extract the maximum number (or Frequency) per GO
+maximum_column_names <- colnames(GO_sign_columns)[max.col(GO_sign_columns,ties.method = "first")] %>% as.data.frame()
+
+# Combine it with the pvalue data
+maximums_pvalues_and_names <- cbind(maximum_column_names, GO_sign$GO_description,GO_sign$p.value)
+colnames(maximums_pvalues_and_names) <- c("Species","GO_description","pvalue")
+maximums_pvalues_and_names <- maximums_pvalues_and_names %>% group_by(Species)
+
+# Create a list with the GOs per species. Each dataframe contains the data for each species. 
+maximum_split <- maximums_pvalues_and_names %>% group_split()
+top20_per_species <- lapply(maximum_split, function(df) {
+  df <- df[order(df$pvalue),]
+  df <- df[1:20,]
+})
+
+# Manually annotate the functions (copy paste to the GO database)
+enterobacter <- top20_per_species[[1]]
+enterobacter$functions <- c("MF","MF","MF","MF","MF","MF","MF","MF","CC","MF","CC","MF","BP","BP","MF","BP","MF","MF","MF","BP")
+
+klebsiella <- top20_per_species[[2]]
+klebsiella$functions <- c("MF","MF","MF","BP","MF","MF","MF","MF","MF","MF","BP","BP","BP","MF","MF","MF","MF","MF","CC","MF")
+
+leuconostoc <- top20_per_species[[3]]
+leuconostoc$functions <- c("MF","BP","BP","MF","CC","MF","CC","BP","BP","MF","MF","MF","MF","MF","BP","MF","MF","MF","BP","BP")
+
+sodgloss <- top20_per_species[[4]]
+sodgloss <- sodgloss %>% na.omit()
+sodgloss$functions <- c("MF","BP","MF","BP","BP","MF","BP","BP","MF","MF","BP","MF")
+
+sodpra <- top20_per_species[[5]]
+sodpra$functions <- c("MF","MF","CC","MF","MF","MF","MF","MF","BP","MF","MF","MF","MF","MF","MF","MF","CC","BP","MF","BP")
+
+# Plot function
+go_plot <- function(df, plotfilename) {
+  df2 <- df %>% 
+    # 1. Remove any grouping
+    ungroup() %>% 
+    # 2. Arrange by
+    #   i.  facet group (period)
+    #   ii. value (val)
+    arrange(functions, pvalue) %>%
+    # 3. Add order column of row numbers
+    mutate(order = row_number())
+  
+
+plot_df <- ggplot(df2, aes(order, pvalue)) +
+  geom_col(aes(fill = functions), position = "dodge", width = 0.5) +
+  scale_x_continuous(
+    breaks = df2$order,
+    labels = df2$GO_description) +
+  # scale_y_continuous(expand = c(0, 0)) +
+  facet_grid(functions ~ ., scales = "free", space = "free") +
+  coord_flip() +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2", name = "functions") +
+  theme(panel.grid.major.y = element_blank()) + 
+  labs(x="", y="p-value", title = df2$Species[1]) +
+  theme(text = element_text(size=12),legend.position = "none",
+        axis.ticks.y = element_blank()) + scale_y_log10("pvalue",
+                                                            breaks = trans_breaks("log10", function(x) 10^x),
+                                                            labels = trans_format("log10", math_format(10^.x)))
+ggsave(filename = plotfilename, plot = plot_df, width = 10, height = 15)
+}
+
+go_plot(sodgloss, plotfilename = "sodalis_gloss.pdf")
+go_plot(klebsiella, plotfilename = "klesbiella.pdf")
+go_plot(sodpra, plotfilename = "sodalis_prae.pdf")
+go_plot(enterobacter, plotfilename = "enterobacter.pdf")
+go_plot(leuconostoc, plotfilename = "leuconostoc.pdf")
+
+```
 
