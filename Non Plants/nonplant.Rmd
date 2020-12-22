@@ -3,7 +3,7 @@ title: "NONPLANT ANALYSIS "
 output:
   pdf_document: default
 editor_options: SOL_ NOVEMBER 2020
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 The aim of this analysis is to understand the type and distribution of the nonplants DNA found in the Honey and if they might play a function in the process of honey/or benefit the bees health in relation with season 
@@ -13,7 +13,7 @@ The aim of this analysis is to understand the type and distribution of the nonpl
 3. We also need to look specifically the species with the seasonal variation and make functional enrichment (table with p values)
 
 ```{r}
-setwd("~/Desktop/Non Plants")
+setwd("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Non Plants")
 library(readxl) 
 library(RColorBrewer)
 library(ggplot2)
@@ -33,7 +33,7 @@ myPalette <- brewer.pal(6, "Dark2")
 1.
 ```{r}
 #All non plant species 
-nonplants<-read.csv("./Normalised_reads/normalised_methodseason_species.csv", header = TRUE)
+nonplants<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Normalised_reads/normalised_methodseason_species.csv", header = TRUE)
 nonplants<-nonplants[!grepl("Viridiplantae", nonplants$Kingdom),]
 
 #filter species with less that 100 reads and export for manual and NCBI-based classification
@@ -46,9 +46,9 @@ NCBI<-read_excel("NCBI.xlsx")
 NCBI<-NCBI[!grepl("Apis mellifera filamentous virus", NCBI$Species),]
 
 #Differential non plant species across seasons (from Cluster analysis)
-SeasonalDifCl1<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_1.csv", header = TRUE)
-SeasonalDifCl3<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_3.csv", header = TRUE)
-SeasonalDifCl4<-read.csv("./Figures/Figure_3/Cluster/Species_cluster_4.csv", header = TRUE)
+SeasonalDifCl1<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_1.csv", header = TRUE)
+SeasonalDifCl3<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_3.csv", header = TRUE)
+SeasonalDifCl4<-read.csv("~/Documents/GitHub/Direct-shotgun-metagenomics-pub/Figures/Figure_3/Cluster/Species_cluster_4.csv", header = TRUE)
 SeasonalDifAll<-rbind(SeasonalDifCl1,SeasonalDifCl3,SeasonalDifCl4)
 SeasonalDifAll<-SeasonalDifAll[!grepl("Viridiplantae", SeasonalDifAll$Kingdom),]
 SeasonalDifAll<-SeasonalDifAll[,-(2:11)]
@@ -294,19 +294,19 @@ summary(Func_all_m)
 
 ###### ANOVA
 c<-Func_all_m %>% 
-  nest(data = c(Species, Method,Frequency)) %>% #nesting doesn't work, I can't fix it
+  nest(data = c(Species, Method,Frequency)) %>% 
   mutate(model = map(data, ~anova(lm(Frequency ~ Species, .))), 
          tidy = map(model, broom::tidy)) %>% 
         select(GO_description, tidy) %>% 
         unnest(tidy)
 
 ###### NON PARAMETRIC
-c<-Func_all_m %>% 
-  nest(data = c(Species, Method,Frequency)) %>% #nesting doesn't work, I can't fix it
-  mutate(model = map(data, ~kruskal.test(Frequency ~ Species, .)), 
-         tidy = map(model, broom::tidy)) %>% 
-        select(GO_description, tidy) %>% 
-        unnest(tidy)
+#c<-Func_all_m %>% 
+  #nest(data = c(Species, Method,Frequency)) %>% 
+  #mutate(model = map(data, ~kruskal.test(Frequency ~ Species, .)), 
+         #tidy = map(model, broom::tidy)) %>% 
+        #select(GO_description, tidy) %>% 
+        #unnest(tidy)
 
 #####CHOOSE#######
 
@@ -360,12 +360,12 @@ write.table(GO_sign, "GO_significant.txt", sep="\t")
 
 ```
 
-Results: Except that the nest function doesn't seems to work with a lot of data (NEED TO BE FIX), I managed to extract a p-value for each GO across the 5 species found specifically in automn.
-Levene's Test for Homogeneity of Variance appear to be significant to make a ANOVA despite the many zero (true) across the data. Data transformation to root cube seems to work ok-ish to make the data more normal. I am not very convinced either. BUt this is the only way to get some significant p-values, non parametric test only give non-significant (probably because of the nesting issue)
-ONCE we fix the nesting issue, The GO appear to be significant will somehow require some level organisation (visulisation with ruban?, enrichment within highter level?... need to ask for advise to Pavlopoulos and Martin).
+Results: I managed to extract a p-value for each GO across the 5 species found specifically in automn.
+Levene's Test for Homogeneity of Variance appear to be significant to make a ANOVA despite the many zero (true) across the data. Data transformation to root cube seems to work ok-ish to make the data more normal. I am not very convinced either so do not apply it for test. BUt this is the only way to get some significant p-values, non parametric test only give non-significant 
+The GO appear to be significant will somehow require some level organisation (visulisation with ruban?, enrichment within highter level?... need to ask for advise to Pavlopoulos and Martin).
 
 
-p value plots
+p value plots (ANASTASIO)
 
 ```{r}
 # Export the columns 
@@ -374,7 +374,7 @@ GO_sign_columns <- GO_sign[,2:6]
 # Rename the columns
 colnames(GO_sign_columns) <- c("Enterobacter sp. SA187","Klebsiella oxytoca","Leuconostoc pseudomesenteroides","Sodalis glossinidius","Sodalis praecaptivus")
 
-# Extract the maximum number (or Frequency) per GO
+# Extract the maximum number (or Frequency) per GO (this is a choice as we assumed that the highest mean is bringing the significance)
 maximum_column_names <- colnames(GO_sign_columns)[max.col(GO_sign_columns,ties.method = "first")] %>% as.data.frame()
 
 # Combine it with the pvalue data
@@ -392,19 +392,49 @@ top20_per_species <- lapply(maximum_split, function(df) {
 # Manually annotate the functions (copy paste to the GO database)
 enterobacter <- top20_per_species[[1]]
 enterobacter$functions <- c("MF","MF","MF","MF","MF","MF","MF","MF","CC","MF","CC","MF","BP","BP","MF","BP","MF","MF","MF","BP")
+enterobacter$Topfunctions<-c( "Carbohydrate process", "Others","Others","Others","Others","Carbohydrate process","Others","Others","Others","Carbohydrate process","Others","Carbohydrate process","Others","Others","Others","Others","Others","Others","Others","Carbohydrate process" )
+enterobacter$pvalue<--log10(enterobacter$pvalue)
+enterobacter<-merge(enterobacter,GO_sign,by=c("GO_description"))
+enterobacter<-enterobacter[,-c(7:10,12:22)]
+colnames(enterobacter)[6] <- "Frequency"
+colnames(enterobacter)[7] <- "SD"
 
 klebsiella <- top20_per_species[[2]]
 klebsiella$functions <- c("MF","MF","MF","BP","MF","MF","MF","MF","MF","MF","BP","BP","BP","MF","MF","MF","MF","MF","CC","MF")
+klebsiella$Topfunctions<-c("Others","C-C lyase activity","tRNA modif","tRNA modif","Phosphorilation","C-C lyase activity","C-C lyase activity","C-C lyase activity","Phosphorilation","Others","Phosphorilation","Others","Others","Others","Others","Others","tRNA modif","Others","Others","Others")
+klebsiella$pvalue<--log10(klebsiella$pvalue)
+klebsiella<-merge(klebsiella,GO_sign,by=c("GO_description"))
+klebsiella<-klebsiella[,-c(6,8:11,13:22)]
+colnames(klebsiella)[6] <- "Frequency"
+colnames(klebsiella)[7] <- "SD"
 
 leuconostoc <- top20_per_species[[3]]
 leuconostoc$functions <- c("MF","BP","BP","MF","CC","MF","CC","BP","BP","MF","MF","MF","MF","MF","BP","MF","MF","MF","BP","BP")
+leuconostoc$Topfunctions<-c("tRNA modif","tRNA modif","DNA repair","Glycolysis","Others","Glycolysis","Others","Others","Others","Others","Others","tRNA modif","Others","Others","tRNA modif","DNA repair","Others","DNA repair","DNA repair","DNA repair")
+leuconostoc$pvalue<--log10(leuconostoc$pvalue)
+leuconostoc<-merge(leuconostoc,GO_sign,by=c("GO_description"))
+leuconostoc<-leuconostoc[,-c(6:7,9:12,14:22)]
+colnames(leuconostoc)[6] <- "Frequency"
+colnames(leuconostoc)[7] <- "SD"
 
 sodgloss <- top20_per_species[[4]]
 sodgloss <- sodgloss %>% na.omit()
 sodgloss$functions <- c("MF","BP","MF","BP","BP","MF","BP","BP","MF","MF","BP","MF")
+sodgloss$Topfunctions<- c("Transposition","Transposition","Others","Transposition","Others","Others","Transposition","Transposition","Others","Others","Others","Others")
+sodgloss$pvalue<--log10(sodgloss$pvalue) 
+sodgloss<-merge(sodgloss,GO_sign,by=c("GO_description"))
+sodgloss<-sodgloss[,-c(6:8,10:13,15:22)]
+colnames(sodgloss)[6] <- "Frequency"
+colnames(sodgloss)[7] <- "SD"
 
 sodpra <- top20_per_species[[5]]
 sodpra$functions <- c("MF","MF","CC","MF","MF","MF","MF","MF","BP","MF","MF","MF","MF","MF","MF","MF","CC","BP","MF","BP")
+sodpra$Topfunctions<- c("Amino-acid process","Amino-acid process","Others","Others","Others","Others","Amino-acid process","Amino-acid process","Amino-acid process","Amino-acid process","Others","Others","Others","Others","Others","Others","Others","Others","Others","Others")
+sodpra$pvalue<--log10(sodpra$pvalue) 
+sodpra<-merge(sodpra,GO_sign,by=c("GO_description"))
+sodpra<-sodpra[,-c(6:9,11:14,16:22)]
+colnames(sodpra)[6] <- "Frequency"
+colnames(sodpra)[7] <- "SD"
 
 # Plot function
 go_plot <- function(df, plotfilename) {
@@ -443,6 +473,27 @@ go_plot(klebsiella, plotfilename = "klesbiella.pdf")
 go_plot(sodpra, plotfilename = "sodalis_prae.pdf")
 go_plot(enterobacter, plotfilename = "enterobacter.pdf")
 go_plot(leuconostoc, plotfilename = "leuconostoc.pdf")
+
+#plot all top functions (SOL)
+automn_final<-rbind(enterobacter,klebsiella,leuconostoc,sodgloss,sodpra)
+automn_final<-automn_final[- grep("Others", automn_final$Topfunctions),]
+#automn_final$Frequency<-log10(automn_final$Frequency)
+
+automn_final<- automn_final %>% 
+    ungroup() %>% 
+    arrange(Species,Topfunctions, pvalue) %>%
+    mutate(order = row_number())
+
+
+ggplot(automn_final, aes(x = pvalue, y = GO_description)) + 
+  geom_point(aes( size = Frequency, color=Species), alpha = 0.5) + 
+  #scale_size(range = c(0,150)) +
+  #scale_fill_brewer(palette="Oranges")+
+  theme_minimal()+
+  facet_grid(vars(Species), scales="free", space="free_x") +
+  xlab("-log10(p.value)") +
+  ylab("GO description") 
+
 
 ```
 
