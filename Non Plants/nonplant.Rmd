@@ -485,14 +485,15 @@ automn_final<- automn_final %>%
     mutate(order = row_number())
 
 
-ggplot(automn_final, aes(x = pvalue, y = GO_description)) + 
-  geom_point(aes( size = Frequency, color=Species), alpha = 0.5) + 
-  #scale_size(range = c(0,150)) +
-  #scale_fill_brewer(palette="Oranges")+
+automn_final$Species <- str_wrap(automn_final$Species, width = 15, exdent = 2)
+
+
+ggplot(automn_final, aes(x = pvalue, y = reorder(GO_description,-pvalue))) + 
+  geom_point(aes( size = Frequency, fill=Species), shape = 21, colour="black") + 
   theme_minimal()+
   facet_grid(vars(Species), scales="free", space="free_x") +
   xlab("-log10(p.value)") +
-  ylab("GO description") 
+  ylab("GO description") + scale_fill_brewer(palette = "Oranges") + scale_size_continuous(limits = c(0,200),range = c(0,10), breaks = c(1,50,100,200))
 
 
 ```
