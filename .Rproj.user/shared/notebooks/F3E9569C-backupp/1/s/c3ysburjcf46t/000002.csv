@@ -1,0 +1,26 @@
+"0","```r
+Hives_annotation <- as.data.frame(colData(Hives_dds_family))
+
+
+get_super_kingdom_or_plant <- function(x) {
+  setwd(\"C:/Users/user/Desktop/taxdmp\")
+  ifelse(getTaxonomy(x, desiredTaxa = \"superkingdom\") != \"Eukaryota\", getTaxonomy(x, desiredTaxa = \"superkingdom\"), ifelse(getTaxonomy(x, desiredTaxa = \"kingdom\") == \"Viridiplantae\", getTaxonomy(x, desiredTaxa = \"kingdom\"), getTaxonomy(x, desiredTaxa = \"superkingdom\")))
+}
+
+TaxonomicIDs_family <- as.numeric(rownames((Hives_counts_vst_family)))
+Taxid_taxonomy_family <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_family)) 
+Taxonomic_IDs_dataframe_family <- as.data.frame(TaxonomicIDs_family)
+annotationrows_family <- bind_cols(Taxid_taxonomy_family,Taxonomic_IDs_dataframe_family)
+colnames(annotationrows_family) <- c(\"Domain\", \"Taxonomic_ID\")
+annotationrows_family <- tibble::column_to_rownames(annotationrows_family, var = \"Taxonomic_ID\")
+
+ann_colors = list(
+    Domain = c(Bacteria = \"#0D0887FF\", Viruses = \"#73D055FF\", Eukaryota = \"#CC4678FF\", Viridiplantae = \"#F0F921FF\", Archaea = \"#ad05f5\"),
+    Season = c(May = \"#5cb300\", July = \"#ecf547\", November = \"#8f7c56\"))
+
+
+ordered_counts_family <- order(rowMeans(counts(Hives_dds_RLE_family,normalized=TRUE)), decreasing=TRUE)
+
+final_heatmap_family <- pheatmap(assay(Hives_counts_vst_family)[ordered_counts_family,],cluster_rows = FALSE, show_rownames = FALSE, clustering_distance_cols = \"correlation\", cluster_cols = TRUE, annotation_col = select(Hives_annotation,Season,Varroa,Population), annotation_row = annotationrows_family, annotation_colors = ann_colors[1:2], main = \"Heatmap families\", height = 20)
+ggsave(filename=\"heatmap_family.png\", plot=final_heatmap_family)
+```"

@@ -1,0 +1,8 @@
+"0","```r
+if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
+if (!require('stringr')) install.packages('stringr'); library('stringr')
+if (!require('rlist')) install.packages('rlist'); library('rlist')
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+if (!require('ggsci')) install.packages('ggsci'); library('ggsci')
+theme_update(plot.title = element_text(hjust = 0.5))
+```"

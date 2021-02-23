@@ -1,0 +1,13 @@
+"0","```r
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2')
+if (!require('ggpubr')) install.packages('ggpubr'); library('ggpubr')
+
+plot_kraken2_community_genus <- ggplot(kraken2_community_genus, aes(x=reorder(Name,-Relative_abundance_rooted), y=Relative_abundance_rooted, fill=colouring)) + geom_bar(stat = \"identity\") + theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) + scale_fill_manual(values = c(\"grey\", \"blue\")) + labs(y= \"Relative abundance\", title = \"Abundance distribution\", fill = \"Originally present\")
+
+plot_kraken2_community_genus
+
+plot_kraken2_community_genus_limit <- plot_kraken2_community_genus + ylim(0,0.5) + geom_hline(yintercept = 0.004, linetype =\"dashed\", color = \"black\")
+plot_kraken2_community_genus_limit
+ggsave(filename=\"genus_limit.png\", plot = plot_kraken2_community_genus_limit)
+
+```"

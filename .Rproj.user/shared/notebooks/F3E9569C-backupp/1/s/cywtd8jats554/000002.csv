@@ -1,0 +1,10 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames\")
+
+kraken2_output_names <- c(\"Reads_assigned_rooted_at_taxon\", \"Reads_assigned_directly_to_taxon\",\"Rank_code\",\"Taxonomic_ID\",\"Name\")
+
+kraken2_community <- read.delim(file = 'mock_community_all.txt', sep = '\t', header = FALSE, skip = 1, strip.white = TRUE)[,-c(1)]
+names(kraken2_community) <- kraken2_output_names
+kraken2_community <- arrange(kraken2_community,Taxonomic_ID)
+
+```"

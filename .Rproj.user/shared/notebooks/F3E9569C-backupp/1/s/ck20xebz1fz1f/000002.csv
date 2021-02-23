@@ -1,0 +1,1 @@
+"0","$ ./kraken2 --db nucleotide file.fastq --threads 30 --report-zero-counts file_results --output file_res.kraken"

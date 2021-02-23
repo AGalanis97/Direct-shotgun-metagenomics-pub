@@ -1,26 +1,25 @@
 {
-    "collab_server" : "",
-    "contents" : "",
-    "created" : 1608052328794.000,
-    "dirty" : false,
-    "encoding" : "UTF-8",
-    "folds" : "",
-    "hash" : "3726471082",
-    "id" : "39C11D37",
-    "lastKnownWriteTime" : 1608147899,
-    "last_content_update" : 1608147899136,
-    "path" : "~/GitHub/honeyDSM-seq/varroa_analysis.R",
-    "project_path" : "varroa_analysis.R",
-    "properties" : {
-        "cursorPosition" : "98,0",
-        "scrollLine" : "65",
-        "tempName" : "Untitled2"
+    "id": "39C11D37",
+    "path": "~/GitHub/honeyDSM-seq/varroa_analysis.R",
+    "project_path": "varroa_analysis.R",
+    "type": "r_source",
+    "hash": "3553742360",
+    "contents": "",
+    "dirty": false,
+    "created": 1608052328794.0,
+    "source_on_save": false,
+    "relative_order": 8,
+    "properties": {
+        "cursorPosition": "147,0",
+        "scrollLine": "0",
+        "tempName": "Untitled2"
     },
-    "read_only" : false,
-    "read_only_alternatives" : [
-    ],
-    "relative_order" : 8,
-    "source_on_save" : false,
-    "source_window" : "",
-    "type" : "r_source"
+    "folds": "",
+    "lastKnownWriteTime": 1608241499,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1608241499,
+    "read_only": false,
+    "read_only_alternatives": []
 }

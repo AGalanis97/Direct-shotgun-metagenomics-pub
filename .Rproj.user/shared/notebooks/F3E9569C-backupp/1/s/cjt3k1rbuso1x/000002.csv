@@ -1,0 +1,15 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames/RMSE\")
+
+temp_species_plants <- list.files(pattern = \"species_plants.csv\")
+species_plants_list <- lapply(temp_species_plants,read.csv)
+
+temp_genus_plants <- list.files(pattern = \"genus_plants.csv\")
+genus_plants_list <- lapply(temp_genus_plants,read.csv)
+
+temp_others <- list.files(pattern = \"others.csv\")
+others_list <- lapply(temp_others,read.csv)
+
+temp_community <- list.files(pattern = \"community.csv\")
+community_list <- lapply(temp_community,read.csv)
+```"

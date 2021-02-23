@@ -1,0 +1,6 @@
+"0","```r
+kraken2_community_genus <- filter(kraken2_community, Rank_code == \"G\")
+
+kraken2_community_species <- filter(kraken2_community, Rank_code == \"S\")
+
+```"

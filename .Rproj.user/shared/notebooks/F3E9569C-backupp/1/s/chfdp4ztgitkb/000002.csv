@@ -1,0 +1,8 @@
+"0","```r
+if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
+if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
+if (!require('taxize')) install.packages('taxize'): library('taxize')
+
+
+hives_metadata <- read.csv(\"C:/Users/user/Desktop/data_frames/comparison/metadata_hives.csv\")
+```"

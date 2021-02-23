@@ -1,0 +1,8 @@
+"0","```r
+kraken2_community$Relative_abundance <- (kraken2_community$Reads_assigned_directly_to_taxon / kraken2_community[1,1]) * 100
+kraken2_community$Relative_abundance_rooted <- (kraken2_community$Reads_assigned_rooted_at_taxon / kraken2_community[1,1]) * 100
+
+Community_names <- c(\"Brassica cretica\", \"Chlamydomonas reinhardtii\", \"Citrus sinensis\", \"Malus domestica\", \"Medicago truncatula\", \"Oxalis drummondii\", \"Papaver somniferum\", \"Petunia x hybrida\", \"Prunus persica\", \"Pyrus x bretschneideri\", \"Theobroma cacao\", \"Zea maysâ€,â€Apis mellifera filamentous virus\", \"Apis mellifera\", \"Frischella perrara\", \"Gilliamella apicola\", \"Homo sapiens\", \"Lactobacillus kunkeei\", \"Nosema ceranae\", \"Paenibacillus apiarius\", \"Snodgrassella alvi\", \"Staphylococcus epidermidis\", \"Varroa destructor\")
+kraken2_community$colouring <- ifelse(kraken2_community$Name %in% Community_names, \"YES\", \"NO\")
+
+```"

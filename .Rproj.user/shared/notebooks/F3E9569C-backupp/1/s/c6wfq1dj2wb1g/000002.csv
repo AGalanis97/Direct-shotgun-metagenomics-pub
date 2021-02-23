@@ -1,0 +1,16 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames/barcharts\")
+others_dataset <- list.files(path = getwd(), recursive = TRUE, pattern = \"others.csv\")
+
+comparison_others <- others_dataset %>%
+  setNames(nm = .) %>%
+  map_df(read.csv, .id = \"file name\")
+
+comparison_others$Software <- factor(comparison_others$Software, levels = c(\"Mock\",\"CCMetagen\",\"DIAMOND\",\"kraken2\",\"minimap2\"))
+
+stacked_barplot_others <- ggplot() + geom_bar(aes(y = Observed_Abundance, x = Software, fill= Species), data = comparison_others, stat='identity', width=0.3, position=\"fill\") + theme(legend.position = 'bottom', legend.text = element_text(size = 8)) + scale_fill_rickandmorty() + theme_bw(base_size = 15) + scale_y_continuous(labels = function(x) paste0(x*100, \"%\"))
+
+final_barplot_others <- print(stacked_barplot_others + labs(title= \"Comparison for other organisms (non-Viridiplantae)\",y=\"Observed Abundance (%)\", x = \"\"))
+ggsave(filename=\"final_barplot_others.pdf\",plot = final_barplot_others, device = \"pdf\", width = 9, height = 5)
+
+```"

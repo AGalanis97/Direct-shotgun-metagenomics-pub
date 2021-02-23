@@ -1,0 +1,1 @@
+"0","$ CCMetagen.py -i file_out_kma.res -o file_results --depth_unit rpm --mapstat file_out_kma.mapstat -c 0.01 -st 85.00"

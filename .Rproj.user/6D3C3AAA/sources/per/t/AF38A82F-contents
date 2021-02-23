@@ -1,0 +1,326 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Including Hive 7
+```{r}
+install.packages('devtools')
+#Not necessary to install ALDEX2
+BiocManager::install("ALDEx2")
+
+devtools::install_github('ggloor/CoDaSeq/CoDaSeq')
+library(CoDaSeq)
+```
+
+
+```{r}
+setwd("C:/Users/user/Desktop/data_frames/comparison")
+if (!require('purrr')) install.packages('purrr'); library('purrr')
+if (!require('taxonomizr')) install.packages('taxonomizr'); library('taxonomizr')
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(factoextra)
+
+kraken2_output_names <- c("Sample_rooted_reads", "Sample_reads","Rank_code","Taxonomic_ID","Name")
+
+# CHANGE THE PATH TO WHERE THE FILES ARE IN THE GOOGLE DRIVE
+
+import_kraken2_files <- list.files(path = "C:/Users/user/Desktop/data_frames/comparison",pattern = "\\.tsv",full.names = T)
+
+kraken2_files <- lapply(import_kraken2_files, function(tble) {
+   read.delim(file = tble, 
+              sep = '\t',
+              header = FALSE,
+              strip.white = TRUE)[,-c(1)]
+})
+
+# CHANGE THE PATH TO WHERE THE FILES ARE IN THE GOOGLE DRIVE
+
+naming_list <- list.files(path = "C:/Users/user/Desktop/data_frames/comparison",pattern = "\\.tsv")
+
+# This will name each element (or dataframe) of the list
+# according to the filename it originated from.
+
+kraken2_files <- setNames(kraken2_files, substring(naming_list, first  = 1, last = nchar(naming_list) -4))
+
+kraken2_files = lapply(kraken2_files,setNames,kraken2_output_names)
+
+kraken2_files = lapply(kraken2_files,arrange, Taxonomic_ID)
+
+# Optionally add the relative abundance as well
+kraken2_files = lapply(kraken2_files, function(df) {
+  df$Relative_abundance = df$Sample_reads / df[1,1] * 100;
+  df$Relative_abundance_rooted = df$Sample_rooted_reads / df[1,1] * 100;
+  return(df)
+})
+
+classification_ranks <- function(df) {
+  setwd("C:/Users/user/Desktop/taxdmp") # SET PATH FOR TAXONOMIZR
+  taxids <- df[,4]
+  Phylum <- as.character(getTaxonomy(taxids, desiredTaxa = "phylum"))
+  Kingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "kingdom"))
+  Superkingdom <- as.data.frame(getTaxonomy(taxids, desiredTaxa = "superkingdom"))
+  cbind(df, Phylum, Kingdom, Superkingdom)
+}
+
+kraken2_files = lapply(kraken2_files, classification_ranks)
+```
+
+
+```{r}
+kraken2_files_family <- kraken2_files %>% lapply(filter, Rank_code == "F") %>% lapply(filter, Name != "Drosophilidae") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
+kraken2_files_genus <- kraken2_files %>% lapply(filter, Rank_code == "G") %>% lapply(filter, Name != "Drosophila") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
+
+kraken2_files_species <- kraken2_files %>% lapply(filter, Rank_code == "S") %>% lapply(filter, Name != "Drosophila melanogaster") %>% lapply(filter, is.na(Phylum)|Phylum != "Chordata")
+
+
+kraken2_files_filter_genus <- lapply(kraken2_files_genus, "[", c(2,4))
+kraken2_files_filter_species <- lapply(kraken2_files_species, "[", c(2,4))
+kraken2_files_filter_family <- lapply(kraken2_files_family, "[", c(1,4))
+
+
+Hives_genus <- lapply(names(kraken2_files_filter_genus), function(x){
+  colnames(kraken2_files_filter_genus[[x]]) <- c(x,"Taxonomic_ID")
+  kraken2_files_filter_genus[[x]]
+})
+names(Hives_genus) <- names(kraken2_files_filter_genus) 
+
+Hives_species <- lapply(names(kraken2_files_filter_species), function(x){
+  colnames(kraken2_files_filter_species[[x]]) <- c(x,"Taxonomic_ID")
+  kraken2_files_filter_species[[x]]
+})
+names(Hives_species) <- names(kraken2_files_filter_species) 
+
+
+Hives_family <- lapply(names(kraken2_files_filter_family), function(x){
+  colnames(kraken2_files_filter_family[[x]]) <- c(x,"Taxonomic_ID")
+  kraken2_files_filter_family[[x]]
+})
+names(Hives_family) <- names(kraken2_files_filter_family) 
+
+
+Hives_comparison_genus <- Hives_genus %>% purrr::reduce(full_join, by = "Taxonomic_ID") %>% select("Taxonomic_ID", everything()) %>% mutate_all(~replace(., is.na(.),0))
+
+Hives_comparison_species <- Hives_species %>% purrr::reduce(full_join, by = "Taxonomic_ID") %>% select("Taxonomic_ID", everything()) %>% mutate_all(~replace(., is.na(.), 0))
+
+
+Hives_comparison_family <- Hives_family %>% purrr::reduce(full_join, by = "Taxonomic_ID") %>% select("Taxonomic_ID", everything()) %>% mutate_all(~replace(., is.na(.), 0))
+
+```
+
+
+```{r}
+# this function returns domain
+get_super_kingdom_or_plant <- function(x) {
+  setwd("C:/Users/user/Desktop/taxdmp")
+  ifelse(getTaxonomy(x, desiredTaxa = "superkingdom") != "Eukaryota", getTaxonomy(x, desiredTaxa = "superkingdom"), ifelse(getTaxonomy(x, desiredTaxa = "kingdom") == "Viridiplantae", getTaxonomy(x, desiredTaxa = "kingdom"), getTaxonomy(x, desiredTaxa = "superkingdom")))
+}
+
+
+library(zCompositions)
+
+Species_all <- Hives_comparison_species
+
+rownames(Species_all) <- c()
+
+Species_all <- column_to_rownames(Species_all, "Taxonomic_ID")
+
+Species <- data.frame(Species_all[which(apply(Species_all, 1, function(x){sum(x)}) > 1),], check.names=F)
+
+classification_clr <- function(df) {
+  setwd("C:/Users/user/Desktop/taxdmp") # SET THE DIRECTORY OF TAXONOMIZR 
+  taxids <- rownames(df)
+  Species <- as.character(getTaxonomy(taxids,desiredTaxa = "species"))
+}
+
+Species_copy <- Species
+
+Species_names <- classification_clr(Species)
+Species_names1 <- as.data.frame(Species_names)
+Species_names1$Species_names <- as.character(Species_names1$Species_names)
+Species_names1[911,1] <- print("Acinetobacter sp. NEB149")
+Species_names1[638,1] <- print("Mesorhizobium sp. NIBRBAC000500504")
+
+rownames(Species_copy) <- NULL
+rownames(Species_copy) <- Species_names1[,1] 
+
+
+Species_czm <- cmultRepl(t(Species_copy),  label=0, method="CZM")
+
+Species_clr <- t(apply(Species_czm, 1, function(x){log(x) - mean(log(x))}))
+
+Species_pcx <- prcomp(Species_clr, scale. = F)
+
+
+annotationrows_species_2 = as.data.frame(annotationrows_species[,-2])
+annotationrows_species_clr <- tibble::column_to_rownames(annotationrows_species_2, var = "Species")
+
+species_colours <- annotationrows_species_clr %>% rownames_to_column(var = "Species")
+
+
+TaxonomicIDs_species <- as.numeric(rownames((Species)))
+Taxid_taxonomy_species <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_species)) 
+Taxonomic_IDs_dataframe_species <- as.data.frame(TaxonomicIDs_species)
+annotationrows_species_clr <- bind_cols(Taxid_taxonomy_species,Taxonomic_IDs_dataframe_species)
+colnames(annotationrows_species_clr) <- c("Domain", "Taxonomic_ID")
+annotationrows_specie_clrs <- tibble::column_to_rownames(annotationrows_species_clr, var = "Taxonomic_ID")
+
+
+species_colours1 <- filter(species_colours, Species %in% Species_names1$Species_names)
+
+
+rownames(annotationrows_species_clr) <- NULL
+rownames(annotationrows_species_clr) <- rownames(Species_copy)
+
+sample_method <- c("DirectSM_H4","DirectSM_H5","DirectSM_H6","DirectSM_H7","SM_H4","SM_H5","SM_H6","SM_H7")
+hive_number <- c("4","5","6","7","4","5","6","7")
+data_hives <- as.data.frame(cbind(sample_method,hive_number))
+data_hives = data_hives %>% column_to_rownames(var = "sample_method")
+season <- rep(c("Autumn","Spring","Summer","Summer"),2)
+data_hives$hive_number <- as.factor(data_hives$hive_number)
+
+
+biplot_species <- factoextra::fviz_pca_biplot(Species_pcx,repel = T, select.var = list(contrib = 20), col.var = annotationrows_species_clr$Domain) + theme_minimal() + labs(x = "PC1: 41.2%", y = "PC2: 20.8%") + geom_point(aes(color = season), size = 4)
+
+ggsave(plot = biplot_species, filename = "C:/Users/user/Desktop/biplot_species.png", width = 10, height = 10)
+
+```
+
+
+
+```{r}
+
+Genus_all <- Hives_comparison_genus
+
+rownames(Genus_all) <- c()
+
+Genus_all <- column_to_rownames(Genus_all, "Taxonomic_ID")
+
+Genus <- data.frame(Genus_all[which(apply(Genus_all, 1, function(x){sum(x)}) > 1),], check.names=F)
+
+classification_clr <- function(df) {
+  setwd("C:/Users/user/Desktop/taxdmp") # SET THE DIRECTORY OF TAXONOMIZR 
+  taxids <- rownames(df)
+  Genus <- as.character(getTaxonomy(taxids,desiredTaxa = "genus"))
+}
+
+Genus_copy <- Genus
+
+Genus_names <- classification_clr(Genus)
+Genus_names1 <- as.data.frame(Genus_names)
+Genus_names1$Genus_names <- as.character(Genus_names1$Genus_names)
+
+rownames(Genus_copy) <- NULL
+rownames(Genus_copy) <- Genus_names1[,1] 
+
+
+Genus_czm <- cmultRepl(t(Genus_copy),  label=0, method="CZM")
+
+Genus_clr <- t(apply(Genus_czm, 1, function(x){log(x) - mean(log(x))}))
+
+Genus_pcx <- prcomp(Genus_clr, scale. = F)
+
+TaxonomicIDs_genus <- as.numeric(rownames((Genus)))
+Taxid_taxonomy_genus <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_genus)) 
+Taxonomic_IDs_dataframe_genus <- as.data.frame(TaxonomicIDs_genus)
+annotationrows_genus <- bind_cols(Taxid_taxonomy_genus,Taxonomic_IDs_dataframe_genus)
+colnames(annotationrows_genus) <- c("Domain", "Taxonomic_ID")
+annotationrows_genus <- tibble::column_to_rownames(annotationrows_genus, var = "Taxonomic_ID")
+
+
+annotationrows_Genus_clr <- annotationrows_genus
+
+Genus_colours <- annotationrows_Genus_clr %>% rownames_to_column(var = "Genus")
+
+
+
+Genus_colours1 <- filter(Genus_colours, Genus %in% Genus_names1$Genus_names)
+
+
+rownames(annotationrows_Genus_clr) <- NULL
+rownames(annotationrows_Genus_clr) <- rownames(Genus_copy)
+
+sample_method <- c("DirectSM_H4","DirectSM_H5","DirectSM_H6","DirectSM_H7","SM_H4","SM_H5","SM_H6","SM_H7")
+hive_number <- c("4","5","6","7","4","5","6","7")
+data_hives <- as.data.frame(cbind(sample_method,hive_number))
+data_hives = data_hives %>% column_to_rownames(var = "sample_method")
+season <- rep(c("Autumn","Spring","Summer","Summer"),2)
+data_hives$hive_number <- as.factor(data_hives$hive_number)
+
+
+biplot_Genus <- factoextra::fviz_pca_biplot(Genus_pcx,repel = T, select.var = list(contrib = 20), col.var = annotationrows_Genus_clr$Domain) + theme_minimal() + labs(x = "PC1: 36%", y = "PC2: 21.9%") + geom_point(aes(color = season), size = 4)
+
+ggsave(plot = biplot_Genus, filename = "C:/Users/user/Desktop/biplot_Genus.png", width = 10, height = 10)
+
+```
+
+
+```{r}
+
+
+Family_all <- Hives_comparison_family
+
+rownames(Family_all) <- c()
+
+Family_all <- column_to_rownames(Family_all, "Taxonomic_ID")
+
+Family <- data.frame(Family_all[which(apply(Family_all, 1, function(x){sum(x)}) > 1),], check.names=F)
+
+classification_clr <- function(df) {
+  setwd("C:/Users/user/Desktop/taxdmp") # SET THE DIRECTORY OF TAXONOMIZR 
+  taxids <- rownames(df)
+  Family <- as.character(getTaxonomy(taxids,desiredTaxa = "family"))
+}
+
+Family_copy <- Family
+
+Family_names <- classification_clr(Family)
+Family_names1 <- as.data.frame(Family_names)
+Family_names1$Family_names <- as.character(Family_names1$Family_names)
+Family_names1[286,1] <- print("Autographiviridae")
+Family_names1[326,1] <- print("Drexlerviridae")
+
+family_na <- cbind(Family_names1$Family_names,rownames(Family_copy))
+ 
+
+rownames(Family_copy) <- NULL
+rownames(Family_copy) <- Family_names1$Family_names 
+
+
+Family_czm <- cmultRepl(t(Family_copy),  label=0, method="CZM")
+
+Family_clr <- t(apply(Family_czm, 1, function(x){log(x) - mean(log(x))}))
+
+Family_pcx <- prcomp(Family_clr, scale. = F)
+
+TaxonomicIDs_Family <- as.numeric(rownames((Family)))
+Taxid_taxonomy_Family <- as.data.frame(get_super_kingdom_or_plant(TaxonomicIDs_Family)) 
+Taxonomic_IDs_dataframe_Family <- as.data.frame(TaxonomicIDs_Family)
+annotationrows_Family <- bind_cols(Taxid_taxonomy_Family,Taxonomic_IDs_dataframe_Family)
+colnames(annotationrows_Family) <- c("Domain", "Taxonomic_ID")
+annotationrows_Family <- tibble::column_to_rownames(annotationrows_Family, var = "Taxonomic_ID")
+
+
+annotationrows_Family_clr <- annotationrows_Family
+
+Family_colours <- annotationrows_Family_clr %>% rownames_to_column(var = "Family")
+
+
+
+Family_colours1 <- filter(Family_colours, Family %in% Family_names1$Family_names)
+
+
+rownames(annotationrows_Family_clr) <- NULL
+rownames(annotationrows_Family_clr) <- rownames(Family_copy)
+
+
+biplot_Family <- factoextra::fviz_pca_biplot(Family_pcx,repel = T, select.var = list(contrib = 20), col.var = annotationrows_Family_clr$Domain) + theme_minimal() + labs(x = "PC1: 37.2%", y = "PC2: 19.2%") + geom_point(aes(color = season), size = 4)
+
+ggsave(plot = biplot_Family, filename = "C:/Users/user/Desktop/biplot_Family.png", width = 10, height = 10)
+
+```
+

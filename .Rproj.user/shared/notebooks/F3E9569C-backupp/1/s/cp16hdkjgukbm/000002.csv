@@ -1,0 +1,38 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames/RMSE\")
+if (!require('gridExtra')) install.packages('gridExtra'); library('gridExtra')
+
+custom_rmse <- function(df){ 
+      exp <- df[,\"Expected_Abundance\"] 
+      obs <- df[,\"Observed_Abundance\"]
+      rmse_value <- rmse(exp,obs)
+      return(rmse_value)
+}
+
+RMSE_plant_species <- as.data.frame(do.call(rbind, lapply(species_plants_list,custom_rmse)))
+
+RMSE_plant_genus <- as.data.frame(do.call(rbind, lapply(genus_plants_list,custom_rmse)))
+
+RMSE_others <- as.data.frame(do.call(rbind, lapply(others_list,custom_rmse)))
+
+RMSE_community <- as.data.frame(do.call(rbind, lapply(community_list,custom_rmse)))
+
+RMSE_total <- cbind(RMSE_plant_species,RMSE_plant_genus,RMSE_others,RMSE_community)
+
+colnames(RMSE_total) <- c(\"Plant_Species\",\"Plant_Genus\",\"Others\",\"Community\")
+names_for_RMSE <- c(\"Viridiplantae: \n Species level\",\"Viridiplantae: \n Genus level\", \"Others\", \"Community\")
+
+names(RMSE_total) <- names_for_RMSE
+rounded_RMSE_total <- round(RMSE_total,digits = 3)
+png(\"RMSE_total.png\",height = 50*nrow(rounded_RMSE_total), width = 100*ncol(rounded_RMSE_total))
+rounded_RMSE_total
+grid.table(rounded_RMSE_total)
+
+trial_rmse_total <- as_huxtable(rounded_RMSE_total)
+set_bold(trial_rmse_total,  row = 1, col = 4)
+
+pdf(\"RMSE_table.pdf\", height=11, width=10)
+grid.table(rounded_RMSE_total)
+dev.off()
+
+```"

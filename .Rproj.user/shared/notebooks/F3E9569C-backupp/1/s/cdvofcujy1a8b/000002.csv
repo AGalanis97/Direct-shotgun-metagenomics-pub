@@ -1,0 +1,1 @@
+"0","$ kma -i file.fastq -o file_out_kma -t_db compress_ncbi -t 300 -1t1 -mem_mode -and -ef"

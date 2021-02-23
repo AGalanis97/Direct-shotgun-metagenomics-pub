@@ -1,0 +1,10 @@
+"0","```r
+Hives_normalised_counts_family <- counts(Hives_dds_RLE_family, normalized = TRUE)
+
+Hives_counts_vst_family <- varianceStabilizingTransformation(Hives_dds_RLE_family, blind = FALSE)
+
+PCA_plot_family <- plotPCA(Hives_counts_vst_family, intgroup = \"Method\") + geom_text(aes(label=hives_metadata$Hive), vjust=1.5)
+
+
+ggsave(filename=\"PCA_plot_family.png\", plot = PCA_plot_family)
+```"

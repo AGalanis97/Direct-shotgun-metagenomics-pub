@@ -267,6 +267,18 @@ degQC(Hives_normalised_counts_species, colData(res1)[["Method"]], pvalue = res2[
 
 
 
+
+dds_object <- DESeq(Hives_dds_RLE_species, test = "LRT", reduced = ~Method, full = ~Method+Season)
+rld <- rlog(dds_object, blind=F)
+results <- results(dds_object)
+
+pvals <- results$pvalue
+pvalnames <- rownames(results)
+speciesnames <- getTaxonomy(pvalnames,desiredTaxa = "species", 'nameNode.sqlite')
+altogether <- cbind(speciesnames,pvals)
+
+
+
 # Export the counts because it will be needed for the next figure
 classification_deseq_export(normalised_reads = Hives_normalised_counts_species_filtered, path_filename = "./Figures/Figure_3/normalised_methodseason_species_filtered2.csv")
 

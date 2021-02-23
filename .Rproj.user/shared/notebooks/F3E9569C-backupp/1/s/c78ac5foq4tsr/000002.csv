@@ -1,0 +1,30 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames\")
+
+CCMetagen_community <- read.csv(\"CCMetagen_community.csv\")
+DIAMOND_community <- read.csv(\"DIAMOND_community.csv\")
+kraken2_community <- read.csv(\"kraken2_community.csv\")
+minimap2_community <- read.csv(\"minimap2_community.csv\")
+
+library(scales)
+q_colors =  3 # for no particular reason
+v_colors =  viridis(q_colors, option = \"plasma\")
+v_colours = c(v_colors,\"#73D055FF\")
+
+
+scatterplot <- function(df, x, y) {
+   ggscatter(df, x=\"Observed_Abundance\", y= \"Expected_Abundance\", color = \"Taxonomic_Domain\", size = 3, palette = c(\"#0D0887FF\",\"#8a8a5c\",\"#CC4678FF\",\"#73D055FF\",\"#F0F921FF\")) + stat_cor(size=7, label.x = 4, label.y = 18) + labs(x=\"Observed Abundance (%)\", y=\"Expected Abundance (%)\", color = \"Taxonomic Domain\", title = \"\") + theme_bw(base_size = 15) + geom_abline(intercept = 0, slope =1) + theme(legend.text = element_text(size=10))
+}
+
+
+
+plot1 <- scatterplot(CCMetagen_community) + xlim(0,20) + ylim(0,20)
+plot2 <- scatterplot(DIAMOND_community) + xlim(0,20) + ylim(0,20)
+plot3 <- scatterplot(kraken2_community) + xlim(0,20) + ylim(0,20)
+plot4 <- scatterplot(minimap2_community) + xlim(0,20) + ylim(0,20)
+
+final_scatterplot_no_export <- ggarrange(plot1,plot2,plot3,plot4, labels = c(\"A\",\"B\",\"C\",\"D\"),ncol = 2, nrow = 2, common.legend = TRUE, legend = \"bottom\")
+final_scatterplot <- annotate_figure(final_scatterplot_no_export,  top = text_grob(\"Performance of tools on the community dataset\", face = \"bold\", size = 14), bottom = text_grob(\"A: CCMetagen, B: DIAMOND, C: kraken2, D: minimap2\"))
+
+ggsave(path = \"C:/Users/user/Desktop/data_frames/barcharts\", filename = \"scatter_plot_performance.pdf\", plot= final_scatterplot, height=8, width = 10, device = \"pdf\")
+```"

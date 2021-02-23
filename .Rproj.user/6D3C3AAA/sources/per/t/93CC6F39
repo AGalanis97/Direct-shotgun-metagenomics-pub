@@ -1,0 +1,32 @@
+{
+    "id": "93CC6F39",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1611315205436.0,
+    "source_on_save": false,
+    "relative_order": 12,
+    "properties": {
+        "expression": "comparison",
+        "caption": "comparison",
+        "totalObservations": "24",
+        "displayedObservations": "24",
+        "variables": "9",
+        "cacheKey": "E2D825F3",
+        "object": "comparison",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=comparison&cache_key=E2D825F3&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2115478497152,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1611315205436,
+    "read_only": false,
+    "read_only_alternatives": []
+}

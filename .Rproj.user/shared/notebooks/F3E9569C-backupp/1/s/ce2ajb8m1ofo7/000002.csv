@@ -1,0 +1,2 @@
+"0","$ sh FASTQspike.sh -nobackground -platform ion -source 0.2 <genome.file>.fasta 
+  -o <desired.output> -threads 30"

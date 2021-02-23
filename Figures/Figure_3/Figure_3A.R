@@ -3,8 +3,8 @@
 # This script will INSTALL packages that have not been previously installed. 
 # If you do not wish to install new packages, please avoid running this script.
 
-# This script will reproduce Figures 3A
-# This script is written in R version 3.6.3
+# This script will reproduce Figure 3A
+# This script is written in R version 4.0.3
 
 # Load or install (if not present) the required packages
 if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
@@ -17,7 +17,6 @@ if (!require('here')) install.packages('here'): library('here')
 # from here: and simply unzip it in the cloned repository. Place it at the top level, honeyDSM-seq and not in the subfolders.
 if (!require('DESeq2')) install.packages('DESeq2'); library('DESeq2')
 if (!require('pheatmap')) install.packages('pheatmap'): library('pheatmap')
-if (!require('taxize')) install.packages('taxize'): library('taxize')
 
 # Import the normalised reads table
 Hives_normalised_counts <- read.csv("./Figures/Figure_3/normalised_methodseason_species.csv")[,-1]

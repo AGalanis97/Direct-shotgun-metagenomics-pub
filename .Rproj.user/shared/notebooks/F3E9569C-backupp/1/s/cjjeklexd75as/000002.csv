@@ -1,0 +1,3 @@
+"0","$ ./kraken2-build --download-taxonomy --db nucleotide
+$ kraken2-build --download-library nt --use-ftp --db nucleotide
+$ kraken2-build --build --threads 30 --db nucleotide"

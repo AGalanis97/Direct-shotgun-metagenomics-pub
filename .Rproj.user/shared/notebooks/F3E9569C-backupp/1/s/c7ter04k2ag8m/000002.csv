@@ -1,0 +1,18 @@
+"0","```r
+setwd(\"C:/Users/user/Desktop/data_frames/RMSE\")
+
+getnames <- function(df){ 
+      soft <- df[2,1] 
+      return(soft)
+}
+
+list_naming <- unlist(lapply(species_plants_list,getnames), use.names = FALSE)
+names(species_plants_list) <- list_naming
+
+list_naming_genus <- unlist(lapply(species_plants_list,getnames), use.names = FALSE)
+names(genus_plants_list) <- list_naming_genus
+
+names(others_list) <- list_naming
+
+names(community_list) <- list_naming
+```"

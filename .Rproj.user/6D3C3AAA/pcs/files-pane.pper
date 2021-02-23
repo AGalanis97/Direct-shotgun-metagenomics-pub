@@ -1,9 +1,9 @@
 {
-    "path" : "~/GitHub/honeyDSM-seq",
-    "sortOrder" : [
+    "path": "~/GitHub/honeyDSM-seq",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "ascending": true,
+            "columnIndex": 2
         }
     ]
 }

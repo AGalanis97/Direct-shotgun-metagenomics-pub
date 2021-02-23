@@ -1,0 +1,2 @@
+"0","$ sed '/^[^>]/s/[R|Y|W|S|M|K|H|B|V|D|]//g' others.fasta > otherscorrected.fasta
+$ sed 's/[R|Y|W|S|M|K|H|B|V|D]/N/g' input.file > output.file"

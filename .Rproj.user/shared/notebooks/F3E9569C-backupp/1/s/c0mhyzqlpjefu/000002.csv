@@ -1,0 +1,1 @@
+"0","$ perl -ne 'if (/^>/){@a=split /_/; $h{$a[0]}++; $a[0].= \".\".$h{$a[0]}; $s=join \"_\", @a; print $s;}else{print $_;}' <mock_community_corrected.fasta >communitycorrectedunique.fasta"

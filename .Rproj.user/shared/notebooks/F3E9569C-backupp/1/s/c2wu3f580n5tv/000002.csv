@@ -1,0 +1,6 @@
+"0","```r
+Hives_dds_family <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Hive + Method, tidy = TRUE)
+
+Hives_dds_RLE_family <- estimateSizeFactors(Hives_dds_family,type = \"ratio\")
+
+```"
