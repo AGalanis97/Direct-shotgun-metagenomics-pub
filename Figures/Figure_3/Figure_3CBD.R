@@ -243,15 +243,7 @@ Hives_normalised_counts_species <- counts(Hives_dds_RLE_species, normalized = TR
 Hives_counts_vst_species <- varianceStabilizingTransformation(Hives_dds_RLE_species, blind = FALSE)
 
 # Export the counts because it will be needed for the next figure
-classification_deseq_export(normalised_reads = Hives_normalised_counts_species_filtered, path_filename = "./Figures/Figure_3/normalised_methodseason_species_filtered2.csv")
-
-
-filtered_species <- rowSums( counts(Hives_dds_RLE_species, normalized = TRUE) >= 50) >=2
-Hives_dds_RLE_species_filtered <- Hives_dds_RLE_species[filtered_species,]
-
-Hives_normalised_counts_species_filtered <- counts(Hives_dds_RLE_species_filtered, normalized = TRUE)
-Hives_counts_vst_species_filtered <- varianceStabilizingTransformation(Hives_dds_RLE_species_filtered, blind = TRUE)
-
+classification_deseq_export(normalised_reads = Hives_normalised_counts_species, path_filename = "./Figures/Figure_3/normalised_methodseason_species.csv")
 
 Hives_annotation <- as.data.frame(colData(Hives_dds_species))
 
@@ -503,25 +495,6 @@ listspecies <- taxonomy_per_cluster(species_sig_res)
 export_list(listfamily, FamGenSp = "Family",output_path = "./Figures/Figure_3/")
 export_list(listgenus, FamGenSp = "Genus",output_path = "./Figures/Figure_3/")
 export_list(listspecies, FamGenSp = "Species",output_path = "./Figures/Figure_3/")
-
-
-get_waffle_plot_per_cluster <- function(df) {
-  vector_w <- c(`Bacteria` = sum(df$Superkingdom == "Bacteria"),`Viruses` = sum(df$Superkingdom == "Viruses"),`Eukaryota` = (sum(df$Superkingdom == "Eukaryota")-sum(na.omit(df$Kingdom == "Viridiplantae"))),`Viridiplantae` = sum(na.omit(df$Kingdom == "Viridiplantae")), `Archaea` = sum(na.omit(df$Kingdom == "Archaea")))
-  waffle(vector_w, rows=5, size=0.5, 
-         colors=c("#E6AB02","#eb53a1","#7570B3","#1B9E77","#D95F02"), pad = 3)
-}
-
-family_waffles <- lapply(listfamily, get_waffle_plot_per_cluster)
-genus_waffles <- lapply(listgenus, get_waffle_plot_per_cluster)
-species_waffles <- lapply(listspecies, get_waffle_plot_per_cluster)
-
-arranged_family <- ggarrange(plotlist =  family_waffles, ncol = 3, common.legend = T)
-arranged_genus <- ggarrange(plotlist =  genus_waffles, ncol = 5, common.legend = T)
-arranged_species <- ggarrange(plotlist =  species_waffles, ncol = 5, common.legend = T)
-
-ggsave(plot = arranged_family, filename = "./Figures/Figure_3/family_cluster_composition_filtered.pdf")
-ggsave(plot = arranged_genus, filename = "./Figures/Figure_3/genus_cluster_composition_filtered.pdf")
-ggsave(plot = arranged_species, filename = "./Figures/Figure_3/species_cluster_composition_filtered.pdf")
 
 
 # PCA analysis
