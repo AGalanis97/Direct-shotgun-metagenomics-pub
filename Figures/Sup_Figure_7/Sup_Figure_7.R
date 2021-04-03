@@ -52,7 +52,7 @@ write.table(ids,"./Figures/Figure_3/taxids_fam.csv",row.names = FALSE, col.names
 
 
 # Import the tree
-tree1 <- read.tree("./Figures/Figure_3/treefam.newick")
+tree1 <- read.tree("./Figures/Sup_Figure_7/treefam.newick")
 tree1
 
 # generate a circular tree
