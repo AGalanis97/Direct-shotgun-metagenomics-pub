@@ -155,7 +155,7 @@ classification_deseq_export <- function(normalised_reads, path_filename) {
 
 
 # Normalisation with DESeq2 requires a metadata file
-hives_metadata <- read.csv("./Figures/Figure_3/Data_fig_3/metadata_hives.csv")
+hives_metadata <- read.csv("./Figures/Figure_3/Data_fig_3/metadata_hives.csv", stringsAsFactors = T)
 
 # We apply the RLE normalisation but using the Method + Season so we can observe seasonal effects and do methodological validation
 Hives_dds_family <- DESeqDataSetFromMatrix(countData = Hives_comparison_family, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
@@ -213,7 +213,7 @@ Hives_normalised_counts_genus <- counts(Hives_dds_RLE_genus, normalized = TRUE)
 Hives_counts_vst_genus <- varianceStabilizingTransformation(Hives_dds_RLE_genus_filtered, blind = FALSE)
 
 # Export reads
-classification_deseq_export(normalised_reads = Hives_normalised_counts_genus, path_filename = "./Figures/Figure_3/normalised_methodseason_genus_filtered.csv")
+classification_deseq_export(normalised_reads = Hives_normalised_counts_genus, path_filename = "./Figures/Figure_3/normalised_methodseason_genus.csv")
 
 
 Hives_annotation <- as.data.frame(colData(Hives_dds_genus))
@@ -239,6 +239,11 @@ ggsave(filename="heatmap_genus.png", plot=final_heatmap_genus, path =output_path
 Hives_dds_species <- DESeqDataSetFromMatrix(countData = Hives_comparison_species, colData = hives_metadata, design = ~Method + Season, tidy = TRUE)
 
 Hives_dds_RLE_species <- estimateSizeFactors(Hives_dds_species,type = "ratio")
+
+filtered_species <- rowSums( counts(Hives_dds_RLE_species, normalized = TRUE) >= 50) >=2
+Hives_dds_RLE_species_filtered <- Hives_dds_RLE_species[filtered_species,]
+
+
 Hives_normalised_counts_species <- counts(Hives_dds_RLE_species, normalized = TRUE)
 Hives_counts_vst_species <- varianceStabilizingTransformation(Hives_dds_RLE_species, blind = FALSE)
 
@@ -407,26 +412,26 @@ plotDiffAbund <- function(colNums, DESeq_RLE_object, title, level = c("species",
 
 # Draw the heatmaps
 differentially_abundant_species <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_RLE_species_filtered,
+  DESeq_RLE_object =Hives_dds_RLE_species,
   colNums = c(1:8),
-  level = "species", pathcsv = "./Figures/Figure_3/significant_species_filtered.csv")
+  level = "species", pathcsv = "./Figures/Figure_3/significant_species.csv")
 
 differentially_abundant_genera <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_RLE_genus_filtered,
+  DESeq_RLE_object =Hives_dds_RLE_genus,
   colNums = c(1:8),
-  level = "genus", pathcsv = "./Figures/Figure_3/significant_genera_filtered.csv")
+  level = "genus", pathcsv = "./Figures/Figure_3/significant_genera.csv")
 
 differentially_abundant_families <- plotDiffAbund(
-  DESeq_RLE_object =Hives_dds_RLE_family_filtered,
+  DESeq_RLE_object =Hives_dds_RLE_family,
   colNums = c(1:8),
   level = "family",
-  pathcsv = "./Figures/Figure_3/significant_families_filtered.csv")
+  pathcsv = "./Figures/Figure_3/significant_families.csv")
 
 
 
-ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species_filtered.pdf",device="pdf", height = 10, width = 14)
-ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera_filtered.pdf",device="pdf", height = 10, width = 14)
-ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families_filtered.pdf",device="pdf", height = 10, width = 14)
+ggsave(plot= differentially_abundant_species,filename = "./Figures/Figure_3/significantly_abundant_species.pdf",device="pdf", height = 10, width = 14)
+ggsave(plot= differentially_abundant_genera,filename = "./Figures/Figure_3/significantly_abundant_genera.pdf",device="pdf", height = 10, width = 14)
+ggsave(plot= differentially_abundant_families,filename = "./Figures/Figure_3/significantly_abundant_families.pdf",device="pdf", height = 10, width = 14)
 
 # Now we can cluster the significantly abundant families/genera/species and observe patterns 
 sig_res_LRT <- function(dds_object1, meta, replacegenes) {
@@ -436,7 +441,7 @@ sig_res_LRT <- function(dds_object1, meta, replacegenes) {
   clustering <- sig %>% arrange(padj) %>% head(n=1000)
   rld <- rlog(dds_object2, blind = F)
   rld_mat <- assay(rld)
-  cluster_rlog <- cluster_rlog <- rld_mat[clustering$Taxonomic_ID, ]
+  cluster_rlog <- rld_mat[clustering$Taxonomic_ID, ]
   meta$Method <- c("DirectSM","DirectSM","DirectSM","DirectSM","SM","SM","SM","SM")
   results_deg <- degPatterns(cluster_rlog, metadata = meta, time = "Season", col="Method", minc = 2)
   primary_plot <- degPlotCluster(results_deg$normalized, time = "Season", color = "Method", facet = T) + theme_bw() + scale_x_discrete(limits = c("May","July","November")) + scale_colour_brewer(type = "qual", palette = "Set1") + labs(title = "", y = "Z-score of abundance")
@@ -446,13 +451,13 @@ sig_res_LRT <- function(dds_object1, meta, replacegenes) {
 
 hives_metadata_new <- hives_metadata %>% column_to_rownames(var = "X")
 
-family_sig_res <- sig_res_LRT(Hives_dds_RLE_family_filtered, meta = hives_metadata_new, replacegenes = "Families")
-genus_sig_res <- sig_res_LRT(Hives_dds_RLE_genus_filtered, meta = hives_metadata_new, replacegenes = "Genera")
-species_sig_res <- sig_res_LRT(Hives_dds_RLE_species_filtered, meta = hives_metadata_new, replacegenes = "Species")
+family_sig_res <- sig_res_LRT(Hives_dds_RLE_family, meta = hives_metadata_new, replacegenes = "Families")
+genus_sig_res <- sig_res_LRT(Hives_dds_RLE_genus, meta = hives_metadata_new, replacegenes = "Genera")
+species_sig_res <- sig_res_LRT(Hives_dds_RLE_species, meta = hives_metadata_new, replacegenes = "Species")
 
-ggsave(plot = family_sig_res, filename = "./Figures/Figure_3/DEGpattern_family_filtered.pdf", height = 4)
-ggsave(plot = genus_sig_res, filename = "./Figures/Figure_3/DEGpattern_genus_filtered.pdf", height = 4)
-ggsave(plot = species_sig_res, filename = "./Figures/Figure_3/DEGpattern_species_filtered.pdf", height = 4)
+ggsave(plot = family_sig_res, filename = "./Figures/Figure_3/DEGpattern_family.pdf", height = 4)
+ggsave(plot = genus_sig_res, filename = "./Figures/Figure_3/DEGpattern_genus.pdf", height = 4)
+ggsave(plot = species_sig_res, filename = "./Figures/Figure_3/DEGpattern_species.pdf", height = 4)
 
 # Export the Families/Genera/Species per cluster, and return taxonomy
 # we use the split function to split the clusters in a list and then export them
