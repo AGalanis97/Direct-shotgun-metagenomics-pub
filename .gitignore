@@ -1,1 +1,205 @@
 .DS_Store
+nodes.dmp
+.RData
+.Rhistory
+accessionTaxa.sql
+Figures/Figure_3/.Rhistory
+Figures/Figure_3C/.Rhistory
+genera.txt
+GO_significant2.txt
+map_go_uniref90.txt
+nameNode.sqlite
+names.dmp
+RJ_J_S2_classified.txt
+Varroa 2/.RData
+Varroa 2/.Rhistory
+Varroa 2/wgs/spd10.sh
+Varroa 2/wgs/spd10/spd10.log
+Varroa 2/wgs/spd10/SPD10_Apis_mellifera.bam
+Varroa 2/wgs/spd10/SPD10_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd10/SPD10_Artemisia_annua.bam
+Varroa 2/wgs/spd10/SPD10_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd10/SPD10_Asparagus_officinalis.bam
+Varroa 2/wgs/spd10/SPD10_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd10/SPD10_Cajanus_cajan.bam
+Varroa 2/wgs/spd10/SPD10_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd10/SPD10_Helianthus_annuus.bam
+Varroa 2/wgs/spd10/SPD10_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd10/SPD10_Nosema_ceranae.bam
+Varroa 2/wgs/spd10/SPD10_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd10/SPD10_Olea_europaea.bam
+Varroa 2/wgs/spd10/SPD10_Olea_europaea.bam.sam
+Varroa 2/wgs/spd10/SPD10_Papaver_somniferum.bam
+Varroa 2/wgs/spd10/SPD10_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd10/SPD10_varroa_destructor.bam
+Varroa 2/wgs/spd10/SPD10_varroa_destructor.bam.sam
+Varroa 2/wgs/spd10/SPD10_vitis_vinifera.bam
+Varroa 2/wgs/spd10/SPD10_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd3.sh
+Varroa 2/wgs/spd3/spd3.log
+Varroa 2/wgs/spd3/SPD3_Apis_mellifera.bam
+Varroa 2/wgs/spd3/SPD3_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd3/SPD3_Artemisia_annua.bam
+Varroa 2/wgs/spd3/SPD3_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd3/SPD3_Asparagus_officinalis.bam
+Varroa 2/wgs/spd3/SPD3_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd3/SPD3_Cajanus_cajan.bam
+Varroa 2/wgs/spd3/SPD3_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd3/SPD3_Helianthus_annuus.bam
+Varroa 2/wgs/spd3/SPD3_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd3/SPD3_Nosema_ceranae.bam
+Varroa 2/wgs/spd3/SPD3_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd3/SPD3_Olea_europaea.bam
+Varroa 2/wgs/spd3/SPD3_Olea_europaea.bam.sam
+Varroa 2/wgs/spd3/SPD3_Papaver_somniferum.bam
+Varroa 2/wgs/spd3/SPD3_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd3/SPD3_varroa_destructor.bam
+Varroa 2/wgs/spd3/SPD3_varroa_destructor.bam.sam
+Varroa 2/wgs/spd3/SPD3_vitis_vinifera.bam
+Varroa 2/wgs/spd3/SPD3_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd4.sh
+Varroa 2/wgs/spd4/spd4.log
+Varroa 2/wgs/spd4/SPD4_Apis_mellifera.bam
+Varroa 2/wgs/spd4/SPD4_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd4/SPD4_Artemisia_annua.bam
+Varroa 2/wgs/spd4/SPD4_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd4/SPD4_Asparagus_officinalis.bam
+Varroa 2/wgs/spd4/SPD4_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd4/SPD4_Cajanus_cajan.bam
+Varroa 2/wgs/spd4/SPD4_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd4/SPD4_Helianthus_annuus.bam
+Varroa 2/wgs/spd4/SPD4_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd4/SPD4_Nosema_ceranae.bam
+Varroa 2/wgs/spd4/SPD4_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd4/SPD4_Olea_europaea.bam
+Varroa 2/wgs/spd4/SPD4_Olea_europaea.bam.sam
+Varroa 2/wgs/spd4/SPD4_Papaver_somniferum.bam
+Varroa 2/wgs/spd4/SPD4_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd4/SPD4_varroa_destructor.bam
+Varroa 2/wgs/spd4/SPD4_varroa_destructor.bam.sam
+Varroa 2/wgs/spd4/SPD4_vitis_vinifera.bam
+Varroa 2/wgs/spd4/SPD4_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd5.sh
+Varroa 2/wgs/spd5/spd5.log
+Varroa 2/wgs/spd5/SPD5_Apis_mellifera.bam
+Varroa 2/wgs/spd5/SPD5_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd5/SPD5_Artemisia_annua.bam
+Varroa 2/wgs/spd5/SPD5_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd5/SPD5_Asparagus_officinalis.bam
+Varroa 2/wgs/spd5/SPD5_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd5/SPD5_Cajanus_cajan.bam
+Varroa 2/wgs/spd5/SPD5_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd5/SPD5_Helianthus_annuus.bam
+Varroa 2/wgs/spd5/SPD5_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd5/SPD5_Nosema_ceranae.bam
+Varroa 2/wgs/spd5/SPD5_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd5/SPD5_Olea_europaea.bam
+Varroa 2/wgs/spd5/SPD5_Olea_europaea.bam.sam
+Varroa 2/wgs/spd5/SPD5_Papaver_somniferum.bam
+Varroa 2/wgs/spd5/SPD5_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd5/SPD5_varroa_destructor.bam
+Varroa 2/wgs/spd5/SPD5_varroa_destructor.bam.sam
+Varroa 2/wgs/spd5/SPD5_vitis_vinifera.bam
+Varroa 2/wgs/spd5/SPD5_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd6.sh
+Varroa 2/wgs/spd6/spd6.log
+Varroa 2/wgs/spd6/SPD6_Apis_mellifera.bam
+Varroa 2/wgs/spd6/SPD6_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd6/SPD6_Artemisia_annua.bam
+Varroa 2/wgs/spd6/SPD6_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd6/SPD6_Asparagus_officinalis.bam
+Varroa 2/wgs/spd6/SPD6_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd6/SPD6_Cajanus_cajan.bam
+Varroa 2/wgs/spd6/SPD6_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd6/SPD6_Helianthus_annuus.bam
+Varroa 2/wgs/spd6/SPD6_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd6/SPD6_Nosema_ceranae.bam
+Varroa 2/wgs/spd6/SPD6_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd6/SPD6_Olea_europaea.bam
+Varroa 2/wgs/spd6/SPD6_Olea_europaea.bam.sam
+Varroa 2/wgs/spd6/SPD6_Papaver_somniferum.bam
+Varroa 2/wgs/spd6/SPD6_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd6/SPD6_varroa_destructor.bam
+Varroa 2/wgs/spd6/SPD6_varroa_destructor.bam.sam
+Varroa 2/wgs/spd6/SPD6_vitis_vinifera.bam
+Varroa 2/wgs/spd6/SPD6_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd7.sh
+Varroa 2/wgs/spd7/spd7.log
+Varroa 2/wgs/spd7/SPD7_Apis_mellifera.bam
+Varroa 2/wgs/spd7/SPD7_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd7/SPD7_Artemisia_annua.bam
+Varroa 2/wgs/spd7/SPD7_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd7/SPD7_Asparagus_officinalis.bam
+Varroa 2/wgs/spd7/SPD7_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd7/SPD7_Cajanus_cajan.bam
+Varroa 2/wgs/spd7/SPD7_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd7/SPD7_Helianthus_annuus.bam
+Varroa 2/wgs/spd7/SPD7_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd7/SPD7_Nosema_ceranae.bam
+Varroa 2/wgs/spd7/SPD7_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd7/SPD7_Olea_europaea.bam
+Varroa 2/wgs/spd7/SPD7_Olea_europaea.bam.sam
+Varroa 2/wgs/spd7/SPD7_Papaver_somniferum.bam
+Varroa 2/wgs/spd7/SPD7_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd7/SPD7_varroa_destructor.bam
+Varroa 2/wgs/spd7/SPD7_varroa_destructor.bam.sam
+Varroa 2/wgs/spd7/SPD7_vitis_vinifera.bam
+Varroa 2/wgs/spd7/SPD7_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd8.sh
+Varroa 2/wgs/spd8/spd8.log
+Varroa 2/wgs/spd8/SPD8_Apis_mellifera.bam
+Varroa 2/wgs/spd8/SPD8_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd8/SPD8_Artemisia_annua.bam
+Varroa 2/wgs/spd8/SPD8_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd8/SPD8_Asparagus_officinalis.bam
+Varroa 2/wgs/spd8/SPD8_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd8/SPD8_Cajanus_cajan.bam
+Varroa 2/wgs/spd8/SPD8_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd8/SPD8_Helianthus_annuus.bam
+Varroa 2/wgs/spd8/SPD8_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd8/SPD8_Nosema_ceranae.bam
+Varroa 2/wgs/spd8/SPD8_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd8/SPD8_Olea_europaea.bam
+Varroa 2/wgs/spd8/SPD8_Olea_europaea.bam.sam
+Varroa 2/wgs/spd8/SPD8_Papaver_somniferum.bam
+Varroa 2/wgs/spd8/SPD8_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd8/SPD8_varroa_destructor.bam
+Varroa 2/wgs/spd8/SPD8_varroa_destructor.bam.sam
+Varroa 2/wgs/spd8/SPD8_vitis_vinifera.bam
+Varroa 2/wgs/spd8/SPD8_vitis_vinifera.bam.sam
+Varroa 2/wgs/spd9.sh
+Varroa 2/wgs/spd9/spd9.log
+Varroa 2/wgs/spd9/SPD9_Apis_mellifera.bam
+Varroa 2/wgs/spd9/SPD9_Apis_mellifera.bam.sam
+Varroa 2/wgs/spd9/SPD9_Artemisia_annua.bam
+Varroa 2/wgs/spd9/SPD9_Artemisia_annua.bam.sam
+Varroa 2/wgs/spd9/SPD9_Asparagus_officinalis.bam
+Varroa 2/wgs/spd9/SPD9_Asparagus_officinalis.bam.sam
+Varroa 2/wgs/spd9/SPD9_Cajanus_cajan.bam
+Varroa 2/wgs/spd9/SPD9_Cajanus_cajan.bam.sam
+Varroa 2/wgs/spd9/SPD9_Helianthus_annuus.bam
+Varroa 2/wgs/spd9/SPD9_Helianthus_annuus.bam.sam
+Varroa 2/wgs/spd9/SPD9_Nosema_ceranae.bam
+Varroa 2/wgs/spd9/SPD9_Nosema_ceranae.bam.sam
+Varroa 2/wgs/spd9/SPD9_Olea_europaea.bam
+Varroa 2/wgs/spd9/SPD9_Olea_europaea.bam.sam
+Varroa 2/wgs/spd9/SPD9_Papaver_somniferum.bam
+Varroa 2/wgs/spd9/SPD9_Papaver_somniferum.bam.sam
+Varroa 2/wgs/spd9/SPD9_varroa_destructor.bam
+Varroa 2/wgs/spd9/SPD9_varroa_destructor.bam.sam
+Varroa 2/wgs/spd9/SPD9_vitis_vinifera.bam
+Varroa 2/wgs/spd9/SPD9_vitis_vinifera.bam.sam
+varroabam/dsmh4.bam
+varroabam/dsmh5.bam
+varroabam/dsmh6.bam
+varroabam/dsmh7.bam
+varroabam/smh4.bam
+varroabam/smh5.bam
+varroabam/smh6.bam
+varroabam/smh7.bam
+.RData
+.Rhistory
+Figures/Figure_3/.Rhistory
+.RData
+.Rhistory
+Figures/Figure_3/.Rhistory
