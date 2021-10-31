@@ -1,0 +1,25 @@
+{
+    "id": "CABED814",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635190683926.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "id": "9a91c1e3a47d4934926865ab449538c6",
+        "name": "kraken2_files_species",
+        "title": "kraken2_files_species"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2771230955744,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635190683926,
+    "read_only": false,
+    "read_only_alternatives": []
+}

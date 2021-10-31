@@ -1,0 +1,32 @@
+{
+    "id": "F393C693",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635192916026.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "expression": "no_genome_corr",
+        "caption": "no_genome_corr",
+        "totalObservations": "25",
+        "displayedObservations": "25",
+        "variables": "2",
+        "cacheKey": "2791E9A1",
+        "object": "no_genome_corr",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=no_genome_corr&cache_key=2791E9A1&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 7957704863871034658,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635192916026,
+    "read_only": false,
+    "read_only_alternatives": []
+}

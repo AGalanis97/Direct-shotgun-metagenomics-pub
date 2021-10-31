@@ -1,0 +1,35 @@
+
+#This script makes list of readID based on their barcode
+
+if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
+
+setwd("/Volumes/Minion_Ext/barcoded_new")
+
+barcodingSum <- read.table(file = "barcoding_summary.txt", header = TRUE,sep = "\t")
+head(barcodingSum)
+
+
+ReadID_barcode07<-barcodingSum %>% 
+  filter(barcode_arrangement == "barcode07") %>% 
+  pull(1)
+
+ReadID_barcode08<-barcodingSum %>% 
+  filter(barcode_arrangement == "barcode08") %>% 
+  pull(1)
+
+
+### If the unclassified reads with a barcode are required, use this script instead
+
+ReadID_barcode07<-barcodingSum %>%  
+  filter(grepl('NB07', barcode_full_arrangement)) %>% 
+  pull(1)
+## Increase of 100 000 reads!
+
+ReadID_barcode08<-barcodingSum %>% 
+  filter(grepl('NB08', barcode_full_arrangement)) %>% 
+  pull(1)
+
+#Export lists
+write.table(ReadID_barcode07, file = "ReadID_barcode07.txt", sep = "\t",col.names = FALSE,row.names = FALSE)
+write.table(ReadID_barcode08, file = "ReadID_barcode08.txt", sep = "\t",col.names = FALSE,row.names = FALSE)
+

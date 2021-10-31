@@ -1,0 +1,24 @@
+{
+    "id": "748318EA",
+    "path": "~/GitHub/honeyDSM-seq/Figures/Differential_abundance_analysis/Figure_3CD_and_reads_tables.R",
+    "project_path": "Figures/Differential_abundance_analysis/Figure_3CD_and_reads_tables.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635190699059.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "cursorPosition": "166,0",
+        "scrollLine": "137"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1617475757,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1617475757,
+    "read_only": false,
+    "read_only_alternatives": []
+}

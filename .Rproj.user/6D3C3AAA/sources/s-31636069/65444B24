@@ -1,0 +1,32 @@
+{
+    "id": "65444B24",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635192433519.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "expression": "real_abundance2",
+        "caption": "real_abundance2",
+        "totalObservations": "25",
+        "displayedObservations": "25",
+        "variables": "2",
+        "cacheKey": "B3EA81BE",
+        "object": "real_abundance2",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=real_abundance2&cache_key=B3EA81BE&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 8315165955120652656,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635192433519,
+    "read_only": false,
+    "read_only_alternatives": []
+}

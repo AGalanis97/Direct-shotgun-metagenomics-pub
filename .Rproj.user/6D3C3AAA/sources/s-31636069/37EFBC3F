@@ -1,0 +1,32 @@
+{
+    "id": "37EFBC3F",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635190833007.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "expression": "Hives_comparison_species",
+        "caption": "Hives_comparison_species",
+        "totalObservations": "54",
+        "displayedObservations": "54",
+        "variables": "2",
+        "cacheKey": "3795BEB9",
+        "object": "Hives_comparison_species",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=Hives_comparison_species&cache_key=3795BEB9&max_cols=50",
+        "preview": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2771230955744,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635190833007,
+    "read_only": false,
+    "read_only_alternatives": []
+}

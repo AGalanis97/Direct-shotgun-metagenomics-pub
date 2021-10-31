@@ -1,0 +1,32 @@
+{
+    "id": "C03F0523",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635226288130.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "expression": "genome_corrected",
+        "caption": "genome_corrected",
+        "totalObservations": 25,
+        "displayedObservations": 25,
+        "variables": 2,
+        "cacheKey": "643409FE",
+        "object": "genome_corrected",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=genome_corrected&cache_key=643409FE&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 7310014143394750496,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635226288130,
+    "read_only": false,
+    "read_only_alternatives": []
+}

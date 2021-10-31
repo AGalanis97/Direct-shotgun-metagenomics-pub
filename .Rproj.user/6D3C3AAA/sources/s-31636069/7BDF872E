@@ -1,0 +1,32 @@
+{
+    "id": "7BDF872E",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1635193833759.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "expression": "Hives_species",
+        "caption": "Hives_species",
+        "totalObservations": 25,
+        "displayedObservations": 25,
+        "variables": 2,
+        "cacheKey": "20D17A5B",
+        "object": "Hives_species",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=Hives_species&cache_key=20D17A5B&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2771230955744,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635193833759,
+    "read_only": false,
+    "read_only_alternatives": []
+}
