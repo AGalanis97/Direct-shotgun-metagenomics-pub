@@ -20,5 +20,5 @@ This folder contains the results from analysed the additional mocks that were cr
 
 Each folder contains the results from the kraken2 threshold evaluation, while in the top level there is the known abundance of each one of the samples.
 
-### 3 Direct-shotgun-metagenomics-pub/Figures
+### 3. Direct-shotgun-metagenomics-pub/Figures
 This folder contains subfolders and scripts named after the figure they reproduce. Required data exists in each folder.
