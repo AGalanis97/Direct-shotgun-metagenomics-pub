@@ -1,7 +1,7 @@
 # Direct shotgun metagenomics captures species abundance of honey samples
 [![DOI](https://zenodo.org/badge/273162987.svg)](https://zenodo.org/badge/latestdoi/273162987)
 
-This repository contains all files and code to reproduce the results in the publication [Bee foraging preferences, microbiota and pathogens revealed by direct shotgun metagenomics of honey](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13626). Currently on bioRxiv.
+This repository contains all files and code to reproduce the results in the publication [Bee foraging preferences, microbiota and pathogens revealed by direct shotgun metagenomics of honey](https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13626).
 <p>When running the code from scripts, there is no need to change working directories - all paths are relative to the R project file located in this repository.</p>
 
 ## Folders
